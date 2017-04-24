@@ -11,6 +11,7 @@ output:
 ```{r include=FALSE}
 # Don't delete this chunk if you are using the DataComputing package
 library(DataComputing)
+library(tidyr)
 ```
 *Source file* 
 ```{r, results='asis', echo=FALSE}
