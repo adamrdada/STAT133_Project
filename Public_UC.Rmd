@@ -28,19 +28,19 @@ Public_UC_Arrests_On_campus_Student_Housing_Facilities <- read.csv("Public_UC_Ar
 
 Public_UC_Criminal_Offenses_Noncampus <- read.csv("Public_UC_Criminal_Offenses_Noncampus.csv")
 
-Public_UC_Criminal_Offenses_Campus <- read.csv("Public_UC_Criminal_Offenses_Campus.csv")
+Public_UC_Criminal_Offenses_Campus <- read.csv("Public_UC_Criminal_Offenses_On_campus.csv")
 
 Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities <- read.csv("Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities.csv")
 
 Public_UC_Disciplinary_Actions_Noncampus <- read.csv("Public_UC_Disciplinary_Actions_Noncampus.csv")
 
-Public_UC_Disciplinary_Actions_Campus <- read.csv("Public_UC_Disciplinary_Actions_Campus.csv")
+Public_UC_Disciplinary_Actions_Campus <- read.csv("Public_UC_Disciplinary_Actions_On_campus.csv")
 
-Public_UC_Disciplinary_Actions_On_campus_Student_Housing_Facilities <- read.csv("Public_UC_Disciplinary_Actions_On_campus_Student_Housing_Facilities.csv")
+Public_UC_Disciplinary_Actions_On_campus_Student_Housing_Facilities <- read.csv("Public_UC_Disciplinary_Actions_Student_Housing_Facilities.csv")
 
 Public_UC_VAWA_Offenses_Noncampus <- read.csv("Public_UC_VAWA_Offenses_Noncampus.csv")
 
-Public_UC_VAWA_Offenses_Campus <- read.csv("Public_UC_VAWA_Offenses_Campus.csv")
+Public_UC_VAWA_Offenses_Campus <- read.csv("Public_UC_VAWA_Offenses_On_campus.csv")
 
 Public_UC_VAWA_Offenses_On_campus_Student_Housing_Facilities <- read.csv("Public_UC_VAWA_Offenses_On_campus_Student_Housing_Facilities.csv")
 ```
