@@ -1,0 +1,360 @@
+Survey year,Unitid,Institution name,Campus ID, Campus Name,Institution Size,Illegal weapons possession,Drug law violations,Liquor law violations
+2001,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,18079,0,3,0
+2001,110529,California State Polytechnic University-Pomona,1,Main Campus,19041,2,7,7
+2001,110486,California State University-Bakersfield,1,Main Campus,7050,0,0,0
+2001,441937,California State University-Channel Islands,1,California State University Channel Islands,,0,0,0
+2001,110538,California State University-Chico,1,Main Campus,16704,0,8,4
+2001,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,12871,1,0,0
+2001,110574,California State University-East Bay,1,Main Campus,13240,0,1,1
+2001,110556,California State University-Fresno,1,Main Campus,20007,2,2,6
+2001,110565,California State University-Fullerton,1,Main Campus,30357,1,0,0
+2001,110583,California State University-Long Beach,1,Main Campus,33259,0,2,21
+2001,110592,California State University-Los Angeles,1,California State University- Los Angeles,20675,1,1,2
+2001,409698,California State University-Monterey Bay,1,California State University- Monterey Bay,3020,0,14,41
+2001,110608,California State University-Northridge,1,California State University- Northridge,31448,1,5,1
+2001,110617,California State University-Sacramento,1,Sacramento State,26923,0,4,3
+2001,110510,California State University-San Bernardino,1,California State University- San Bernardino,15985,0,0,1
+2001,110495,California State University-Stanislaus,1,CSU Stanislaus - Turlock,7534,0,4,9
+2001,169248,Central Michigan University,1,Main Campus,27797,0,8,33
+2001,115755,Humboldt State University,1,Humboldt State University,7382,0,10,7
+2001,122409,San Diego State University,1,Main Campus,34171,1,29,10
+2001,122597,San Francisco State University,1,Main Campus,26866,0,32,7
+2001,122755,San Jose State University,1,Main Campus,28007,0,22,4
+2001,123572,Sonoma State University,1,Sonoma State University,7590,0,11,34
+2001,111188,The California Maritime Academy,1,California State University Maritime Academy,606,0,0,0
+2002,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,18453,0,3,3
+2002,110529,California State Polytechnic University-Pomona,1,Main Campus,19821,3,10,1
+2002,110486,California State University-Bakersfield,1,Main Campus,7765,0,0,0
+2002,441937,California State University-Channel Islands,1,California State University Channel Islands,630,0,0,0
+2002,110538,California State University-Chico,1,Main Campus,16246,0,5,1
+2002,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,13504,0,1,2
+2002,110574,California State University-East Bay,1,Main Campus,13876,0,0,1
+2002,110556,California State University-Fresno,1,Main Campus,21272,1,7,16
+2002,110565,California State University-Fullerton,1,Main Campus,32143,0,7,6
+2002,110583,California State University-Long Beach,1,Main Campus,34566,1,5,6
+2002,110592,California State University-Los Angeles,1,California State University- Los Angeles,21099,0,2,0
+2002,409698,California State University-Monterey Bay,1,California State University- Monterey Bay,3551,1,20,32
+2002,110608,California State University-Northridge,1,California State University- Northridge,33579,2,5,1
+2002,110617,California State University-Sacramento,1,Sacramento State,28558,0,2,6
+2002,110510,California State University-San Bernardino,1,California State University- San Bernardino,16341,0,4,3
+2002,366711,California State University-San Marcos,1,Main Campus,7678,0,0,0
+2002,110495,California State University-Stanislaus,1,CSU Stanislaus - Turlock,7850,0,2,3
+2002,169248,Central Michigan University,1,Main Campus,27919,0,11,32
+2002,115755,Humboldt State University,1,Humboldt State University,7611,1,13,0
+2002,122409,San Diego State University,1,Main Campus,34304,1,16,56
+2002,122597,San Francisco State University,1,Main Campus,28378,1,39,9
+2002,122755,San Jose State University,1,Main Campus,30350,0,14,6
+2002,123572,Sonoma State University,1,Sonoma State University,8219,2,12,12
+2002,111188,The California Maritime Academy,1,California State University Maritime Academy,719,0,2,0
+2003,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,18303,0,14,2
+2003,110529,California State Polytechnic University-Pomona,1,Main Campus,19804,3,2,1
+2003,110486,California State University-Bakersfield,1,Main Campus,7933,0,0,0
+2003,441937,California State University-Channel Islands,1,California State University Channel Islands,1560,0,0,0
+2003,110538,California State University-Chico,1,Main Campus,15516,0,7,10
+2003,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,13248,2,4,0
+2003,110574,California State University-East Bay,1,Main Campus,13455,0,1,2
+2003,110556,California State University-Fresno,1,Main Campus,22342,0,4,18
+2003,110565,California State University-Fullerton,1,Main Campus,32592,1,8,5
+2003,110583,California State University-Long Beach,1,Main Campus,34715,1,18,24
+2003,110592,California State University-Los Angeles,1,California State University- Los Angeles,20637,0,1,0
+2003,409698,California State University-Monterey Bay,1,California State University- Monterey Bay,3760,3,10,27
+2003,110608,California State University-Northridge,1,California State University- Northridge,33426,1,12,3
+2003,110617,California State University-Sacramento,1,Sacramento State,28375,0,7,4
+2003,110510,California State University-San Bernardino,1,California State University- San Bernardino,16927,1,7,1
+2003,366711,California State University-San Marcos,1,Main Campus,7777,0,4,16
+2003,110495,California State University-Stanislaus,1,CSU Stanislaus - Turlock,8072,0,1,5
+2003,169248,Central Michigan University,1,Main Campus,27758,0,5,28
+2003,115755,Humboldt State University,1,Humboldt State University,7725,0,14,1
+2003,122409,San Diego State University,1,Main Campus,32803,1,27,76
+2003,122597,San Francisco State University,1,Main Campus,29686,4,22,20
+2003,122755,San Jose State University,1,Main Campus,28932,0,20,8
+2003,123572,Sonoma State University,1,Sonoma State University,8371,3,6,10
+2003,111188,The California Maritime Academy,1,California State University Maritime Academy,698,0,0,0
+2004,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,17582,0,5,1
+2004,110529,California State Polytechnic University-Pomona,1,Main Campus,19003,1,0,0
+2004,110486,California State University-Bakersfield,1,Main Campus,7755,0,0,0
+2004,441937,California State University-Channel Islands,1,California State University Channel Islands,2021,0,0,0
+2004,110538,California State University-Chico,1,Main Campus,15734,0,4,5
+2004,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,12613,0,3,2
+2004,110574,California State University-East Bay,1,Main Campus,13061,0,0,1
+2004,110556,California State University-Fresno,1,Main Campus,19781,0,8,9
+2004,110565,California State University-Fullerton,1,Main Campus,32744,2,5,3
+2004,110583,California State University-Long Beach,1,Main Campus,33479,1,11,26
+2004,110592,California State University-Los Angeles,1,California State University- Los Angeles,20307,0,1,5
+2004,409698,California State University-Monterey Bay,1,California State University- Monterey Bay,3945,1,15,34
+2004,110608,California State University-Northridge,1,California State University- Northridge,31341,5,24,12
+2004,110617,California State University-Sacramento,1,Sacramento State,27972,0,2,0
+2004,110510,California State University-San Bernardino,1,California State University- San Bernardino,16194,0,5,2
+2004,366711,California State University-San Marcos,1,Main Campus,7365,1,2,15
+2004,110495,California State University-Stanislaus,1,CSU Stanislaus - Turlock,7858,0,0,6
+2004,169248,Central Michigan University,1,Main Campus,27683,0,13,47
+2004,115755,Humboldt State University,1,Humboldt State University,7550,0,33,11
+2004,122409,San Diego State University,1,Main Campus,32043,1,7,15
+2004,122597,San Francisco State University,1,Main Campus,28804,5,33,9
+2004,122755,San Jose State University,1,Main Campus,29044,0,11,1
+2004,123572,Sonoma State University,1,Sonoma State University,7977,2,8,6
+2004,111188,The California Maritime Academy,1,California State University Maritime Academy,758,0,1,0
+2005,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,18475,0,11,2
+2005,110529,California State Polytechnic University-Pomona,1,Main Campus,19885,0,0,0
+2005,110486,California State University-Bakersfield,1,Main Campus,7549,1,1,0
+2005,441937,California State University-Channel Islands,1,California State University Channel Islands,2575,0,1,2
+2005,110538,California State University-Chico,1,Main Campus,15919,0,7,1
+2005,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,12357,0,2,1
+2005,110574,California State University-East Bay,1,Main Campus,12535,0,0,0
+2005,110556,California State University-Fresno,1,Main Campus,20371,0,13,14
+2005,110565,California State University-Fullerton,1,Main Campus,35040,1,3,3
+2005,110583,California State University-Long Beach,1,Main Campus,34547,1,13,7
+2005,110592,California State University-Los Angeles,1,California State University- Los Angeles,20034,0,1,10
+2005,409698,California State University-Monterey Bay,1,California State University- Monterey Bay,3773,2,5,7
+2005,110608,California State University-Northridge,1,California State University- Northridge,33243,0,26,13
+2005,110617,California State University-Sacramento,1,Sacramento State,27932,4,4,3
+2005,110510,California State University-San Bernardino,1,California State University- San Bernardino,16431,5,4,0
+2005,366711,California State University-San Marcos,1,Main Campus,7502,0,1,4
+2005,110495,California State University-Stanislaus,1,CSU Stanislaus - Turlock,8137,1,7,4
+2005,169248,Central Michigan University,1,Main Campus,27221,0,17,37
+2005,115755,Humboldt State University,1,Humboldt State University,7462,1,45,3
+2005,122409,San Diego State University,1,Main Campus,31802,1,8,18
+2005,122597,San Francisco State University,1,Main Campus,28950,3,33,10
+2005,122755,San Jose State University,1,Main Campus,29975,2,12,19
+2005,123572,Sonoma State University,1,Sonoma State University,7749,2,13,2
+2005,111188,The California Maritime Academy,1,California State University Maritime Academy,859,0,0,0
+2006,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,18722,0,10,0
+2006,110529,California State Polytechnic University-Pomona,1,Main Campus,20510,1,2,1
+2006,110486,California State University-Bakersfield,1,Main Campus,7711,0,0,1
+2006,441937,California State University-Channel Islands,1,California State University Channel Islands,3123,0,1,0
+2006,110538,California State University-Chico,1,Main Campus,16250,0,3,0
+2006,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,12068,1,1,0
+2006,110574,California State University-East Bay,1,Main Campus,12706,0,0,1
+2006,110556,California State University-Fresno,1,Main Campus,22098,1,7,3
+2006,110565,California State University-Fullerton,1,Main Campus,35921,1,6,5
+2006,110583,California State University-Long Beach,1,Main Campus,35574,2,12,12
+2006,110592,California State University-Los Angeles,1,California State University- Los Angeles,20565,0,1,4
+2006,409698,California State University-Monterey Bay,1,California State University- Monterey Bay,3818,1,15,27
+2006,110608,California State University-Northridge,1,California State University- Northridge,34560,7,33,11
+2006,110617,California State University-Sacramento,1,Sacramento State,28529,1,10,0
+2006,110510,California State University-San Bernardino,1,California State University- San Bernardino,16479,4,10,4
+2006,366711,California State University-San Marcos,1,Main Campus,8734,0,0,2
+2006,110495,California State University-Stanislaus,1,CSU Stanislaus - Turlock,8374,0,3,1
+2006,169248,Central Michigan University,1,Main Campus,26710,0,24,20
+2006,115755,Humboldt State University,1,Humboldt State University,7435,0,68,8
+2006,122409,San Diego State University,1,Main Campus,33441,0,19,21
+2006,122597,San Francisco State University,1,Main Campus,29628,3,50,10
+2006,122755,San Jose State University,1,Main Campus,29604,2,27,40
+2006,123572,Sonoma State University,1,Sonoma State University,8274,1,33,9
+2006,111188,The California Maritime Academy,1,California State University Maritime Academy,828,0,0,0
+2007,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,19777,0,10,1
+2007,110529,California State Polytechnic University-Pomona,1,Main Campus,21477,1,1,2
+2007,110486,California State University-Bakersfield,1,Main Campus,7700,1,2,0
+2007,441937,California State University-Channel Islands,1,California State University Channel Islands,3599,0,0,0
+2007,110538,California State University-Chico,1,Main Campus,17034,0,7,1
+2007,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,12082,0,2,0
+2007,110574,California State University-East Bay,1,Main Campus,13124,1,0,0
+2007,110556,California State University-Fresno,1,Main Campus,22383,0,10,1
+2007,110565,California State University-Fullerton,1,Main Campus,37130,0,4,7
+2007,110583,California State University-Long Beach,1,Main Campus,36868,2,14,3
+2007,110592,California State University-Los Angeles,1,California State University- Los Angeles,21051,0,0,5
+2007,409698,California State University-Monterey Bay,1,California State University- Monterey Bay,4080,1,13,6
+2007,110608,California State University-Northridge,1,California State University- Northridge,35446,0,43,9
+2007,110617,California State University-Sacramento,1,Sacramento State,28829,0,9,0
+2007,110510,California State University-San Bernardino,1,California State University- San Bernardino,17066,2,13,4
+2007,366711,California State University-San Marcos,1,Main Campus,9159,0,1,1
+2007,110495,California State University-Stanislaus,1,CSU Stanislaus - Turlock,8836,0,4,1
+2007,169248,Central Michigan University,1,Main Campus,26611,0,18,11
+2007,115755,Humboldt State University,1,Humboldt State University,7773,4,44,3
+2007,122409,San Diego State University,1,Main Campus,35695,4,20,10
+2007,122597,San Francisco State University,1,Main Campus,30125,1,37,6
+2007,122755,San Jose State University,1,Main Campus,31906,4,25,19
+2007,123572,Sonoma State University,1,Sonoma State University,8770,3,22,23
+2007,111188,The California Maritime Academy,1,California State University Maritime Academy,858,0,0,0
+2008,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,19471,1,32,0
+2008,110529,California State Polytechnic University-Pomona,1,Main Campus,21190,0,0,0
+2008,110486,California State University-Bakersfield,1,Main Campus,7684,1,0,4
+2008,441937,California State University-Channel Islands,1,California State University Channel Islands,3783,0,1,0
+2008,110538,California State University-Chico,1,Main Campus,17132,0,7,0
+2008,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,12851,0,2,0
+2008,110574,California State University-East Bay,1,Main Campus,14167,0,0,0
+2008,110556,California State University-Fresno,1,Main Campus,22613,0,5,1
+2008,110565,California State University-Fullerton,1,Main Campus,36996,0,9,3
+2008,110583,California State University-Long Beach,1,Main Campus,37891,2,19,11
+2008,110592,California State University-Los Angeles,1,California State University- Los Angeles,20743,1,0,3
+2008,409698,California State University-Monterey Bay,1,California State University- Monterey Bay,4340,0,4,5
+2008,110608,California State University-Northridge,1,California State University- Northridge,36208,1,38,0
+2008,110617,California State University-Sacramento,1,Sacramento State,29011,0,2,8
+2008,110510,California State University-San Bernardino,1,California State University- San Bernardino,17646,0,13,0
+2008,366711,California State University-San Marcos,1,Main Campus,9148,1,2,0
+2008,110495,California State University-Stanislaus,1,CSU Stanislaus - Turlock,8601,0,3,0
+2008,169248,Central Michigan University,1,Main Campus,27225,0,63,22
+2008,115755,Humboldt State University,1,Humboldt State University,7800,3,52,6
+2008,122409,San Diego State University,1,Main Campus,34889,0,40,9
+2008,122597,San Francisco State University,1,Main Campus,30014,5,75,11
+2008,122755,San Jose State University,1,Main Campus,32746,2,34,6
+2008,123572,Sonoma State University,1,Sonoma State University,8921,3,21,9
+2008,111188,The California Maritime Academy,1,California State University Maritime Academy,875,0,0,0
+2009,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,19325,0,20,0
+2009,110529,California State Polytechnic University-Pomona,1,Main Campus,22273,0,2,0
+2009,110486,California State University-Bakersfield,1,Main Campus,8003,0,1,3
+2009,441937,California State University-Channel Islands,1,California State University Channel Islands,3862,0,2,0
+2009,110538,California State University-Chico,1,Main Campus,16934,2,4,0
+2009,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,14477,0,2,0
+2009,110574,California State University-East Bay,1,Main Campus,14749,0,0,0
+2009,110556,California State University-Fresno,1,Main Campus,21500,2,10,9
+2009,110565,California State University-Fullerton,1,Main Campus,36262,1,10,1
+2009,110583,California State University-Long Beach,1,Main Campus,35557,0,27,11
+2009,110592,California State University-Los Angeles,1,California State University- Los Angeles,20619,1,3,10
+2009,409698,California State University-Monterey Bay,1,California State University- Monterey Bay,4688,0,20,6
+2009,110608,California State University-Northridge,1,California State University- Northridge,35198,2,21,1
+2009,110617,California State University-Sacramento,1,Sacramento State,29241,0,14,0
+2009,110510,California State University-San Bernardino,1,California State University- San Bernardino,17852,1,4,3
+2009,366711,California State University-San Marcos,1,Main Campus,9767,0,6,1
+2009,110495,California State University-Stanislaus,1,CSU Stanislaus - Turlock,8586,0,2,4
+2009,169248,Central Michigan University,1,Main Campus,27247,0,25,23
+2009,115755,Humboldt State University,1,Humboldt State University,7954,2,62,14
+2009,122409,San Diego State University,1,Main Campus,32817,1,49,7
+2009,122597,San Francisco State University,1,Main Campus,30469,0,52,7
+2009,122755,San Jose State University,1,Main Campus,31280,1,32,15
+2009,123572,Sonoma State University,1,Sonoma State University,8546,2,12,3
+2009,111188,The California Maritime Academy,1,California State University Maritime Academy,823,0,0,0
+2010,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,18360,2,11,0
+2010,110529,California State Polytechnic University-Pomona,1,Main Campus,20747,0,2,0
+2010,110486,California State University-Bakersfield,1,Main Campus,7906,0,0,0
+2010,441937,California State University-Channel Islands,1,California State University Channel Islands,3828,0,0,0
+2010,110538,California State University-Chico,1,Main Campus,15989,0,3,0
+2010,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,13854,0,2,0
+2010,110574,California State University-East Bay,1,Main Campus,12889,0,3,2
+2010,110556,California State University-Fresno,1,Main Campus,20932,0,10,0
+2010,110565,California State University-Fullerton,1,Main Campus,35590,0,6,4
+2010,110583,California State University-Long Beach,1,Main Campus,33416,3,19,0
+2010,110592,California State University-Los Angeles,1,California State University- Los Angeles,20142,0,3,3
+2010,409698,California State University-Monterey Bay,1,California State University- Monterey Bay,4790,1,18,0
+2010,110608,California State University-Northridge,1,California State University- Northridge,35272,0,17,1
+2010,110617,California State University-Sacramento,1,Sacramento State,27033,0,4,2
+2010,110510,California State University-San Bernardino,1,California State University- San Bernardino,16400,1,10,3
+2010,366711,California State University-San Marcos,1,Main Campus,9722,0,1,1
+2010,110495,California State University-Stanislaus,1,CSU Stanislaus - Turlock,8305,0,7,3
+2010,169248,Central Michigan University,1,Main Campus,28292,0,22,20
+2010,115755,Humboldt State University,1,Humboldt State University,7903,1,45,3
+2010,122409,San Diego State University,1,Main Campus,29187,1,20,24
+2010,122597,San Francisco State University,1,Main Campus,29718,2,36,2
+2010,122755,San Jose State University,1,Main Campus,29076,3,27,7
+2010,123572,Sonoma State University,1,Sonoma State University,8395,0,7,11
+2010,111188,The California Maritime Academy,1,California State University Maritime Academy,855,0,0,0
+2011,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,18762,0,21,0
+2011,110529,California State Polytechnic University-Pomona,1,Main Campus,21107,0,0,0
+2011,110486,California State University-Bakersfield,1,Main Campus,8002,0,0,0
+2011,441937,California State University-Channel Islands,1,California State University Channel Islands,4179,0,2,0
+2011,110538,California State University-Chico,1,Main Campus,15920,0,1,0
+2011,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,14364,0,0,0
+2011,110574,California State University-East Bay,1,Main Campus,13160,0,0,0
+2011,110556,California State University-Fresno,1,Main Campus,21981,0,8,2
+2011,110565,California State University-Fullerton,1,Main Campus,36156,0,4,6
+2011,110583,California State University-Long Beach,1,Main Campus,34870,0,6,0
+2011,110592,California State University-Los Angeles,1,California State University- Los Angeles,21284,0,1,0
+2011,409698,California State University-Monterey Bay,1,California State University- Monterey Bay,5173,0,17,10
+2011,110608,California State University-Northridge,1,California State University- Northridge,36911,1,14,0
+2011,110617,California State University-Sacramento,1,Sacramento State,28016,0,2,1
+2011,110510,California State University-San Bernardino,1,California State University- San Bernardino,17250,1,1,0
+2011,366711,California State University-San Marcos,1,Main Campus,10276,0,0,1
+2011,110495,California State University-Stanislaus,1,CSU Stanislaus - Turlock,9246,1,0,2
+2011,169248,Central Michigan University,1,Main Campus,28194,0,41,33
+2011,115755,Humboldt State University,1,Humboldt State University,8046,0,3,2
+2011,122409,San Diego State University,1,Main Campus,30541,0,26,28
+2011,122597,San Francisco State University,1,Main Campus,29541,2,35,7
+2011,122755,San Jose State University,1,Main Campus,30236,3,18,4
+2011,123572,Sonoma State University,1,Sonoma State University,8668,0,0,9
+2011,111188,The California Maritime Academy,1,California State University Maritime Academy,886,0,0,0
+2012,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,18679,0,0,0
+2012,110529,California State Polytechnic University-Pomona,1,Main Campus,22156,0,1,0
+2012,110486,California State University-Bakersfield,1,Main Campus,8520,0,0,0
+2012,441937,California State University-Channel Islands,1,California State University Channel Islands,4920,0,2,0
+2012,110538,California State University-Chico,1,Main Campus,16470,0,5,0
+2012,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,13933,0,0,0
+2012,110574,California State University-East Bay,1,Main Campus,13851,0,0,0
+2012,110556,California State University-Fresno,1,Main Campus,22565,1,5,0
+2012,110565,California State University-Fullerton,1,Main Campus,37677,0,7,3
+2012,110583,California State University-Long Beach,1,Main Campus,36279,3,0,0
+2012,110592,California State University-Los Angeles,1,California State University- Los Angeles,21755,0,0,1
+2012,409698,California State University-Monterey Bay,1,California State University- Monterey Bay,5609,0,17,1
+2012,110608,California State University-Northridge,1,California State University- Northridge,36164,0,9,2
+2012,110617,California State University-Sacramento,1,Sacramento State,28539,0,2,0
+2012,110510,California State University-San Bernardino,1,California State University- San Bernardino,18234,1,0,0
+2012,366711,California State University-San Marcos,1,Main Campus,10610,0,0,1
+2012,110495,California State University-Stanislaus,1,CSU Stanislaus - Turlock,8882,0,0,3
+2012,169248,Central Michigan University,1,Main Campus,27626,0,17,20
+2012,115755,Humboldt State University,1,Humboldt State University,8116,0,5,0
+2012,122409,San Diego State University,1,Main Campus,30843,2,27,33
+2012,122597,San Francisco State University,1,Main Campus,30500,0,18,8
+2012,122755,San Jose State University,1,Main Campus,30448,11,23,6
+2012,123572,Sonoma State University,1,Sonoma State University,9021,0,0,0
+2012,111188,The California Maritime Academy,1,California State University Maritime Academy,973,0,0,0
+2013,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,19703,1,28,0
+2013,110529,California State Polytechnic University-Pomona,1,Main Campus,22501,0,0,0
+2013,110486,California State University-Bakersfield,1,Main Campus,8371,0,0,0
+2013,441937,California State University-Channel Islands,1,California State University Channel Islands,5140,0,1,0
+2013,110538,California State University-Chico,1,Main Campus,16356,0,0,0
+2013,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,14670,0,0,0
+2013,110574,California State University-East Bay,1,Main Campus,14526,0,0,0
+2013,110556,California State University-Fresno,1,Main Campus,23060,0,4,1
+2013,110565,California State University-Fullerton,1,Main Campus,38325,3,1,1
+2013,110583,California State University-Long Beach,1,Main Campus,35586,1,0,0
+2013,110592,California State University-Los Angeles,1,California State University- Los Angeles,23258,0,1,0
+2013,409698,California State University-Monterey Bay,1,California State University- Monterey Bay,5732,2,3,1
+2013,110608,California State University-Northridge,1,California State University- Northridge,38310,0,1,1
+2013,110617,California State University-Sacramento,1,Sacramento State,28811,0,0,0
+2013,110510,California State University-San Bernardino,1,California State University- San Bernardino,18398,0,0,0
+2013,366711,California State University-San Marcos,1,Main Campus,11300,0,2,3
+2013,110495,California State University-Stanislaus,1,CSU Stanislaus - Turlock,8917,0,0,1
+2013,169248,Central Michigan University,1,Main Campus,26841,0,20,10
+2013,115755,Humboldt State University,1,Humboldt State University,8293,0,4,0
+2013,122409,San Diego State University,1,Main Campus,31899,1,31,5
+2013,122597,San Francisco State University,1,Main Campus,29905,2,4,13
+2013,122755,San Jose State University,1,Main Campus,31278,2,8,3
+2013,123572,Sonoma State University,1,Sonoma State University,9120,0,1,6
+2013,111188,The California Maritime Academy,1,California State University Maritime Academy,1045,0,0,0
+2014,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,20186,2,28,2
+2014,110529,California State Polytechnic University-Pomona,1,Main Campus,23966,1,4,1
+2014,110486,California State University-Bakersfield,1,Main Campus,8720,0,0,0
+2014,441937,California State University-Channel Islands,1,California State University Channel Islands,5879,0,1,0
+2014,110538,California State University-Chico,1,Main Campus,17287,0,2,0
+2014,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,14687,0,0,0
+2014,110574,California State University-East Bay,1,Main Campus,14823,1,0,0
+2014,110556,California State University-Fresno,1,Main Campus,23179,0,8,0
+2014,110565,California State University-Fullerton,1,Main Campus,38128,1,6,0
+2014,110583,California State University-Long Beach,1,Main Campus,36809,0,2,0
+2014,110592,California State University-Los Angeles,1,California State University- Los Angeles,24488,0,0,0
+2014,409698,California State University-Monterey Bay,1,California State University- Monterey Bay,6631,2,9,2
+2014,110608,California State University-Northridge,1,California State University- Northridge,40131,0,4,0
+2014,110617,California State University-Sacramento,1,Sacramento State,29349,0,1,0
+2014,110510,California State University-San Bernardino,1,California State University- San Bernardino,18952,0,2,0
+2014,366711,California State University-San Marcos,1,Main Campus,12154,0,1,1
+2014,110495,California State University-Stanislaus,1,CSU Stanislaus - Turlock,9045,0,0,0
+2014,169248,Central Michigan University,1,Main Campus,26879,0,20,4
+2014,115755,Humboldt State University,1,Humboldt State University,8485,0,3,3
+2014,122409,San Diego State University,1,Main Campus,33483,3,6,2
+2014,122597,San Francisco State University,1,Main Campus,29465,1,2,1
+2014,122755,San Jose State University,1,Main Campus,32713,4,15,0
+2014,123572,Sonoma State University,1,Sonoma State University,9290,0,0,0
+2014,111188,The California Maritime Academy,1,California State University Maritime Academy,1047,0,0,0
+2015,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,20944,1,5,0
+2015,110529,California State Polytechnic University-Pomona,1,Main Campus,23717,3,0,1
+2015,110486,California State University-Bakersfield,1,Main Campus,9228,0,0,0
+2015,441937,California State University-Channel Islands,1,California State University Channel Islands,6167,0,0,0
+2015,110538,California State University-Chico,1,Main Campus,17220,0,0,0
+2015,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,14635,0,0,0
+2015,110574,California State University-East Bay,1,Main Campus,15528,1,0,0
+2015,110556,California State University-Fresno,1,Main Campus,24136,0,5,0
+2015,110565,California State University-Fullerton,1,Main Campus,38948,0,2,1
+2015,110583,California State University-Long Beach,1,Main Campus,37446,2,1,0
+2015,110592,California State University-Los Angeles,1,California State University- Los Angeles,27680,0,0,0
+2015,409698,California State University-Monterey Bay,1,California State University- Monterey Bay,7102,0,17,0
+2015,110608,California State University-Northridge,1,California State University- Northridge,41548,0,8,0
+2015,110617,California State University-Sacramento,1,Sacramento State,30284,0,0,0
+2015,110510,California State University-San Bernardino,1,California State University- San Bernardino,20024,1,1,0
+2015,366711,California State University-San Marcos,1,Main Campus,12793,0,2,4
+2015,110495,California State University-Stanislaus,1,CSU Stanislaus - Turlock,9282,1,0,2
+2015,169248,Central Michigan University,1,Main Campus,26825,0,6,3
+2015,115755,Humboldt State University,1,Humboldt State University,8790,2,2,0
+2015,122409,San Diego State University,1,Main Campus,34254,1,15,11
+2015,122597,San Francisco State University,1,Main Campus,30256,0,0,0
+2015,122755,San Jose State University,1,Main Campus,32773,4,26,0
+2015,123572,Sonoma State University,1,Sonoma State University,9408,1,0,0
+2015,111188,The California Maritime Academy,1,California State University Maritime Academy,1075,1,0,0

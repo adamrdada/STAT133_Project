@@ -1,0 +1,375 @@
+Survey year,Unitid,Institution name,Campus ID, Campus Name,Institution Size,Illegal weapons possession,Drug law violations,Liquor law violations
+2001,109651,Art Center College of Design,1,Hillside Campus,1465,0,0,0
+2001,109785,Azusa Pacific University,1,Azusa (main campus),6835,0,0,0
+2001,110097,Biola University,1,Main Campus,4317,0,0,0
+2001,262086,Brandman University,1,Main Campus & Administration - Irvine,4779,0,0,0
+2001,110361,California Baptist University,1,Main Campus,2090,0,0,0
+2001,110404,California Institute of Technology,1,Main Campus,2058,0,0,0
+2001,110413,California Lutheran University,1,Main Campus,2857,0,0,0
+2001,111948,Chapman University,1,Orange Campus,4591,0,1,0
+2001,112251,Claremont Graduate University,1,Main Campus,1944,0,1,10
+2001,112075,Concordia University-Irvine,1,Main Campus,1314,0,0,0
+2001,114813,Fresno Pacific University,1,FRESNO PACIFIC UNIVERSITY,2016,0,0,0
+2001,114840,Fuller Theological Seminary in California,1,Fuller Pasadena,2599,0,0,0
+2001,115083,Golden Gate University-San Francisco,1,San Francisco,4843,0,0,0
+2001,117627,La Sierra University,1,La Sierra University,1566,0,0,0
+2001,117636,Loma Linda University,1,Loma Linda University,3162,0,0,0
+2001,117946,Loyola Marymount University,1,Westchester Campus,7921,0,0,0
+2001,119173,Mount Saint Mary's University,1,Chalon,1965,0,0,0
+2001,119605,National University,1,NATIONAL UNIVERSITY,18267,0,0,0
+2001,120254,Occidental College,1,Occidental College,1796,0,0,0
+2001,121150,Pepperdine University,1,Malibu - Main Campus,7383,0,0,0
+2001,121309,Point Loma Nazarene University,1,Point Loma Nazerene University Main Campus,2881,0,0,0
+2001,123554,Saint Mary's College of California,1,Main Campus,4127,0,0,0
+2001,122931,Santa Clara University,1,Main Campus - Santa Clara University,7368,0,0,0
+2001,243744,Stanford University,1,Main Campus,18591,1,4,0
+2001,117140,University of La Verne,1,MAIN CAMPUS,7283,0,0,0
+2001,121691,University of Redlands,1,Main Campus,4224,0,0,0
+2001,122436,University of San Diego,1,UNIVERSITY OF SAN DIEGO,7062,0,0,0
+2001,122612,University of San Francisco,1,Hilltop Campus (San Francisco),8063,0,0,0
+2001,123961,University of Southern California,1,University Park Campus,29813,0,1,1
+2001,120883,University of the Pacific,1,Main Campus,5697,0,0,0
+2001,123651,Vanguard University of Southern California,1,Vanguard University of Southern California,1827,0,0,0
+2001,123651,Vanguard University of Southern California,2,Vanguard University - CINCEL,1827,0,0,0
+2001,123651,Vanguard University of Southern California,5,Vanguard University - Culver City,1827,0,0,0
+2001,123651,Vanguard University of Southern California,8,Vanguard Center,1827,0,0,0
+2001,112525,Western University of Health Sciences,1,Western University of Health Sciences,1435,0,0,0
+2001,125763,Whittier College,1,Main Campus,2098,0,0,0
+2002,110097,Biola University,1,Main Campus,4535,0,0,0
+2002,262086,Brandman University,1,Main Campus & Administration - Irvine,8443,0,0,0
+2002,110361,California Baptist University,1,Main Campus,2165,0,0,0
+2002,110404,California Institute of Technology,1,Main Campus,2120,0,0,0
+2002,114813,Fresno Pacific University,1,FRESNO PACIFIC UNIVERSITY,2347,0,0,0
+2002,117636,Loma Linda University,1,Loma Linda University,3297,0,0,0
+2002,119605,National University,1,NATIONAL UNIVERSITY,17865,1,0,1
+2002,120254,Occidental College,1,Occidental College,1832,0,0,0
+2002,121309,Point Loma Nazarene University,1,Point Loma Nazerene University Main Campus,2998,0,0,0
+2002,123554,Saint Mary's College of California,1,Main Campus,4442,0,0,0
+2002,122931,Santa Clara University,1,Main Campus - Santa Clara University,7811,1,1,6
+2002,243744,Stanford University,1,Main Campus,18297,1,2,0
+2002,117140,University of La Verne,1,MAIN CAMPUS,7519,0,0,0
+2002,121691,University of Redlands,1,Main Campus,4297,0,0,0
+2002,122436,University of San Diego,1,UNIVERSITY OF SAN DIEGO,7126,0,0,0
+2002,122612,University of San Francisco,1,Hilltop Campus (San Francisco),8194,0,0,0
+2002,123961,University of Southern California,1,University Park Campus,30682,0,0,0
+2002,120883,University of the Pacific,1,Main Campus,5886,0,0,0
+2002,112525,Western University of Health Sciences,1,Western University of Health Sciences,1400,0,0,0
+2003,109785,Azusa Pacific University,1,Azusa (main campus),8188,0,0,0
+2003,110097,Biola University,1,Main Campus,5084,0,0,0
+2003,262086,Brandman University,1,Main Campus & Administration - Irvine,6275,0,0,0
+2003,110361,California Baptist University,1,Main Campus,2359,0,0,0
+2003,110404,California Institute of Technology,1,Main Campus,2172,0,0,0
+2003,114813,Fresno Pacific University,1,FRESNO PACIFIC UNIVERSITY,2167,0,0,0
+2003,114840,Fuller Theological Seminary in California,1,Fuller Pasadena,2812,0,0,0
+2003,117636,Loma Linda University,1,Loma Linda University,3501,0,0,0
+2003,119605,National University,1,NATIONAL UNIVERSITY,17064,0,0,0
+2003,121309,Point Loma Nazarene University,1,Point Loma Nazerene University Main Campus,3219,0,0,0
+2003,122931,Santa Clara University,1,Main Campus - Santa Clara University,7794,0,0,1
+2003,243744,Stanford University,1,Main Campus,17824,0,3,0
+2003,117140,University of La Verne,1,MAIN CAMPUS,7471,0,0,0
+2003,121691,University of Redlands,1,Main Campus,4366,0,0,0
+2003,122436,University of San Diego,1,UNIVERSITY OF SAN DIEGO,7395,0,0,0
+2003,122612,University of San Francisco,1,Hilltop Campus (San Francisco),8159,0,1,0
+2003,123961,University of Southern California,1,University Park Campus,31606,1,1,0
+2003,120883,University of the Pacific,1,Main Campus,6121,0,0,0
+2003,125763,Whittier College,1,Main Campus,2275,0,0,0
+2004,109785,Azusa Pacific University,1,Azusa (main campus),8162,0,0,0
+2004,110097,Biola University,1,Main Campus,5362,0,0,0
+2004,262086,Brandman University,1,Main Campus & Administration - Irvine,6033,0,0,0
+2004,110361,California Baptist University,1,Main Campus,2905,0,0,0
+2004,110404,California Institute of Technology,1,Main Campus,2171,0,0,0
+2004,111948,Chapman University,1,Orange Campus,5554,0,0,0
+2004,114813,Fresno Pacific University,1,FRESNO PACIFIC UNIVERSITY,2019,0,0,0
+2004,117946,Loyola Marymount University,1,Westchester Campus,8770,0,0,0
+2004,119605,National University,1,NATIONAL UNIVERSITY,25684,0,0,0
+2004,120254,Occidental College,1,Occidental College,1887,0,0,0
+2004,121309,Point Loma Nazarene University,1,Point Loma Nazerene University Main Campus,3209,0,0,0
+2004,122931,Santa Clara University,1,Main Campus - Santa Clara University,7908,0,1,0
+2004,243744,Stanford University,1,Main Campus,18836,0,4,3
+2004,117140,University of La Verne,1,MAIN CAMPUS,8140,0,0,0
+2004,121691,University of Redlands,1,Main Campus,4519,0,0,0
+2004,122436,University of San Diego,1,UNIVERSITY OF SAN DIEGO,7599,0,0,0
+2004,122612,University of San Francisco,1,Hilltop Campus (San Francisco),8271,0,0,0
+2004,123961,University of Southern California,1,University Park Campus,32160,2,5,0
+2004,120883,University of the Pacific,1,Main Campus,6268,0,0,0
+2004,123651,Vanguard University of Southern California,9,Hyundai Motor America,2195,0,0,0
+2004,125763,Whittier College,1,Main Campus,2458,0,0,0
+2005,109785,Azusa Pacific University,1,Azusa (main campus),8327,0,0,0
+2005,110097,Biola University,1,Main Campus,5658,0,0,0
+2005,262086,Brandman University,1,Main Campus & Administration - Irvine,6052,0,0,0
+2005,110404,California Institute of Technology,1,Main Campus,2169,0,0,0
+2005,110413,California Lutheran University,1,Main Campus,3212,0,0,0
+2005,111948,Chapman University,1,Orange Campus,5732,0,0,0
+2005,114813,Fresno Pacific University,1,FRESNO PACIFIC UNIVERSITY,1996,0,0,1
+2005,117636,Loma Linda University,1,Loma Linda University,3854,0,0,0
+2005,117946,Loyola Marymount University,1,Westchester Campus,8865,0,0,0
+2005,119605,National University,1,NATIONAL UNIVERSITY,26035,0,0,0
+2005,120254,Occidental College,1,Occidental College,1839,0,0,0
+2005,121309,Point Loma Nazarene University,1,Point Loma Nazerene University Main Campus,3445,0,0,0
+2005,122931,Santa Clara University,1,Main Campus - Santa Clara University,8097,0,0,0
+2005,243744,Stanford University,1,Main Campus,19042,0,4,6
+2005,117140,University of La Verne,1,MAIN CAMPUS,8148,0,0,0
+2005,121691,University of Redlands,1,Main Campus,4269,0,0,0
+2005,122436,University of San Diego,1,UNIVERSITY OF SAN DIEGO,7548,0,0,0
+2005,122612,University of San Francisco,1,Hilltop Campus (San Francisco),8457,0,0,0
+2005,123961,University of Southern California,1,University Park Campus,32836,1,7,2
+2005,120883,University of the Pacific,1,Main Campus,6196,0,0,0
+2005,123651,Vanguard University of Southern California,1,Vanguard University of Southern California,2249,0,0,0
+2005,123651,Vanguard University of Southern California,2,Vanguard University - CINCEL,2249,0,0,0
+2005,125763,Whittier College,1,Main Campus,2299,0,0,0
+2006,109785,Azusa Pacific University,1,Azusa (main campus),8128,1,1,0
+2006,110097,Biola University,1,Main Campus,5745,0,0,0
+2006,262086,Brandman University,1,Main Campus & Administration - Irvine,6079,0,0,0
+2006,110404,California Institute of Technology,1,Main Campus,2086,0,0,0
+2006,111948,Chapman University,1,Orange Campus,5908,0,0,0
+2006,117627,La Sierra University,1,La Sierra University,1896,0,0,0
+2006,117636,Loma Linda University,1,Loma Linda University,3881,0,0,0
+2006,117946,Loyola Marymount University,1,Westchester Campus,8972,0,0,0
+2006,119605,National University,1,NATIONAL UNIVERSITY,25844,0,0,0
+2006,120254,Occidental College,1,Occidental College,1825,0,0,0
+2006,121309,Point Loma Nazarene University,1,Point Loma Nazerene University Main Campus,3532,0,0,0
+2006,122931,Santa Clara University,1,Main Campus - Santa Clara University,7952,0,0,0
+2006,243744,Stanford University,1,Main Campus,17747,0,7,0
+2006,117140,University of La Verne,1,MAIN CAMPUS,7482,0,0,0
+2006,121691,University of Redlands,1,Main Campus,4080,0,0,0
+2006,122436,University of San Diego,1,UNIVERSITY OF SAN DIEGO,7483,0,0,0
+2006,122612,University of San Francisco,1,Hilltop Campus (San Francisco),8549,0,0,0
+2006,123961,University of Southern California,1,University Park Campus,33389,1,7,4
+2006,120883,University of the Pacific,1,Main Campus,6251,0,0,0
+2006,123651,Vanguard University of Southern California,1,Vanguard University of Southern California,2219,0,0,0
+2006,123651,Vanguard University of Southern California,2,Vanguard University - CINCEL,2219,0,0,0
+2006,112525,Western University of Health Sciences,1,Western University of Health Sciences,2130,0,0,0
+2006,125763,Whittier College,1,Main Campus,2054,0,0,0
+2007,109785,Azusa Pacific University,1,Azusa (main campus),8084,0,0,0
+2007,110097,Biola University,1,Main Campus,5830,0,0,0
+2007,262086,Brandman University,1,Main Campus & Administration - Irvine,6328,0,0,0
+2007,110404,California Institute of Technology,1,Main Campus,2133,0,0,0
+2007,111948,Chapman University,1,Orange Campus,6022,0,0,0
+2007,117627,La Sierra University,1,La Sierra University,1749,0,0,0
+2007,117636,Loma Linda University,1,Loma Linda University,4022,1,0,3
+2007,117946,Loyola Marymount University,1,Westchester Campus,8977,0,3,0
+2007,119605,National University,1,NATIONAL UNIVERSITY,26363,0,0,0
+2007,120254,Occidental College,1,Occidental College,1877,0,0,0
+2007,121309,Point Loma Nazarene University,1,Point Loma Nazerene University Main Campus,3480,0,0,0
+2007,122931,Santa Clara University,1,Main Campus - Santa Clara University,8685,0,0,0
+2007,243744,Stanford University,1,Main Campus,19782,0,0,0
+2007,117140,University of La Verne,1,MAIN CAMPUS,7370,0,0,0
+2007,121691,University of Redlands,1,Main Campus,4188,0,0,0
+2007,122436,University of San Diego,1,UNIVERSITY OF SAN DIEGO,7504,0,0,0
+2007,122612,University of San Francisco,1,Hilltop Campus (San Francisco),8714,0,0,0
+2007,123961,University of Southern California,1,University Park Campus,33408,2,8,8
+2007,120883,University of the Pacific,1,Main Campus,6235,0,0,0
+2007,112525,Western University of Health Sciences,1,Western University of Health Sciences,2254,2,5,2
+2007,125763,Whittier College,1,Main Campus,1985,0,0,0
+2008,109785,Azusa Pacific University,1,Azusa (main campus),8548,0,0,0
+2008,110097,Biola University,1,Main Campus,5893,0,0,0
+2008,262086,Brandman University,1,Main Campus & Administration - Irvine,6067,0,0,0
+2008,110404,California Institute of Technology,1,Main Campus,2126,0,0,0
+2008,111948,Chapman University,1,Orange Campus,6128,0,0,0
+2008,112075,Concordia University-Irvine,1,Main Campus,2543,0,2,0
+2008,114813,Fresno Pacific University,1,FRESNO PACIFIC UNIVERSITY,2436,0,0,0
+2008,117627,La Sierra University,1,La Sierra University,1899,0,0,0
+2008,117636,Loma Linda University,1,Loma Linda University,4040,0,0,0
+2008,117946,Loyola Marymount University,1,Westchester Campus,9011,0,0,0
+2008,119605,National University,1,NATIONAL UNIVERSITY,15521,0,0,0
+2008,121309,Point Loma Nazarene University,1,Point Loma Nazerene University Main Campus,3390,0,0,0
+2008,122931,Santa Clara University,1,Main Campus - Santa Clara University,8758,0,0,0
+2008,243744,Stanford University,1,Main Campus,17833,0,1,0
+2008,117140,University of La Verne,1,MAIN CAMPUS,7511,0,0,0
+2008,121691,University of Redlands,1,Main Campus,4317,0,0,0
+2008,122436,University of San Diego,1,UNIVERSITY OF SAN DIEGO,7832,0,0,0
+2008,122612,University of San Francisco,1,Hilltop Campus (San Francisco),8750,0,0,0
+2008,123961,University of Southern California,1,University Park Campus,33747,0,7,0
+2008,120883,University of the Pacific,1,Main Campus,6251,0,0,0
+2008,112525,Western University of Health Sciences,1,Western University of Health Sciences,2393,0,0,0
+2008,125763,Whittier College,1,Main Campus,2047,0,0,0
+2009,109785,Azusa Pacific University,1,Azusa (main campus),8539,0,0,0
+2009,110097,Biola University,1,Main Campus,5942,0,0,0
+2009,262086,Brandman University,1,Main Campus & Administration - Irvine,6386,0,0,0
+2009,110404,California Institute of Technology,1,Main Campus,2130,0,0,0
+2009,111948,Chapman University,1,Orange Campus,6398,0,0,2
+2009,112075,Concordia University-Irvine,1,Main Campus,2564,2,0,0
+2009,114813,Fresno Pacific University,1,FRESNO PACIFIC UNIVERSITY,2668,0,0,0
+2009,115083,Golden Gate University-San Francisco,1,San Francisco,3586,0,0,0
+2009,117627,La Sierra University,1,La Sierra University,1857,0,0,0
+2009,117636,Loma Linda University,1,Loma Linda University,4114,0,0,2
+2009,117946,Loyola Marymount University,1,Westchester Campus,9015,0,0,0
+2009,119605,National University,1,NATIONAL UNIVERSITY,15553,0,0,0
+2009,121309,Point Loma Nazarene University,1,Point Loma Nazerene University Main Campus,3487,0,0,0
+2009,122931,Santa Clara University,1,Main Campus - Santa Clara University,8846,0,0,0
+2009,243744,Stanford University,1,Main Campus,18498,0,0,0
+2009,117140,University of La Verne,1,MAIN CAMPUS,7482,0,0,0
+2009,121691,University of Redlands,1,Main Campus,4431,0,0,1
+2009,122436,University of San Diego,1,UNIVERSITY OF SAN DIEGO,7868,0,0,0
+2009,122612,University of San Francisco,1,Hilltop Campus (San Francisco),9008,0,0,0
+2009,123961,University of Southern California,1,University Park Campus,34824,0,7,27
+2009,120883,University of the Pacific,1,Main Campus,6401,0,0,0
+2009,123651,Vanguard University of Southern California,1,Vanguard University of Southern California,1923,0,0,0
+2009,112525,Western University of Health Sciences,1,Western University of Health Sciences,2663,0,0,0
+2009,125763,Whittier College,1,Main Campus,2093,0,0,0
+2010,109785,Azusa Pacific University,1,Azusa (main campus),9258,0,0,0
+2010,110097,Biola University,1,Main Campus,6113,0,0,0
+2010,262086,Brandman University,1,Main Campus & Administration - Irvine,6849,0,0,0
+2010,110404,California Institute of Technology,1,Main Campus,2175,0,0,0
+2010,111948,Chapman University,1,Orange Campus,6881,0,0,0
+2010,112251,Claremont Graduate University,1,Main Campus,2265,0,0,0
+2010,112075,Concordia University-Irvine,1,Main Campus,2927,0,5,2
+2010,114813,Fresno Pacific University,1,FRESNO PACIFIC UNIVERSITY,3356,0,0,0
+2010,115083,Golden Gate University-San Francisco,1,San Francisco,3778,0,0,0
+2010,117627,La Sierra University,1,La Sierra University,2096,0,0,0
+2010,117636,Loma Linda University,1,Loma Linda University,4266,0,0,0
+2010,117946,Loyola Marymount University,1,Westchester Campus,9223,0,0,0
+2010,119605,National University,1,NATIONAL UNIVERSITY,16249,0,0,0
+2010,120254,Occidental College,1,Occidental College,2102,0,0,0
+2010,121150,Pepperdine University,1,Malibu - Main Campus,7604,0,0,0
+2010,121309,Point Loma Nazarene University,1,Point Loma Nazerene University Main Campus,3561,0,0,0
+2010,123554,Saint Mary's College of California,1,Main Campus,3917,0,0,0
+2010,122931,Santa Clara University,1,Main Campus - Santa Clara University,8687,0,0,0
+2010,243744,Stanford University,1,Main Campus,19535,0,0,0
+2010,117140,University of La Verne,1,MAIN CAMPUS,8032,0,0,0
+2010,121691,University of Redlands,1,Main Campus,4431,0,0,0
+2010,122436,University of San Diego,1,UNIVERSITY OF SAN DIEGO,8201,0,0,0
+2010,122612,University of San Francisco,1,Hilltop Campus (San Francisco),9557,0,0,0
+2010,123961,University of Southern California,1,University Park Campus,36896,0,3,0
+2010,120883,University of the Pacific,1,Main Campus,6717,0,0,0
+2010,123651,Vanguard University of Southern California,1,Vanguard University of Southern California,2055,0,0,0
+2010,112525,Western University of Health Sciences,1,Western University of Health Sciences,2917,0,0,0
+2010,125763,Whittier College,1,Main Campus,2288,0,0,0
+2011,109785,Azusa Pacific University,1,Azusa (main campus),9929,0,0,0
+2011,110097,Biola University,1,Main Campus,6251,0,0,0
+2011,110361,California Baptist University,1,Main Campus,5413,1,1,0
+2011,110404,California Institute of Technology,1,Main Campus,2231,0,0,0
+2011,111948,Chapman University,1,Orange Campus,7155,0,0,2
+2011,112075,Concordia University-Irvine,1,Main Campus,3251,0,0,0
+2011,114813,Fresno Pacific University,1,FRESNO PACIFIC UNIVERSITY,3568,0,0,0
+2011,115083,Golden Gate University-San Francisco,1,San Francisco,3561,0,0,0
+2011,117627,La Sierra University,1,La Sierra University,2199,0,0,0
+2011,117636,Loma Linda University,1,Loma Linda University,4455,0,0,0
+2011,117946,Loyola Marymount University,1,Westchester Campus,9352,0,0,0
+2011,119173,Mount Saint Mary's University,1,Chalon,2943,0,0,0
+2011,119605,National University,1,NATIONAL UNIVERSITY,16671,0,0,0
+2011,120254,Occidental College,1,Occidental College,2132,0,0,0
+2011,121309,Point Loma Nazarene University,1,Point Loma Nazerene University Main Campus,3251,0,0,0
+2011,123554,Saint Mary's College of California,1,Main Campus,4099,0,0,0
+2011,122931,Santa Clara University,1,Main Campus - Santa Clara University,8800,0,0,0
+2011,243744,Stanford University,1,Main Campus,19945,0,2,0
+2011,121691,University of Redlands,1,Main Campus,4769,0,0,0
+2011,122436,University of San Diego,1,UNIVERSITY OF SAN DIEGO,8317,0,0,0
+2011,123961,University of Southern California,1,University Park Campus,38010,1,4,2
+2011,120883,University of the Pacific,1,Main Campus,6710,0,0,0
+2011,123651,Vanguard University of Southern California,1,Vanguard University of Southern California,2197,0,0,0
+2011,112525,Western University of Health Sciences,1,Western University of Health Sciences,3247,0,0,0
+2011,125763,Whittier College,1,Main Campus,2417,0,0,0
+2012,109785,Azusa Pacific University,1,Azusa (main campus),10184,0,0,0
+2012,110097,Biola University,1,Main Campus,6303,0,0,0
+2012,110361,California Baptist University,1,Main Campus,6031,0,0,0
+2012,110404,California Institute of Technology,1,Main Campus,2243,0,0,0
+2012,111948,Chapman University,1,Orange Campus,7570,0,0,0
+2012,112075,Concordia University-Irvine,1,Main Campus,3519,0,0,0
+2012,114813,Fresno Pacific University,1,FRESNO PACIFIC UNIVERSITY,3353,0,0,0
+2012,114840,Fuller Theological Seminary in California,1,Fuller Pasadena,2828,0,0,0
+2012,115083,Golden Gate University-San Francisco,1,San Francisco,3493,0,0,0
+2012,117627,La Sierra University,1,La Sierra University,2393,0,0,0
+2012,117636,Loma Linda University,1,Loma Linda University,4612,0,0,0
+2012,117946,Loyola Marymount University,1,Westchester Campus,9492,0,0,0
+2012,119173,Mount Saint Mary's University,1,Chalon,3146,0,0,0
+2012,119605,National University,1,NATIONAL UNIVERSITY,17898,0,0,0
+2012,120254,Occidental College,1,Occidental College,2178,0,0,0
+2012,121309,Point Loma Nazarene University,1,Point Loma Nazerene University Main Campus,3192,0,0,0
+2012,123554,Saint Mary's College of California,1,Main Campus,4228,0,0,0
+2012,122931,Santa Clara University,1,Main Campus - Santa Clara University,8519,0,0,0
+2012,243744,Stanford University,1,Main Campus,18519,0,0,0
+2012,121691,University of Redlands,1,Main Campus,4956,0,0,0
+2012,122436,University of San Diego,1,UNIVERSITY OF SAN DIEGO,8105,0,0,0
+2012,122612,University of San Francisco,1,Hilltop Campus (San Francisco),10040,0,0,0
+2012,123961,University of Southern California,1,University Park Campus,39958,1,1,1
+2012,120883,University of the Pacific,1,Main Campus,6652,0,0,0
+2012,123651,Vanguard University of Southern California,1,Vanguard University of Southern California,2309,0,0,0
+2012,112525,Western University of Health Sciences,1,Western University of Health Sciences,3572,0,0,0
+2012,125763,Whittier College,1,Main Campus,2369,0,0,0
+2013,109651,Art Center College of Design,1,Hillside Campus,1985,0,0,0
+2013,109785,Azusa Pacific University,1,Azusa (main campus),10755,0,0,0
+2013,110097,Biola University,1,Main Campus,6301,0,2,0
+2013,110361,California Baptist University,1,Main Campus,7144,0,0,0
+2013,110404,California Institute of Technology,1,Main Campus,2181,0,0,0
+2013,110413,California Lutheran University,1,Main Campus,4282,0,0,0
+2013,111948,Chapman University,1,Orange Campus,7892,0,0,0
+2013,112251,Claremont Graduate University,1,Main Campus,2204,0,0,0
+2013,112075,Concordia University-Irvine,1,Main Campus,4046,0,0,0
+2013,114813,Fresno Pacific University,1,FRESNO PACIFIC UNIVERSITY,3393,0,0,0
+2013,115083,Golden Gate University-San Francisco,1,San Francisco,3227,0,0,0
+2013,117627,La Sierra University,1,La Sierra University,2440,0,0,0
+2013,117636,Loma Linda University,1,Loma Linda University,4693,0,0,0
+2013,117946,Loyola Marymount University,1,Westchester Campus,9661,0,0,0
+2013,119173,Mount Saint Mary's University,1,Chalon,3274,0,0,0
+2013,119605,National University,1,NATIONAL UNIVERSITY,18207,0,0,0
+2013,120254,Occidental College,1,Occidental College,2128,0,0,0
+2013,121150,Pepperdine University,1,Malibu - Main Campus,7315,0,0,0
+2013,121309,Point Loma Nazarene University,1,Point Loma Nazerene University Main Campus,3359,0,0,0
+2013,123554,Saint Mary's College of California,1,Main Campus,4257,0,0,0
+2013,122931,Santa Clara University,1,Main Campus - Santa Clara University,8770,0,0,0
+2013,243744,Stanford University,1,Main Campus,18346,0,2,0
+2013,122612,University of San Francisco,1,Hilltop Campus (San Francisco),10112,0,0,0
+2013,123961,University of Southern California,1,University Park Campus,41368,0,4,0
+2013,120883,University of the Pacific,1,Main Campus,6421,0,0,0
+2013,112525,Western University of Health Sciences,1,Western University of Health Sciences,3748,0,0,0
+2013,125763,Whittier College,1,Main Campus,2339,0,3,1
+2014,109785,Azusa Pacific University,1,Azusa (main campus),9972,0,3,0
+2014,110097,Biola University,1,Main Campus,6358,2,3,2
+2014,110361,California Baptist University,1,Main Campus,7957,0,0,0
+2014,110404,California Institute of Technology,1,Main Campus,2209,0,0,0
+2014,110413,California Lutheran University,1,Main Campus,4160,0,0,0
+2014,111948,Chapman University,1,Orange Campus,8132,0,0,0
+2014,112251,Claremont Graduate University,1,Main Campus,2160,0,0,0
+2014,112075,Concordia University-Irvine,1,Main Campus,4311,0,0,0
+2014,114813,Fresno Pacific University,1,FRESNO PACIFIC UNIVERSITY,3458,0,0,0
+2014,114840,Fuller Theological Seminary in California,1,Fuller Pasadena,2550,0,0,0
+2014,115083,Golden Gate University-San Francisco,1,San Francisco,2909,0,0,0
+2014,117627,La Sierra University,1,La Sierra University,2510,0,1,0
+2014,117636,Loma Linda University,1,Loma Linda University,4600,0,2,0
+2014,117946,Loyola Marymount University,1,Westchester Campus,9515,0,0,0
+2014,119173,Mount Saint Mary's University,1,Chalon,3292,0,0,0
+2014,120254,Occidental College,1,Occidental College,2040,0,0,0
+2014,121150,Pepperdine University,1,Malibu - Main Campus,7417,0,0,0
+2014,121309,Point Loma Nazarene University,1,Point Loma Nazerene University Main Campus,3374,0,0,0
+2014,123554,Saint Mary's College of California,1,Main Campus,4112,0,0,0
+2014,122931,Santa Clara University,1,Main Campus - Santa Clara University,9015,2,1,0
+2014,243744,Stanford University,1,Main Campus,16963,0,0,0
+2014,117140,University of La Verne,1,MAIN CAMPUS,8517,0,0,0
+2014,122612,University of San Francisco,1,Hilltop Campus (San Francisco),10689,0,0,0
+2014,123961,University of Southern California,1,University Park Campus,42453,0,4,1
+2014,120883,University of the Pacific,1,Main Campus,6304,0,0,0
+2014,123651,Vanguard University of Southern California,1,Vanguard University of Southern California,2255,0,0,0
+2014,112525,Western University of Health Sciences,1,Western University of Health Sciences,3842,0,0,0
+2014,125763,Whittier College,1,Main Campus,2259,0,0,1
+2015,109785,Azusa Pacific University,1,Azusa (main campus),9975,0,0,0
+2015,110097,Biola University,1,Main Campus,6227,0,5,2
+2015,262086,Brandman University,1,Main Campus & Administration - Irvine,8004,0,0,0
+2015,110361,California Baptist University,1,Main Campus,8541,0,0,0
+2015,110404,California Institute of Technology,1,Main Campus,2255,0,0,0
+2015,110413,California Lutheran University,1,Main Campus,4126,0,1,0
+2015,111948,Chapman University,1,Orange Campus,8305,0,0,0
+2015,112251,Claremont Graduate University,1,Main Campus,2136,0,0,0
+2015,112075,Concordia University-Irvine,1,Main Campus,4505,0,0,0
+2015,114813,Fresno Pacific University,1,FRESNO PACIFIC UNIVERSITY,3342,0,0,0
+2015,114840,Fuller Theological Seminary in California,1,Fuller Pasadena,2532,0,0,0
+2015,115083,Golden Gate University-San Francisco,1,San Francisco,2735,0,0,0
+2015,117627,La Sierra University,1,La Sierra University,2476,0,0,0
+2015,117636,Loma Linda University,1,Loma Linda University,4490,0,0,0
+2015,117946,Loyola Marymount University,1,Westchester Campus,9392,0,0,0
+2015,119173,Mount Saint Mary's University,1,Chalon,3431,0,0,0
+2015,120254,Occidental College,1,Occidental College,2023,0,0,0
+2015,121150,Pepperdine University,1,Malibu - Main Campus,7632,0,0,0
+2015,121309,Point Loma Nazarene University,1,Point Loma Nazerene University Main Campus,3663,0,0,0
+2015,123554,Saint Mary's College of California,1,Main Campus,4030,0,0,0
+2015,122931,Santa Clara University,1,Main Campus - Santa Clara University,8680,0,0,0
+2015,243744,Stanford University,1,Main Campus,16980,0,1,0
+2015,455664,The Chicago School of Professional Psychology at Los Angeles,1,Main Campus,2174,0,0,0
+2015,117140,University of La Verne,1,MAIN CAMPUS,8334,0,0,0
+2015,122436,University of San Diego,1,UNIVERSITY OF SAN DIEGO,8251,0,0,0
+2015,122612,University of San Francisco,1,Hilltop Campus (San Francisco),10797,0,0,0
+2015,123961,University of Southern California,1,University Park Campus,43401,1,8,1
+2015,120883,University of the Pacific,1,Main Campus,6281,0,0,0
+2015,123651,Vanguard University of Southern California,1,Vanguard University of Southern California,2184,0,1,0
+2015,112525,Western University of Health Sciences,1,Western University of Health Sciences,3876,0,0,0
+2015,125763,Whittier College,1,Main Campus,2187,0,2,0
