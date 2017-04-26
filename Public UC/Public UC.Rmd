@@ -21,33 +21,49 @@ includeSourceDocuments()
 ```{r}
 Public_UC_Arrests_Noncampus <- read.csv("Public_UC_Arrests_Noncampus.csv")
 
-Public_UC_Arrests_On_campus <- read.csv("Public_UC_Arrests_On_campus")
+Public_UC_Arrests_On_campus <- read.csv("Public_UC_Arrests_On_campus.csv")
 
-Public_UC_Arrests_On_campus_Student_Housing_Facilities <- read.csv("Public_UC_Arrests_On_campus_Student_Housing_Facilities")
+Public_UC_Arrests_On_campus_Student_Housing_Facilities <- read.csv("Public_UC_Arrests_On_campus_Student_Housing_Facilities.csv")
 
-Public_UC_Criminal_Offenses_Noncampus <- read.csv("Public_UC_Criminal_Offenses_Noncampus")
+Public_UC_Criminal_Offenses_Noncampus <- read.csv("Public_UC_Criminal_Offenses_Noncampus.csv")
 
-Public_UC_Criminal_Offenses_On_campus <- read.csv("Public_UC_Criminal_Offenses_On_campus")
+Public_UC_Criminal_Offenses_On_campus <- read.csv("Public_UC_Criminal_Offenses_On_campus.csv")
 
-Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities <- read.csv("Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities")
+Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities <- read.csv("Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities.csv")
 
-Public_UC_Disciplinary_Actions_Noncampus <- read.csv("Public_UC_Disciplinary_Actions_Noncampus")
+Public_UC_Disciplinary_Actions_Noncampus <- read.csv("Public_UC_Disciplinary_Actions_Noncampus.csv")
 
-Public_UC_Disciplinary_Actions_On_campus <- read.csv("Public_UC_Disciplinary_Actions_On_campus")
+Public_UC_Disciplinary_Actions_On_campus <- read.csv("Public_UC_Disciplinary_Actions_On_campus.csv")
 
-Public_UC_Disciplinary_Actions_Student_Housing_Facilities <- read.csv("Public_UC_Disciplinary_Actions_Student_Housing_Facilities")
+Public_UC_Disciplinary_Actions_Student_Housing_Facilities <- read.csv("Public_UC_Disciplinary_Actions_Student_Housing_Facilities.csv")
 
-Public_UC_VAWA_Offenses_Noncampus <- read.csv("Public_UC_VAWA_Offenses_Noncampus")
+Public_UC_VAWA_Offenses_Noncampus <- read.csv("Public_UC_VAWA_Offenses_Noncampus.csv")
 
 Public_UC_VAWA_Offenses_On_campus <- read.csv("Public_UC_VAWA_Offenses_On_campus.csv")
 
 Public_UC_VAWA_Offenses_On_campus_Student_Housing_Facilities <- read.csv("Public_UC_VAWA_Offenses_On_campus_Student_Housing_Facilities.csv")
 ```
 
+
 ```{r}
-Public_UC_Criminal_Offenses_Noncampus %>% filter(`Survey year`, `Institution name`, `Sex offenses - Forcible`, Robbery, `Aggravated assault`, Burglary, `Motor vehicle theft`, Arson)
+#Delete columns of crimes we do not want to observe from the criminal offenses data
+Public_UC_Criminal_Offenses_Noncampus <- Public_UC_Criminal_Offenses_Noncampus %>%
+  subset(select = c(`Survey.year`, `Institution.name`, `Sex.offenses...Forcible`, Robbery, `Aggravated.assault`, Burglary, `Motor.vehicle.theft`, Arson))
 
-Public_UC_Criminal_Offenses_On_campus %>% filter(`Survey year`, `Institution name`, `Sex offenses - Forcible`, Robbery, `Aggravated assault`, Burglary, `Motor vehicle theft`, Arson)
+Public_UC_Criminal_Offenses_On_campus <- Public_UC_Criminal_Offenses_On_campus %>%
+  subset(select = c(`Survey.year`, `Institution.name`, `Sex.offenses...Forcible`, Robbery, `Aggravated.assault`, Burglary, `Motor.vehicle.theft`, Arson))
 
-Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities %>% filter(`Survey year`, `Institution name`, `Sex offenses - Forcible`, Robbery, `Aggravated assault`, Burglary, `Motor vehicle theft`, Arson)
+Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities <- Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities %>%
+  subset(select = c(`Survey.year`, `Institution.name`, `Sex.offenses...Forcible`, Robbery, `Aggravated.assault`, Burglary, `Motor.vehicle.theft`, Arson))
 ```
+
+```{r}
+head(Public_UC_Arrests_Noncampus)
+head(Public_UC_Arrests_On_campus)
+```
+
+```{r}
+#Trying to figure out how to merge the data tables
+Public_UC_Arrests <- merge(Public_UC_Arrests_Noncampus, Public_UC_Arrests_On_campus, by = c("Survey.year", "Institution.name"))
+```
+
