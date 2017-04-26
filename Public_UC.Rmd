@@ -44,4 +44,15 @@ Public_UC_VAWA_Offenses_Campus <- read.csv("Public_UC_VAWA_Offenses_On_campus.cs
 
 Public_UC_VAWA_Offenses_On_campus_Student_Housing_Facilities <- read.csv("Public_UC_VAWA_Offenses_On_campus_Student_Housing_Facilities.csv")
 ```
+```{r}
+Public_UC_Criminal_Offenses_Campus_short <- Public_UC_Criminal_Offenses_Campus %>% filter(Survey.year, Institution.name, Unitid, Campus.Name, Institution.Size, Sex.offenses...Forcible, Robbery, Aggravated.assault, Burglary, Motor.vehicle.theft, Arson) %>% unite(Sex.offenses...Forcible, Robbery, Aggravated.assault, Burglary, Motor.vehicle.theft, Arson, sep="", remove=FALSE)
+
+str(Public_UC_Criminal_Offenses_Campus_short)
+ggplot(Public_UC_Criminal_Offenses_Campus_short, aes(x,y))
+ggplot(Public_UC_Criminal_Offenses_Campus_short, aes(x = Survey.year, y = Unitid, group = Unitid)) + geom_line(aes(color = Crime))
+
+#Public_UC_Criminal_Offenses_Noncampus_short <- Public_UC_Criminal_Offenses_Noncampus %>% filter(Survey.year, Institution.name, Unitid, Campus.Name, Institution.Size, Sex.offenses...Forcible, Robbery, Aggravated.assault, Burglary, Motor.vehicle.theft, Arson)
+
+#Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities_short <- Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities %>% filter(Survey.year, Institution.name, Unitid, Campus.Name, Institution.Size, Sex.offenses...Forcible, Robbery, Aggravated.assault, Burglary, Motor.vehicle.theft, Arson)
+```
 
