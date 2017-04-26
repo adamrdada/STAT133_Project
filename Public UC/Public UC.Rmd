@@ -43,7 +43,28 @@ Public_UC_VAWA_Offenses_On_campus <- read.csv("Public_UC_VAWA_Offenses_On_campus
 
 Public_UC_VAWA_Offenses_On_campus_Student_Housing_Facilities <- read.csv("Public_UC_VAWA_Offenses_On_campus_Student_Housing_Facilities.csv")
 ```
+```{r}
+## Check your .csv file headings
+## If the headings have a space, use the following code
+## If the headings have a dot, leave this chunk as a comment
+ Public_UC_Arrests_Noncampus %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Institution.size=`Institution Size`, Illegal.weapons.possession=`Illegal weapons possession`, Drug.law.violations=`Drug law violations`)
 
+ Public_UC_Arrests_On_campus %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Institution.size=`Institution Size`, Illegal.weapons.possession=`Illegal weapons possession`, Drug.law.violations=`Drug law violations`)
+
+ Public_UC_Arrests_On_campus_Student_Housing_Facilities %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Institution.size=`Institution Size`, Illegal.weapons.possession=`Illegal weapons possession`, Drug.law.violations=`Drug law violations`)
+
+ Public_UC_Criminal_Offenses_Noncampus %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Sex.offenses...Forcible=`Sex offenses - Forcible`, Aggravated.assault=`Aggravated assault`, Motor.vehicle.theft=`Motor vehicle theft`)
+
+ Public_UC_Criminal_Offenses_On_campus %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Sex.offenses...Forcible=`Sex offenses - Forcible`, Aggravated.assault=`Aggravated assault`, Motor.vehicle.theft=`Motor vehicle theft`)
+
+ Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Sex.offenses...Forcible=`Sex offenses - Forcible`, Aggravated.assault=`Aggravated assault`, Motor.vehicle.theft=`Motor vehicle theft`)
+
+ Public_UC_VAWA_Offenses_Noncampus %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Institution.size=`Institution Size`, Domestic.violence=`Domestic violence`, Dating.violence=`Dating violence`)
+
+ Public_UC_VAWA_Offenses_On_campus %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Institution.size=`Institution Size`, Domestic.violence=`Domestic violence`, Dating.violence=`Dating violence`)
+
+ Public_UC_VAWA_Offenses_On_campus_Student_Housing_Facilities %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Institution.size=`Institution Size`, Domestic.violence=`Domestic violence`, Dating.violence=`Dating violence`)
+```
 ```{r}
 #Delete columns of crimes we do not want to observe from the criminal offenses data
 Public_UC_Criminal_Offenses_Noncampus <- Public_UC_Criminal_Offenses_Noncampus %>%
