@@ -85,8 +85,37 @@ Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities <- Public_UC_Cr
 
 ```{r}
 #Merged datatable
-Public_UC_Arrests <- data.frame(year=Public_UC_Arrests_On_campus$Survey.year, name=Public_UC_Arrests_On_campus$Institution.name, size=Public_UC_Arrests_On_campus$Institution.Size, weapon_possession = (Public_UC_Arrests_On_campus$Illegal.weapons.possession + Public_UC_Arrests_On_campus_Student_Housing_Facilities$Illegal.weapons.possession + Public_UC_Arrests_Noncampus$Illegal.weapons.possession)/Public_UC_Arrests_On_campus$Institution.Size, drug_violations = (Public_UC_Arrests_On_campus$Drug.law.violations + Public_UC_Arrests_On_campus_Student_Housing_Facilities$Illegal.weapons.possession + Public_UC_Arrests_Noncampus$Illegal.weapons.possession)/Public_UC_Arrests_On_campus$Institution.Size, liquor_violations = (Public_UC_Arrests_On_campus$Liquor.law.violations + Public_UC_Arrests_On_campus_Student_Housing_Facilities$Liquor.law.violations + Public_UC_Arrests_Noncampus$Liquor.law.violations)/Public_UC_Arrests_On_campus$Institution.Size)
+Public_UC_Arrests <- data.frame(year=Public_UC_Arrests_On_campus$Survey.year, name=Public_UC_Arrests_On_campus$Institution.name, size=Public_UC_Arrests_On_campus$Institution.Size, weapon_arrest = (Public_UC_Arrests_On_campus$Illegal.weapons.possession + Public_UC_Arrests_On_campus_Student_Housing_Facilities$Illegal.weapons.possession + Public_UC_Arrests_Noncampus$Illegal.weapons.possession)/Public_UC_Arrests_On_campus$Institution.Size, drug_arrest = (Public_UC_Arrests_On_campus$Drug.law.violations + Public_UC_Arrests_On_campus_Student_Housing_Facilities$Illegal.weapons.possession + Public_UC_Arrests_Noncampus$Illegal.weapons.possession)/Public_UC_Arrests_On_campus$Institution.Size, liquor_arrest = (Public_UC_Arrests_On_campus$Liquor.law.violations + Public_UC_Arrests_On_campus_Student_Housing_Facilities$Liquor.law.violations + Public_UC_Arrests_Noncampus$Liquor.law.violations)/Public_UC_Arrests_On_campus$Institution.Size)
 
 head(Public_UC_Arrests)
 ```
 
+```{r}
+#Filter out UC Hastings due to reporting inconsitencies
+Public_UC_Arrests <- Public_UC_Arrests %>%
+  filter(name!="University of California-Hastings College of Law")
+```
+
+```{r}
+#Standardize all three disciplinary action data sets
+Public_UC_Disciplinary_Actions_On_campus <-
+  Public_UC_Disciplinary_Actions_On_campus %>%
+  filter(Institution.name!="University of California-Hastings College of Law")
+
+Public_UC_Disciplinary_Actions_Student_Housing_Facilities <-
+  Public_UC_Disciplinary_Actions_Student_Housing_Facilities %>%
+  filter(Institution.name!="University of California-Hastings College of Law") %>%
+  filter(Survey.year > 2007)
+
+Public_UC_Disciplinary_Actions_Noncampus <-
+  Public_UC_Disciplinary_Actions_Noncampus %>%
+  filter(Institution.name!="University of California-Hastings College of Law") %>%
+  filter(Survey.year > 2007)
+
+```
+
+```{r}
+Public_UC_Disciplinary_Actions <- data.frame(year=Public_UC_Disciplinary_Actions_On_campus$Survey.year, name=Public_UC_Disciplinary_Actions_On_campus$Institution.name, size=Public_UC_Disciplinary_Actions_On_campus$Institution.Size, weapon_discipline=(Public_UC_Disciplinary_Actions_On_campus$Illegal.weapons.possession+Public_UC_Disciplinary_Actions_Student_Housing_Facilities$Illegal.weapons.possession+Public_UC_Disciplinary_Actions_Noncampus$Illegal.weapons.possession)/Public_UC_Disciplinary_Actions_On_campus$Institution.Size, drug_discipline=(Public_UC_Disciplinary_Actions_On_campus$Drug.law.violations+Public_UC_Disciplinary_Actions_Student_Housing_Facilities$Drug.law.violations+Public_UC_Disciplinary_Actions_Noncampus$Liquor.law.violations)/Public_UC_Disciplinary_Actions_On_campus$Institution.Size, liquor_discipline=(Public_UC_Disciplinary_Actions_On_campus$Liquor.law.violations+Public_UC_Disciplinary_Actions_Student_Housing_Facilities$Liquor.law.violations+Public_UC_Disciplinary_Actions_Noncampus$Liquor.law.violations)/Public_UC_Disciplinary_Actions_On_campus$Institution.Size)
+
+Public_UC_Disciplinary_Actions
+```
