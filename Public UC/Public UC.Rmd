@@ -126,8 +126,6 @@ Public_UC_Disciplinary_Actions_Noncampus <-
 ```{r}
 #Merged disciplinary action
 Public_UC_Disciplinary_Actions <- data.frame(year=Public_UC_Disciplinary_Actions_On_campus$Survey.year, name=Public_UC_Disciplinary_Actions_On_campus$Institution.name, size=Public_UC_Disciplinary_Actions_On_campus$Institution.Size, weapon_discipline=(Public_UC_Disciplinary_Actions_On_campus$Illegal.weapons.possession+Public_UC_Disciplinary_Actions_Student_Housing_Facilities$Illegal.weapons.possession+Public_UC_Disciplinary_Actions_Noncampus$Illegal.weapons.possession)/Public_UC_Disciplinary_Actions_On_campus$Institution.Size, drug_discipline=(Public_UC_Disciplinary_Actions_On_campus$Drug.law.violations+Public_UC_Disciplinary_Actions_Student_Housing_Facilities$Drug.law.violations+Public_UC_Disciplinary_Actions_Noncampus$Liquor.law.violations)/Public_UC_Disciplinary_Actions_On_campus$Institution.Size, liquor_discipline=(Public_UC_Disciplinary_Actions_On_campus$Liquor.law.violations+Public_UC_Disciplinary_Actions_Student_Housing_Facilities$Liquor.law.violations+Public_UC_Disciplinary_Actions_Noncampus$Liquor.law.violations)/Public_UC_Disciplinary_Actions_On_campus$Institution.Size)
-
-head(Public_UC_Disciplinary_Actions)
 ```
 
 ```{r}
@@ -154,7 +152,7 @@ head(Public_UC_VAWA_Offenses)
 #All sexual crimes offenses combined into one total
 sexual_crimes <- data.frame(year=Public_UC_VAWA_Offenses_On_campus$Survey.year, name=Public_UC_VAWA_Offenses_On_campus$Institution.name, size=Public_UC_VAWA_Offenses_On_campus$Institution.Size, total=Public_UC_VAWA_Offenses$domestic_violence+Public_UC_VAWA_Offenses$dating_violence+Public_UC_VAWA_Offenses$stalking+Public_UC_VAWA_Offenses$rape+Public_UC_VAWA_Offenses$fondling+Public_UC_VAWA_Offenses$statutory_rape)
 
-head(Public_UC_VAWA_Offenses_Combined)
+head(sexual_crimes)
 ```
 
 ```{r}
