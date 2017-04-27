@@ -43,34 +43,37 @@ Public_UC_VAWA_Offenses_On_campus <- read.csv("Public_UC_VAWA_Offenses_On_campus
 
 Public_UC_VAWA_Offenses_On_campus_Student_Housing_Facilities <- read.csv("Public_UC_VAWA_Offenses_On_campus_Student_Housing_Facilities.csv")
 ```
+
 ```{r}
 ## Check your .csv file headings
 ## If the headings have a space, use the following code
 ## If the headings have a dot, leave this chunk as a comment
- Public_UC_Arrests_Noncampus %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Institution.size=`Institution Size`, Illegal.weapons.possession=`Illegal weapons possession`, Drug.law.violations=`Drug law violations`, Liquor.law.violations=`Liquor law violations`)
 
- Public_UC_Arrests_On_campus %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Institution.size=`Institution Size`, Illegal.weapons.possession=`Illegal weapons possession`, Drug.law.violations=`Drug law violations`, Liquor.law.violations=`Liquor law violations`)
+#Public_UC_Arrests_Noncampus %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Institution.size=`Institution Size`, Illegal.weapons.possession=`Illegal weapons possession`, Drug.law.violations=`Drug law violations`, Liquor.law.violations=`Liquor law violations`)
 
- Public_UC_Arrests_On_campus_Student_Housing_Facilities %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Institution.size=`Institution Size`, Illegal.weapons.possession=`Illegal weapons possession`, Drug.law.violations=`Drug law violations`, Liquor.law.violations=`Liquor law violations`)
+#Public_UC_Arrests_On_campus %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Institution.size=`Institution Size`, Illegal.weapons.possession=`Illegal weapons possession`, Drug.law.violations=`Drug law violations`, Liquor.law.violations=`Liquor law violations`)
 
- Public_UC_Criminal_Offenses_Noncampus %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Sex.offenses...Forcible=`Sex offenses - Forcible`, Aggravated.assault=`Aggravated assault`, Motor.vehicle.theft=`Motor vehicle theft`)
+#Public_UC_Arrests_On_campus_Student_Housing_Facilities %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Institution.size=`Institution Size`, Illegal.weapons.possession=`Illegal weapons possession`, Drug.law.violations=`Drug law violations`, Liquor.law.violations=`Liquor law violations`)
 
- Public_UC_Criminal_Offenses_On_campus %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Sex.offenses...Forcible=`Sex offenses - Forcible`, Aggravated.assault=`Aggravated assault`, Motor.vehicle.theft=`Motor vehicle theft`)
+#Public_UC_Criminal_Offenses_Noncampus %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Sex.offenses...Forcible=`Sex offenses - Forcible`, Aggravated.assault=`Aggravated assault`, Motor.vehicle.theft=`Motor vehicle theft`)
 
- Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Sex.offenses...Forcible=`Sex offenses - Forcible`, Aggravated.assault=`Aggravated assault`, Motor.vehicle.theft=`Motor vehicle theft`)
+#Public_UC_Criminal_Offenses_On_campus %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Sex.offenses...Forcible=`Sex offenses - Forcible`, Aggravated.assault=`Aggravated assault`, Motor.vehicle.theft=`Motor vehicle theft`)
 
- Public_UC_VAWA_Offenses_Noncampus %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Institution.size=`Institution Size`, Domestic.violence=`Domestic violence`, Dating.violence=`Dating violence`)
+#Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Sex.offenses...Forcible=`Sex offenses - Forcible`, Aggravated.assault=`Aggravated assault`, Motor.vehicle.theft=`Motor vehicle theft`)
 
- Public_UC_VAWA_Offenses_On_campus %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Institution.size=`Institution Size`, Domestic.violence=`Domestic violence`, Dating.violence=`Dating violence`)
+#Public_UC_VAWA_Offenses_Noncampus %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Institution.size=`Institution Size`, Domestic.violence=`Domestic violence`, Dating.violence=`Dating violence`)
 
- Public_UC_VAWA_Offenses_On_campus_Student_Housing_Facilities %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Institution.size=`Institution Size`, Domestic.violence=`Domestic violence`, Dating.violence=`Dating violence`)
+#Public_UC_VAWA_Offenses_On_campus %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Institution.size=`Institution Size`, Domestic.violence=`Domestic violence`, Dating.violence=`Dating violence`)
+
+#Public_UC_VAWA_Offenses_On_campus_Student_Housing_Facilities %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Institution.size=`Institution Size`, Domestic.violence=`Domestic violence`, Dating.violence=`Dating violence`)
  
- Public_UC_Disciplinary_Actions_Noncampus %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Institution.size=`Institution Size`, Illegal.weapons.possession=`Illegal weapons possession`, Drug.law.violations=`Drug law violations`, Liquor.law.violations=`Liquor law violations`)
+#Public_UC_Disciplinary_Actions_Noncampus %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Institution.size=`Institution Size`, Illegal.weapons.possession=`Illegal weapons possession`, Drug.law.violations=`Drug law violations`, Liquor.law.violations=`Liquor law violations`)
  
- Public_UC_Disciplinary_Actions_On_campus %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Institution.size=`Institution Size`, Illegal.weapons.possession=`Illegal weapons possession`, Drug.law.violations=`Drug law violations`, Liquor.law.violations=`Liquor law violations`)
+#Public_UC_Disciplinary_Actions_On_campus %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Institution.size=`Institution Size`, Illegal.weapons.possession=`Illegal weapons possession`, Drug.law.violations=`Drug law violations`, Liquor.law.violations=`Liquor law violations`)
  
- Public_UC_Disciplinary_Actions_Student_Housing_Facilities %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Institution.size=`Institution Size`, Illegal.weapons.possession=`Illegal weapons possession`, Drug.law.violations=`Drug law violations`, Liquor.law.violations=`Liquor law violations`)
+#Public_UC_Disciplinary_Actions_Student_Housing_Facilities %>% mutate(Survey.year=`Survey year`, Institution.name=`Institution name`, Institution.size=`Institution Size`, Illegal.weapons.possession=`Illegal weapons possession`, Drug.law.violations=`Drug law violations`, Liquor.law.violations=`Liquor law violations`)
 ```
+
 ```{r}
 #Delete columns of crimes we do not want to observe from the criminal offenses data
 Public_UC_Criminal_Offenses_Noncampus <- Public_UC_Criminal_Offenses_Noncampus %>%
@@ -84,23 +87,30 @@ Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities <- Public_UC_Cr
 ```
 
 ```{r}
-#Merged datatable
+#Filter out UC Hastings due to reporting inconsistencies
+Public_UC_Arrests_On_campus <- Public_UC_Arrests_On_campus %>%
+  filter(Institution.name!="University of California-Hastings College of Law")
+
+Public_UC_Arrests_On_campus_Student_Housing_Facilities <- Public_UC_Arrests_On_campus_Student_Housing_Facilities %>%
+  filter(Institution.name!="University of California-Hastings College of Law")
+
+Public_UC_Arrests_Noncampus <- Public_UC_Arrests_Noncampus %>%
+  filter(Institution.name!="University of California-Hastings College of Law")
+```
+
+```{r}
+#Merged UC arrests
 Public_UC_Arrests <- data.frame(year=Public_UC_Arrests_On_campus$Survey.year, name=Public_UC_Arrests_On_campus$Institution.name, size=Public_UC_Arrests_On_campus$Institution.Size, weapon_arrest = (Public_UC_Arrests_On_campus$Illegal.weapons.possession + Public_UC_Arrests_On_campus_Student_Housing_Facilities$Illegal.weapons.possession + Public_UC_Arrests_Noncampus$Illegal.weapons.possession)/Public_UC_Arrests_On_campus$Institution.Size, drug_arrest = (Public_UC_Arrests_On_campus$Drug.law.violations + Public_UC_Arrests_On_campus_Student_Housing_Facilities$Illegal.weapons.possession + Public_UC_Arrests_Noncampus$Illegal.weapons.possession)/Public_UC_Arrests_On_campus$Institution.Size, liquor_arrest = (Public_UC_Arrests_On_campus$Liquor.law.violations + Public_UC_Arrests_On_campus_Student_Housing_Facilities$Liquor.law.violations + Public_UC_Arrests_Noncampus$Liquor.law.violations)/Public_UC_Arrests_On_campus$Institution.Size)
 
 head(Public_UC_Arrests)
 ```
 
 ```{r}
-#Filter out UC Hastings due to reporting inconsitencies
-Public_UC_Arrests <- Public_UC_Arrests %>%
-  filter(name!="University of California-Hastings College of Law")
-```
-
-```{r}
 #Standardize all three disciplinary action data sets
 Public_UC_Disciplinary_Actions_On_campus <-
   Public_UC_Disciplinary_Actions_On_campus %>%
-  filter(Institution.name!="University of California-Hastings College of Law")
+  filter(Institution.name!="University of California-Hastings College of Law") %>%
+  filter(Survey.year > 2007)
 
 Public_UC_Disciplinary_Actions_Student_Housing_Facilities <-
   Public_UC_Disciplinary_Actions_Student_Housing_Facilities %>%
@@ -112,10 +122,58 @@ Public_UC_Disciplinary_Actions_Noncampus <-
   filter(Institution.name!="University of California-Hastings College of Law") %>%
   filter(Survey.year > 2007)
 
+head(Public_UC_Disciplinary_Actions)
 ```
 
 ```{r}
+#Merged disciplinary action
 Public_UC_Disciplinary_Actions <- data.frame(year=Public_UC_Disciplinary_Actions_On_campus$Survey.year, name=Public_UC_Disciplinary_Actions_On_campus$Institution.name, size=Public_UC_Disciplinary_Actions_On_campus$Institution.Size, weapon_discipline=(Public_UC_Disciplinary_Actions_On_campus$Illegal.weapons.possession+Public_UC_Disciplinary_Actions_Student_Housing_Facilities$Illegal.weapons.possession+Public_UC_Disciplinary_Actions_Noncampus$Illegal.weapons.possession)/Public_UC_Disciplinary_Actions_On_campus$Institution.Size, drug_discipline=(Public_UC_Disciplinary_Actions_On_campus$Drug.law.violations+Public_UC_Disciplinary_Actions_Student_Housing_Facilities$Drug.law.violations+Public_UC_Disciplinary_Actions_Noncampus$Liquor.law.violations)/Public_UC_Disciplinary_Actions_On_campus$Institution.Size, liquor_discipline=(Public_UC_Disciplinary_Actions_On_campus$Liquor.law.violations+Public_UC_Disciplinary_Actions_Student_Housing_Facilities$Liquor.law.violations+Public_UC_Disciplinary_Actions_Noncampus$Liquor.law.violations)/Public_UC_Disciplinary_Actions_On_campus$Institution.Size)
 
-Public_UC_Disciplinary_Actions
+head(Public_UC_Disciplinary_Actions)
+```
+
+```{r}
+#Filter out UC Hastings due to reporting discrepencies
+Public_UC_VAWA_Offenses_On_campus <- Public_UC_VAWA_Offenses_On_campus %>%
+  filter(Institution.name!="University of California-Hastings College of Law")
+
+Public_UC_VAWA_Offenses_On_campus_Student_Housing_Facilities <- Public_UC_VAWA_Offenses_On_campus_Student_Housing_Facilities %>%
+  filter(Institution.name!="University of California-Hastings College of Law")
+```
+
+```{r}
+head(Public_UC_VAWA_Offenses_On_campus)
+```
+
+```{r}
+#Merged UC VAWA offenses
+Public_UC_VAWA_Offenses <- data.frame(year=Public_UC_VAWA_Offenses_On_campus$Survey.year, name=Public_UC_VAWA_Offenses_On_campus$Institution.name, size=Public_UC_VAWA_Offenses_On_campus$Institution.Size, domestic_violence=(Public_UC_VAWA_Offenses_On_campus$Domestic.violence+Public_UC_VAWA_Offenses_On_campus_Student_Housing_Facilities$Domestic.violence+Public_UC_VAWA_Offenses_Noncampus$Domestic.violence)/Public_UC_VAWA_Offenses_On_campus$Institution.Size, dating_violence=(Public_UC_VAWA_Offenses_On_campus$Dating.violence+Public_UC_VAWA_Offenses_On_campus_Student_Housing_Facilities$Dating.violence+Public_UC_VAWA_Offenses_Noncampus$Dating.violence)/Public_UC_VAWA_Offenses_On_campus$Institution.Size, stalking=(Public_UC_VAWA_Offenses_On_campus$Stalking+Public_UC_VAWA_Offenses_On_campus_Student_Housing_Facilities$Stalking+Public_UC_VAWA_Offenses_Noncampus$Stalking)/Public_UC_VAWA_Offenses_On_campus$Institution.Size, rape=(Public_UC_VAWA_Offenses_On_campus$Rape+Public_UC_VAWA_Offenses_On_campus_Student_Housing_Facilities$Rape+Public_UC_VAWA_Offenses_Noncampus$Rape)/Public_UC_VAWA_Offenses_On_campus$Institution.Size, fondling=(Public_UC_VAWA_Offenses_On_campus$Fondling+Public_UC_VAWA_Offenses_On_campus_Student_Housing_Facilities$Fondling+Public_UC_VAWA_Offenses_Noncampus$Fondling)/Public_UC_VAWA_Offenses_On_campus$Institution.Size, statutory_rape=(Public_UC_VAWA_Offenses_On_campus$Statutory.Rape+Public_UC_VAWA_Offenses_On_campus_Student_Housing_Facilities$Statutory.Rape+Public_UC_VAWA_Offenses_Noncampus$Statutory.Rape)/Public_UC_VAWA_Offenses_On_campus$Institution.Size)
+
+head(Public_UC_VAWA_Offenses)
+```
+
+```{r}
+#All sexual crimes offenses combined into one total
+sexual_crimes <- data.frame(year=Public_UC_VAWA_Offenses_On_campus$Survey.year, name=Public_UC_VAWA_Offenses_On_campus$Institution.name, size=Public_UC_VAWA_Offenses_On_campus$Institution.Size, total=Public_UC_VAWA_Offenses$domestic_violence+Public_UC_VAWA_Offenses$dating_violence+Public_UC_VAWA_Offenses$stalking+Public_UC_VAWA_Offenses$rape+Public_UC_VAWA_Offenses$fondling+Public_UC_VAWA_Offenses$statutory_rape)
+
+head(Public_UC_VAWA_Offenses_Combined)
+```
+
+```{r}
+#Filter out UC Hastings due to reporting discrepencies
+Public_UC_Criminal_Offenses_On_campus <- Public_UC_Criminal_Offenses_On_campus %>%
+  filter(Institution.name!="University of California-Hastings College of Law")
+
+Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities <- Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities %>%
+  filter(Institution.name!="University of California-Hastings College of Law")
+
+Public_UC_Criminal_Offenses_Noncampus <- Public_UC_Criminal_Offenses_Noncampus %>%
+  filter(Institution.name!="University of California-Hastings College of Law")
+```
+
+```{r}
+#Merged UC Criminal Offenses
+Public_UC_Criminal_Offenses <- data.frame(year=Public_UC_Criminal_Offenses_On_campus$Survey.year, name=Public_UC_Criminal_Offenses_On_campus$Institution.name, size=Public_UC_Arrests$size, forcible_sex_offense=(Public_UC_Criminal_Offenses_On_campus$Sex.offenses...Forcible+Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities$Sex.offenses...Forcible+Public_UC_Criminal_Offenses_Noncampus$Sex.offenses...Forcible)/Public_UC_Arrests$size, robbery=(Public_UC_Criminal_Offenses_On_campus$Robbery+Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities$Robbery+Public_UC_Criminal_Offenses_Noncampus$Robbery)/Public_UC_Arrests$size, aggravated_assault=(Public_UC_Criminal_Offenses_On_campus$Aggravated.assault+Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities$Aggravated.assault+Public_UC_Criminal_Offenses_Noncampus$Aggravated.assault)/Public_UC_Arrests$size, burglary=(Public_UC_Criminal_Offenses_On_campus$Burglary+Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities$Burglary+Public_UC_Criminal_Offenses_Noncampus$Burglary)/Public_UC_Arrests$size, car_theft=(Public_UC_Criminal_Offenses_On_campus$Motor.vehicle.theft+Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities$Motor.vehicle.theft+Public_UC_Criminal_Offenses_Noncampus$Motor.vehicle.theft)/Public_UC_Arrests$size, arson=(Public_UC_Criminal_Offenses_On_campus$Arson+Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities$Arson+Public_UC_Criminal_Offenses_Noncampus$Arson)/Public_UC_Arrests$size)
+
+head(Public_UC_Criminal_Offenses)
 ```
