@@ -121,8 +121,6 @@ Public_UC_Disciplinary_Actions_Noncampus <-
   Public_UC_Disciplinary_Actions_Noncampus %>%
   filter(Institution.name!="University of California-Hastings College of Law") %>%
   filter(Survey.year > 2007)
-
-head(Public_UC_Disciplinary_Actions)
 ```
 
 ```{r}
