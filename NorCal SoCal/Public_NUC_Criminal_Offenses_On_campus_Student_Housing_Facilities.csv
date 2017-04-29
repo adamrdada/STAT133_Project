@@ -1,0 +1,151 @@
+Survey year,Unitid,Institution name,Campus ID, Campus Name,Institution Size,Murder/Non-negligent manslaughter,Negligent manslaughter,Sex offenses - Forcible,Rape,Fondling,Sex offenses - Non-forcible,Incest,Statutory rape,Robbery,Aggravated assault,Burglary,Motor vehicle theft,Arson
+2001,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,18079,0,0,1,,,0,,,0,1,1,0,6
+2001,110529,California State Polytechnic University-Pomona,1,Main Campus,19041,0,0,2,,,0,,,0,0,11,8,0
+2001,110538,California State University-Chico,1,Main Campus,16704,0,0,2,,,0,,,0,1,11,1,0
+2001,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,12871,0,0,1,,,0,,,1,0,3,1,0
+2001,110583,California State University-Long Beach,1,Main Campus,33259,0,0,3,,,0,,,1,0,16,2,1
+2001,110617,California State University-Sacramento,1,Sacramento State,26923,0,0,1,,,0,,,0,1,11,6,0
+2001,115755,Humboldt State University,1,Humboldt State University,7382,0,0,3,,,0,,,0,0,5,0,1
+2001,122409,San Diego State University,1,Main Campus,34171,0,0,4,,,0,,,1,2,5,2,2
+2001,122755,San Jose State University,1,Main Campus,28007,0,0,3,,,0,,,1,1,15,2,1
+2001,123572,Sonoma State University,1,Sonoma State University,7590,0,0,1,,,0,,,0,1,19,1,0
+2002,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,18453,0,0,1,,,0,,,0,0,1,0,0
+2002,110529,California State Polytechnic University-Pomona,1,Main Campus,19821,0,0,1,,,0,,,2,2,15,2,2
+2002,110538,California State University-Chico,1,Main Campus,16246,0,0,1,,,0,,,0,0,7,0,0
+2002,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,13504,0,0,0,,,0,,,0,0,13,2,0
+2002,110583,California State University-Long Beach,1,Main Campus,34566,0,0,0,,,0,,,0,0,4,0,0
+2002,110617,California State University-Sacramento,1,Sacramento State,28558,0,0,4,,,0,,,1,3,3,7,0
+2002,115755,Humboldt State University,1,Humboldt State University,7611,0,0,3,,,0,,,0,0,12,0,5
+2002,122409,San Diego State University,1,Main Campus,34304,0,0,3,,,0,,,0,1,13,4,1
+2002,122755,San Jose State University,1,Main Campus,30350,0,0,1,,,0,,,2,0,5,0,1
+2002,123572,Sonoma State University,1,Sonoma State University,8219,0,0,0,,,0,,,0,1,34,2,0
+2003,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,18303,0,0,4,,,0,,,0,0,4,0,1
+2003,110529,California State Polytechnic University-Pomona,1,Main Campus,19804,0,0,1,,,0,,,1,0,27,0,1
+2003,110538,California State University-Chico,1,Main Campus,15516,0,0,2,,,1,,,0,2,4,3,0
+2003,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,13248,0,0,1,,,0,,,1,2,3,1,0
+2003,110583,California State University-Long Beach,1,Main Campus,34715,0,0,4,,,0,,,0,0,5,13,1
+2003,110617,California State University-Sacramento,1,Sacramento State,28375,0,0,0,,,0,,,0,2,19,10,1
+2003,115755,Humboldt State University,1,Humboldt State University,7725,0,0,2,,,0,,,1,0,11,0,5
+2003,122409,San Diego State University,1,Main Campus,32803,0,0,6,,,0,,,0,4,9,7,1
+2003,122755,San Jose State University,1,Main Campus,28932,0,0,3,,,0,,,0,2,4,0,2
+2003,123572,Sonoma State University,1,Sonoma State University,8371,0,0,1,,,0,,,0,3,30,2,3
+2004,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,17582,0,0,1,,,0,,,1,0,1,0,0
+2004,110529,California State Polytechnic University-Pomona,1,Main Campus,19003,0,0,2,,,0,,,1,1,6,0,0
+2004,110538,California State University-Chico,1,Main Campus,15734,0,0,0,,,0,,,0,2,0,0,0
+2004,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,12613,0,0,1,,,0,,,0,1,11,1,0
+2004,110583,California State University-Long Beach,1,Main Campus,33479,0,0,2,,,0,,,0,0,4,14,0
+2004,110617,California State University-Sacramento,1,Sacramento State,27972,0,0,1,,,0,,,0,0,5,0,0
+2004,115755,Humboldt State University,1,Humboldt State University,7550,0,0,6,,,0,,,0,0,5,1,1
+2004,122409,San Diego State University,1,Main Campus,32043,0,0,7,,,0,,,0,4,12,2,3
+2004,122755,San Jose State University,1,Main Campus,29044,0,0,1,,,0,,,0,1,4,0,0
+2004,123572,Sonoma State University,1,Sonoma State University,7977,0,0,1,,,0,,,0,0,10,1,0
+2005,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,18475,0,0,1,,,0,,,0,0,5,0,0
+2005,110529,California State Polytechnic University-Pomona,1,Main Campus,19885,0,0,0,,,0,,,2,0,22,1,3
+2005,110538,California State University-Chico,1,Main Campus,15919,0,0,0,,,0,,,0,0,13,0,0
+2005,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,12357,0,0,1,,,0,,,0,0,14,0,0
+2005,110583,California State University-Long Beach,1,Main Campus,34547,0,0,2,,,0,,,0,2,5,29,0
+2005,110617,California State University-Sacramento,1,Sacramento State,27932,0,0,4,,,0,,,0,0,6,0,0
+2005,115755,Humboldt State University,1,Humboldt State University,7462,0,0,6,,,0,,,0,0,3,1,3
+2005,122409,San Diego State University,1,Main Campus,31802,0,0,3,,,1,,,0,1,4,5,0
+2005,122755,San Jose State University,1,Main Campus,29975,0,0,1,,,0,,,0,0,13,0,0
+2005,123572,Sonoma State University,1,Sonoma State University,7749,0,0,2,,,0,,,0,0,18,0,1
+2006,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,18722,0,0,4,,,0,,,0,0,2,0,0
+2006,110529,California State Polytechnic University-Pomona,1,Main Campus,20510,0,0,2,,,0,,,0,0,10,0,0
+2006,110538,California State University-Chico,1,Main Campus,16250,0,0,4,,,0,,,0,1,6,0,0
+2006,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,12068,0,0,1,,,0,,,0,1,9,0,0
+2006,110583,California State University-Long Beach,1,Main Campus,35574,0,0,2,,,0,,,0,1,1,0,0
+2006,110617,California State University-Sacramento,1,Sacramento State,28529,0,0,2,,,0,,,0,2,1,3,1
+2006,115755,Humboldt State University,1,Humboldt State University,7435,0,0,5,,,0,,,0,0,1,0,0
+2006,122409,San Diego State University,1,Main Campus,33441,0,0,6,,,0,,,1,2,10,0,0
+2006,122755,San Jose State University,1,Main Campus,29604,0,0,3,,,0,,,2,1,8,0,0
+2006,123572,Sonoma State University,1,Sonoma State University,8274,0,0,1,,,0,,,0,0,11,0,2
+2007,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,19777,0,0,5,,,0,,,1,0,2,0,3
+2007,110529,California State Polytechnic University-Pomona,1,Main Campus,21477,0,0,3,,,0,,,0,1,4,0,1
+2007,110538,California State University-Chico,1,Main Campus,17034,0,0,2,,,0,,,0,0,6,0,0
+2007,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,12082,0,0,0,,,0,,,0,1,13,0,0
+2007,110583,California State University-Long Beach,1,Main Campus,36868,0,0,0,,,0,,,0,1,5,0,0
+2007,110617,California State University-Sacramento,1,Sacramento State,28829,0,0,3,,,1,,,0,0,0,0,0
+2007,115755,Humboldt State University,1,Humboldt State University,7773,0,0,1,,,0,,,1,0,6,0,0
+2007,122409,San Diego State University,1,Main Campus,35695,0,0,5,,,0,,,0,8,15,0,1
+2007,122755,San Jose State University,1,Main Campus,31906,0,0,2,,,0,,,0,1,22,1,1
+2007,123572,Sonoma State University,1,Sonoma State University,8770,0,0,4,,,0,,,0,2,10,0,0
+2008,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,19471,0,0,0,,,0,,,0,0,9,0,9
+2008,110529,California State Polytechnic University-Pomona,1,Main Campus,21190,0,0,3,,,0,,,0,1,1,0,0
+2008,110538,California State University-Chico,1,Main Campus,17132,0,0,1,,,0,,,0,0,6,0,0
+2008,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,12851,0,0,2,,,0,,,0,0,23,0,0
+2008,110583,California State University-Long Beach,1,Main Campus,37891,0,0,1,,,0,,,0,0,0,0,0
+2008,110617,California State University-Sacramento,1,Sacramento State,29011,0,0,0,,,0,,,0,2,3,0,0
+2008,115755,Humboldt State University,1,Humboldt State University,7800,0,0,3,,,0,,,0,1,6,0,1
+2008,122409,San Diego State University,1,Main Campus,34889,0,0,3,,,0,,,2,4,18,0,0
+2008,122755,San Jose State University,1,Main Campus,32746,0,0,3,,,0,,,1,1,9,0,1
+2008,123572,Sonoma State University,1,Sonoma State University,8921,0,0,5,,,1,,,0,1,10,0,1
+2009,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,19325,0,0,0,,,0,,,0,0,2,0,4
+2009,110529,California State Polytechnic University-Pomona,1,Main Campus,22273,0,0,1,,,0,,,0,0,6,0,0
+2009,110538,California State University-Chico,1,Main Campus,16934,0,0,1,,,0,,,0,1,2,0,0
+2009,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,14477,0,0,1,,,0,,,3,1,19,0,0
+2009,110583,California State University-Long Beach,1,Main Campus,35557,0,0,1,,,0,,,0,0,1,0,0
+2009,110617,California State University-Sacramento,1,Sacramento State,29241,1,0,1,,,0,,,0,2,7,0,0
+2009,115755,Humboldt State University,1,Humboldt State University,7954,0,0,0,,,0,,,0,0,4,0,0
+2009,122409,San Diego State University,1,Main Campus,32817,0,0,0,,,0,,,1,1,11,0,0
+2009,122755,San Jose State University,1,Main Campus,31280,0,0,3,,,0,,,0,3,10,0,4
+2009,123572,Sonoma State University,1,Sonoma State University,8546,0,0,2,,,0,,,0,0,4,0,0
+2010,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,18360,0,0,1,,,0,,,0,0,21,0,0
+2010,110529,California State Polytechnic University-Pomona,1,Main Campus,20747,0,0,5,,,0,,,1,0,2,0,0
+2010,110538,California State University-Chico,1,Main Campus,15989,0,0,3,,,1,,,0,0,1,0,1
+2010,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,13854,0,0,1,,,0,,,0,3,13,0,0
+2010,110583,California State University-Long Beach,1,Main Campus,33416,0,0,0,,,0,,,0,0,0,0,0
+2010,110617,California State University-Sacramento,1,Sacramento State,27033,0,0,3,,,0,,,0,0,2,0,0
+2010,115755,Humboldt State University,1,Humboldt State University,7903,0,0,4,,,0,,,0,2,8,0,0
+2010,122409,San Diego State University,1,Main Campus,29187,0,0,9,,,0,,,0,4,22,0,5
+2010,122755,San Jose State University,1,Main Campus,29076,0,0,2,,,0,,,0,0,3,0,0
+2010,123572,Sonoma State University,1,Sonoma State University,8395,0,0,1,,,0,,,0,2,4,0,0
+2011,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,18762,0,0,1,,,0,,,0,0,3,0,1
+2011,110529,California State Polytechnic University-Pomona,1,Main Campus,21107,0,0,6,,,0,,,1,0,2,0,0
+2011,110538,California State University-Chico,1,Main Campus,15920,0,0,2,,,0,,,0,0,2,0,1
+2011,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,14364,0,0,1,,,0,,,0,3,5,0,0
+2011,110583,California State University-Long Beach,1,Main Campus,34870,0,0,3,,,0,,,0,0,6,0,0
+2011,110617,California State University-Sacramento,1,Sacramento State,28016,0,0,1,,,0,,,0,0,0,0,2
+2011,115755,Humboldt State University,1,Humboldt State University,8046,0,0,1,,,0,,,1,0,0,0,0
+2011,122409,San Diego State University,1,Main Campus,30541,0,0,4,,,0,,,0,2,23,0,0
+2011,122755,San Jose State University,1,Main Campus,30236,0,0,2,,,0,,,1,5,4,0,1
+2011,123572,Sonoma State University,1,Sonoma State University,8668,0,0,1,,,0,,,0,0,3,0,0
+2012,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,18679,0,0,0,,,0,,,0,0,0,0,1
+2012,110529,California State Polytechnic University-Pomona,1,Main Campus,22156,0,0,1,,,0,,,1,1,2,0,0
+2012,110538,California State University-Chico,1,Main Campus,16470,0,0,1,,,0,,,0,0,4,0,0
+2012,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,13933,0,0,1,,,0,,,0,3,4,0,0
+2012,110583,California State University-Long Beach,1,Main Campus,36279,0,0,1,,,0,,,0,0,1,0,0
+2012,110617,California State University-Sacramento,1,Sacramento State,28539,0,0,2,,,0,,,0,0,1,0,0
+2012,115755,Humboldt State University,1,Humboldt State University,8116,0,0,4,,,0,,,0,1,1,0,0
+2012,122409,San Diego State University,1,Main Campus,30843,0,0,9,,,0,,,1,3,25,3,0
+2012,122755,San Jose State University,1,Main Campus,30448,0,0,3,,,0,,,1,1,7,0,0
+2012,123572,Sonoma State University,1,Sonoma State University,9021,0,0,2,,,0,,,0,2,5,0,0
+2013,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,19703,0,0,6,,,0,,,0,0,0,0,0
+2013,110529,California State Polytechnic University-Pomona,1,Main Campus,22501,0,0,2,,,0,,,0,0,0,0,0
+2013,110538,California State University-Chico,1,Main Campus,16356,0,0,2,,,0,,,0,0,0,0,0
+2013,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,14670,0,0,1,,,0,,,0,2,7,0,0
+2013,110583,California State University-Long Beach,1,Main Campus,35586,0,0,1,,,0,,,0,0,2,0,0
+2013,110617,California State University-Sacramento,1,Sacramento State,28811,0,0,1,,,0,,,0,0,0,0,0
+2013,115755,Humboldt State University,1,Humboldt State University,8293,0,0,4,,,0,,,0,0,3,0,2
+2013,122409,San Diego State University,1,Main Campus,31899,0,0,4,,,0,,,1,3,22,0,0
+2013,122755,San Jose State University,1,Main Campus,31278,0,0,0,,,0,,,1,0,4,1,0
+2013,123572,Sonoma State University,1,Sonoma State University,9120,0,0,1,,,0,,,0,0,16,0,0
+2014,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,20186,0,0,,6,2,,0,0,0,0,3,0,2
+2014,110529,California State Polytechnic University-Pomona,1,Main Campus,23966,0,0,,2,2,,0,0,0,1,5,0,0
+2014,110538,California State University-Chico,1,Main Campus,17287,0,0,,1,1,,0,0,0,0,0,0,0
+2014,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,14687,0,0,,0,0,,0,0,0,2,14,0,0
+2014,110583,California State University-Long Beach,1,Main Campus,36809,0,0,,0,0,,0,0,0,0,2,0,0
+2014,110617,California State University-Sacramento,1,Sacramento State,29349,0,0,,2,1,,0,0,0,1,2,0,1
+2014,115755,Humboldt State University,1,Humboldt State University,8485,0,0,,3,1,,0,0,1,1,6,0,0
+2014,122409,San Diego State University,1,Main Campus,33483,0,0,,10,1,,0,0,0,3,31,0,0
+2014,122755,San Jose State University,1,Main Campus,32713,0,0,,2,7,,1,0,0,2,6,0,0
+2014,123572,Sonoma State University,1,Sonoma State University,9290,0,0,,4,2,,0,0,0,0,0,0,0
+2015,110422,California Polytechnic State University-San Luis Obispo,1,Main Campus,20944,0,0,,5,0,,0,0,0,1,4,0,2
+2015,110529,California State Polytechnic University-Pomona,1,Main Campus,23717,0,0,,3,2,,0,0,0,0,4,0,1
+2015,110538,California State University-Chico,1,Main Campus,17220,0,0,,2,1,,0,0,0,1,0,0,0
+2015,110547,California State University-Dominguez Hills,1,California State University Dominguez Hills,14635,0,0,,0,2,,0,0,0,2,3,0,0
+2015,110583,California State University-Long Beach,1,Main Campus,37446,0,0,,3,1,,0,1,0,0,1,0,0
+2015,110617,California State University-Sacramento,1,Sacramento State,30284,0,0,,1,2,,0,0,0,1,4,0,0
+2015,115755,Humboldt State University,1,Humboldt State University,8790,0,0,,5,3,,0,0,0,6,8,0,4
+2015,122409,San Diego State University,1,Main Campus,34254,0,0,,7,4,,0,0,0,4,14,0,0
+2015,122755,San Jose State University,1,Main Campus,32773,0,0,,2,2,,0,0,0,2,4,1,0
+2015,123572,Sonoma State University,1,Sonoma State University,9408,0,0,,4,4,,0,0,0,0,8,0,0

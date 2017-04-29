@@ -1,0 +1,89 @@
+Survey year,Unitid,Institution name,Campus ID, Campus Name,Institution Size,Illegal weapons possession,Drug law violations,Liquor law violations
+2008,110635,University of California-Berkeley,1,Main Campus,35396,0,103,538
+2008,110644,University of California-Davis,1,Main Campus,30568,0,26,218
+2008,110398,University of California-Hastings College of Law,1,Main Campus,1306,0,0,0
+2008,110653,University of California-Irvine,1,UCI Main Campus,26984,0,46,514
+2008,110662,University of California-Los Angeles,1,UCLA,38220,1,89,378
+2008,445188,University of California-Merced,1,Main Campus,2718,0,2,56
+2008,110671,University of California-Riverside,1,Main Campus,18079,9,55,8
+2008,110680,University of California-San Diego,1,Main Campus,27520,0,0,3
+2008,110699,University of California-San Francisco,1,Main Campus - Parnassus,2998,0,0,0
+2008,110705,University of California-Santa Barbara,1,Main Campus,21868,5,498,1128
+2008,110714,University of California-Santa Cruz,1,Main Campus,16615,14,976,2029
+2009,110635,University of California-Berkeley,1,Main Campus,35830,1,142,492
+2009,110644,University of California-Davis,1,Main Campus,31247,0,63,192
+2009,110398,University of California-Hastings College of Law,1,Main Campus,1347,0,0,0
+2009,110653,University of California-Irvine,1,UCI Main Campus,27142,0,33,435
+2009,110662,University of California-Los Angeles,1,UCLA,38550,1,124,572
+2009,445188,University of California-Merced,1,Main Campus,3414,0,14,101
+2009,110671,University of California-Riverside,1,Main Campus,19384,1,131,21
+2009,110680,University of California-San Diego,1,Main Campus,28418,0,11,5
+2009,110699,University of California-San Francisco,1,Main Campus - Parnassus,3119,0,0,0
+2009,110705,University of California-Santa Barbara,1,Main Campus,22850,0,354,1006
+2009,110714,University of California-Santa Cruz,1,Main Campus,16775,6,818,1603
+2010,110635,University of California-Berkeley,1,Main Campus,35833,0,117,606
+2010,110644,University of California-Davis,1,Main Campus,31392,0,83,202
+2010,110398,University of California-Hastings College of Law,1,Main Campus,1304,0,0,0
+2010,110653,University of California-Irvine,1,UCI Main Campus,26994,2,13,386
+2010,110662,University of California-Los Angeles,1,UCLA,38157,4,122,681
+2010,445188,University of California-Merced,1,Main Campus,4381,0,16,65
+2010,110671,University of California-Riverside,1,Main Campus,20692,0,146,20
+2010,110680,University of California-San Diego,1,Main Campus,29176,0,94,960
+2010,110699,University of California-San Francisco,1,Main Campus - Parnassus,3024,0,0,0
+2010,110705,University of California-Santa Barbara,1,Main Campus,22218,5,267,772
+2010,110714,University of California-Santa Cruz,1,Main Campus,17187,1,797,3382
+2011,110635,University of California-Berkeley,1,Main Campus,36137,3,98,288
+2011,110644,University of California-Davis,1,Main Campus,31732,0,64,246
+2011,110398,University of California-Hastings College of Law,1,Main Campus,1289,0,0,0
+2011,110653,University of California-Irvine,1,UCI Main Campus,27189,1,28,562
+2011,110662,University of California-Los Angeles,1,UCLA,39271,2,178,633
+2011,445188,University of California-Merced,1,Main Campus,5198,0,10,81
+2011,110671,University of California-Riverside,1,Main Campus,20900,1,132,36
+2011,110680,University of California-San Diego,1,Main Campus,28593,5,323,1085
+2011,110699,University of California-San Francisco,1,Main Campus - Parnassus,3054,0,0,0
+2011,110705,University of California-Santa Barbara,1,Main Campus,21685,1,492,955
+2011,110714,University of California-Santa Cruz,1,Main Campus,17454,8,923,1502
+2012,110635,University of California-Berkeley,1,Main Campus,35893,1,100,315
+2012,110644,University of California-Davis,1,Main Campus,32354,0,23,0
+2012,110398,University of California-Hastings College of Law,1,Main Campus,1159,0,0,0
+2012,110653,University of California-Irvine,1,UCI Main Campus,27479,1,18,539
+2012,110662,University of California-Los Angeles,1,UCLA,39945,4,90,585
+2012,445188,University of California-Merced,1,Main Campus,5760,0,9,21
+2012,110671,University of California-Riverside,1,Main Campus,20947,3,231,19
+2012,110680,University of California-San Diego,1,Main Campus,28294,9,548,1646
+2012,110699,University of California-San Francisco,1,Main Campus - Parnassus,3137,0,0,0
+2012,110705,University of California-Santa Barbara,1,Main Campus,21927,1,350,751
+2012,110714,University of California-Santa Cruz,1,Main Campus,17404,11,740,1632
+2013,110635,University of California-Berkeley,1,Main Campus,36198,1,40,14
+2013,110644,University of California-Davis,1,Main Campus,33307,0,9,1
+2013,110398,University of California-Hastings College of Law,1,Main Campus,1088,0,0,0
+2013,110653,University of California-Irvine,1,UCI Main Campus,28895,2,45,424
+2013,110662,University of California-Los Angeles,1,UCLA,40795,1,86,407
+2013,445188,University of California-Merced,1,Main Campus,6195,1,21,41
+2013,110671,University of California-Riverside,1,Main Campus,21207,3,3,7
+2013,110680,University of California-San Diego,1,Main Campus,29517,3,360,1513
+2013,110699,University of California-San Francisco,1,Main Campus - Parnassus,3079,0,0,0
+2013,110705,University of California-Santa Barbara,1,Main Campus,22225,1,174,736
+2013,110714,University of California-Santa Cruz,1,Main Campus,17203,0,1104,939
+2014,110635,University of California-Berkeley,1,Main Campus,37565,0,50,10
+2014,110644,University of California-Davis,1,Main Campus,34508,1,22,6
+2014,110398,University of California-Hastings College of Law,1,Main Campus,1003,0,0,0
+2014,110653,University of California-Irvine,1,UCI Main Campus,30051,2,20,533
+2014,110662,University of California-Los Angeles,1,UCLA,41845,1,87,386
+2014,445188,University of California-Merced,1,Main Campus,6268,0,28,70
+2014,110671,University of California-Riverside,1,Main Campus,21498,2,3,15
+2014,110680,University of California-San Diego,1,Main Campus,30709,3,478,1689
+2014,110699,University of California-San Francisco,1,Main Campus - Parnassus,3170,0,0,0
+2014,110705,University of California-Santa Barbara,1,Main Campus,23051,0,162,430
+2014,110714,University of California-Santa Cruz,1,Main Campus,17866,3,275,269
+2015,110635,University of California-Berkeley,1,Main Campus,38189,3,63,7
+2015,110644,University of California-Davis,1,Main Campus,35186,0,13,12
+2015,110398,University of California-Hastings College of Law,1,Main Campus,950,0,0,0
+2015,110653,University of California-Irvine,1,UCI Main Campus,30836,1,23,390
+2015,110662,University of California-Los Angeles,1,UCLA,41908,0,89,406
+2015,445188,University of California-Merced,1,Main Campus,6685,0,36,25
+2015,110671,University of California-Riverside,1,Main Campus,21385,3,3,81
+2015,110680,University of California-San Diego,1,Main Campus,32906,2,262,1230
+2015,110699,University of California-San Francisco,1,Main Campus - Parnassus,3107,0,0,0
+2015,110705,University of California-Santa Barbara,1,Main Campus,23497,0,203,409
+2015,110714,University of California-Santa Cruz,1,Main Campus,17868,13,947,1035
