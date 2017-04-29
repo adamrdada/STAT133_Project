@@ -1,0 +1,139 @@
+---
+title: "Final Project"
+author: ""
+date: ""
+output: 
+  html_document:
+    fig_height: 3
+    fig_width: 5
+---
+<!-- Don't edit in between this line and the one below -->
+```{r include=FALSE}
+# Don't delete this chunk if you are using the DataComputing package
+library(DataComputing)
+library(dplyr)
+```
+*Source file* 
+```{r, results='asis', echo=FALSE}
+includeSourceDocuments()
+```
+<!-- Don't edit the material above this line -->
+
+```{r}
+Public_NUC_Arrests_Noncampus <- read.csv("Public_NUC_Arrests_Noncampus.csv")
+
+Public_NUC_Arrests_On_campus <- read.csv("Public_NUC_Arrests_On_campus.csv")
+
+Public_NUC_Arrests_On_campus_Student_Housing_Facilities <- read.csv("Public_NUC_Arrests_On_campus_Student_Housing_Facilities.csv")
+
+Public_NUC_Criminal_Offenses_Noncampus <- read.csv("Public_NUC_Criminal_Offenses_Noncampus.csv")
+
+Public_NUC_Criminal_Offenses_On_campus <- read.csv("Public_NUC_Criminal_Offenses_On_campus.csv")
+
+Public_NUC_Criminal_Offenses_On_campus_Student_Housing_Facilities <- read.csv("Public_NUC_Criminal_Offenses_On_campus_Student_Housing_Facilities.csv")
+
+Public_NUC_Disciplinary_Actions_Noncampus <- read.csv("Public_NUC_Disciplinary_Actions_Noncampus.csv")
+
+Public_NUC_Disciplinary_Actions_On_campus <- read.csv("Public_NUC_Disciplinary_Actions_On_campus.csv")
+
+Public_NUC_Disciplinary_Actions_Student_Housing_Facilities <- read.csv("Public_NUC_Disciplinary_Actions_Student_Housing_Facilities.csv")
+
+Public_NUC_VAWA_Offenses_Noncampus <- read.csv("Public_NUC_VAWA_Offenses_Noncampus.csv")
+
+Public_NUC_VAWA_Offenses_On_campus <- read.csv("Public_NUC_VAWA_Offenses_On_campus.csv")
+
+Public_NUC_VAWA_Offenses_On_campus_Student_Housing_Facilities <- read.csv("Public_NUC_VAWA_Offenses_On_campus_Student_Housing_Facilities.csv")
+```
+
+```{r}
+#Delete columns of crimes we do not want to observe from the criminal offenses data
+Public_NUC_Criminal_Offenses_Noncampus <- Public_NUC_Criminal_Offenses_Noncampus %>%
+  subset(select = c(Survey.year, Institution.name, Sex.offenses...Forcible, Robbery, Aggravated.assault, Burglary, Motor.vehicle.theft, Arson))
+
+Public_NUC_Criminal_Offenses_On_campus <- Public_NUC_Criminal_Offenses_On_campus %>%
+  subset(select = c(Survey.year, Institution.name, Sex.offenses...Forcible, Robbery, Aggravated.assault, Burglary, Motor.vehicle.theft, Arson))
+
+Public_NUC_Criminal_Offenses_On_campus_Student_Housing_Facilities <- Public_NUC_Criminal_Offenses_On_campus_Student_Housing_Facilities %>%
+  subset(select = c(Survey.year, Institution.name, Sex.offenses...Forcible, Robbery, Aggravated.assault, Burglary, Motor.vehicle.theft, Arson))
+```
+
+```{r}
+#Merged CSU arrests
+Public_NUC_Arrests <- data.frame(year=Public_NUC_Arrests_On_campus$Survey.year, name=Public_NUC_Arrests_On_campus$Institution.name, size=Public_NUC_Arrests_On_campus$Institution.Size, weapon_arrest = (Public_NUC_Arrests_On_campus$Illegal.weapons.possession + Public_NUC_Arrests_On_campus_Student_Housing_Facilities$Illegal.weapons.possession + Public_NUC_Arrests_Noncampus$Illegal.weapons.possession)/Public_NUC_Arrests_On_campus$Institution.Size, drug_arrest = (Public_NUC_Arrests_On_campus$Drug.law.violations + Public_NUC_Arrests_On_campus_Student_Housing_Facilities$Illegal.weapons.possession + Public_NUC_Arrests_Noncampus$Illegal.weapons.possession)/Public_NUC_Arrests_On_campus$Institution.Size, liquor_arrest = (Public_NUC_Arrests_On_campus$Liquor.law.violations + Public_NUC_Arrests_On_campus_Student_Housing_Facilities$Liquor.law.violations + Public_NUC_Arrests_Noncampus$Liquor.law.violations)/Public_NUC_Arrests_On_campus$Institution.Size)
+
+head(Public_NUC_Arrests)
+```
+```{r}
+#Merged CSU disciplinary action
+Public_NUC_Disciplinary_Actions_On_campus <- Public_NUC_Disciplinary_Actions_On_campus %>% filter(Survey.year > 2007)
+
+Public_NUC_Disciplinary_Actions_Noncampus <- Public_NUC_Disciplinary_Actions_Noncampus %>% filter(Survey.year > 2007)
+
+Public_NUC_Disciplinary_Actions_Student_Housing_Facilities <- Public_NUC_Disciplinary_Actions_Student_Housing_Facilities %>% filter(Survey.year > 2007)
+
+Public_NUC_Disciplinary_Actions <- data.frame(year=Public_NUC_Disciplinary_Actions_On_campus$Survey.year, name=Public_NUC_Disciplinary_Actions_On_campus$Institution.name, size=Public_NUC_Disciplinary_Actions_On_campus$Institution.Size, weapon_discipline=(Public_NUC_Disciplinary_Actions_On_campus$Illegal.weapons.possession+Public_NUC_Disciplinary_Actions_Student_Housing_Facilities$Illegal.weapons.possession+Public_NUC_Disciplinary_Actions_Noncampus$Illegal.weapons.possession)/Public_NUC_Disciplinary_Actions_On_campus$Institution.Size, drug_discipline=(Public_NUC_Disciplinary_Actions_On_campus$Drug.law.violations+Public_NUC_Disciplinary_Actions_Student_Housing_Facilities$Drug.law.violations+Public_NUC_Disciplinary_Actions_Noncampus$Liquor.law.violations)/Public_NUC_Disciplinary_Actions_On_campus$Institution.Size, liquor_discipline=(Public_NUC_Disciplinary_Actions_On_campus$Liquor.law.violations+Public_NUC_Disciplinary_Actions_Student_Housing_Facilities$Liquor.law.violations+Public_NUC_Disciplinary_Actions_Noncampus$Liquor.law.violations)/Public_NUC_Disciplinary_Actions_On_campus$Institution.Size)
+
+head(Public_NUC_Disciplinary_Actions)
+```
+ 
+ 
+ 
+ 
+```{r}
+#Merged CSU VAWA offenses
+Public_NUC_VAWA_Offenses <- data.frame(year=Public_NUC_VAWA_Offenses_On_campus$Survey.year, name=Public_NUC_VAWA_Offenses_On_campus$Institution.name, size=Public_NUC_VAWA_Offenses_On_campus$Institution.Size, domestic_violence=(Public_NUC_VAWA_Offenses_On_campus$Domestic.violence+Public_NUC_VAWA_Offenses_On_campus_Student_Housing_Facilities$Domestic.violence+Public_NUC_VAWA_Offenses_Noncampus$Domestic.violence)/Public_NUC_VAWA_Offenses_On_campus$Institution.Size, dating_violence=(Public_NUC_VAWA_Offenses_On_campus$Dating.violence+Public_NUC_VAWA_Offenses_On_campus_Student_Housing_Facilities$Dating.violence+Public_NUC_VAWA_Offenses_Noncampus$Dating.violence)/Public_NUC_VAWA_Offenses_On_campus$Institution.Size, stalking=(Public_NUC_VAWA_Offenses_On_campus$Stalking+Public_NUC_VAWA_Offenses_On_campus_Student_Housing_Facilities$Stalking+Public_NUC_VAWA_Offenses_Noncampus$Stalking)/Public_NUC_VAWA_Offenses_On_campus$Institution.Size, rape=(Public_NUC_VAWA_Offenses_On_campus$Rape+Public_NUC_VAWA_Offenses_On_campus_Student_Housing_Facilities$Rape+Public_NUC_VAWA_Offenses_Noncampus$Rape)/Public_NUC_VAWA_Offenses_On_campus$Institution.Size, fondling=(Public_NUC_VAWA_Offenses_On_campus$Fondling+Public_NUC_VAWA_Offenses_On_campus_Student_Housing_Facilities$Fondling+Public_NUC_VAWA_Offenses_Noncampus$Fondling)/Public_NUC_VAWA_Offenses_On_campus$Institution.Size, statutory_rape=(Public_NUC_VAWA_Offenses_On_campus$Statutory.Rape+Public_NUC_VAWA_Offenses_On_campus_Student_Housing_Facilities$Statutory.Rape+Public_NUC_VAWA_Offenses_Noncampus$Statutory.Rape)/Public_NUC_VAWA_Offenses_On_campus$Institution.Size)
+
+Public_NUC_VAWA_Offenses
+```
+
+```{r}
+#All CSU sexual crimes combined into one total
+Public_NUC_Sexual_Crimes <- data.frame(year=Public_NUC_VAWA_Offenses_On_campus$Survey.year, name=Public_NUC_VAWA_Offenses_On_campus$Institution.name, size=Public_NUC_VAWA_Offenses_On_campus$Institution.Size, total=Public_NUC_VAWA_Offenses$domestic_violence+Public_NUC_VAWA_Offenses$dating_violence+Public_NUC_VAWA_Offenses$stalking+Public_NUC_VAWA_Offenses$rape+Public_NUC_VAWA_Offenses$fondling+Public_NUC_VAWA_Offenses$statutory_rape)
+
+head(Public_NUC_Sexual_Crimes)
+```
+
+```{r}
+#Merged CSU criminal offenses
+Public_NUC_Criminal_Offenses <- data.frame(year=Public_NUC_Criminal_Offenses_On_campus$Survey.year, name=Public_NUC_Criminal_Offenses_On_campus$Institution.name, size=Public_NUC_Arrests$size, forcible_sex_offense=(Public_NUC_Criminal_Offenses_On_campus$Sex.offenses...Forcible+Public_NUC_Criminal_Offenses_On_campus_Student_Housing_Facilities$Sex.offenses...Forcible+Public_NUC_Criminal_Offenses_Noncampus$Sex.offenses...Forcible)/Public_NUC_Arrests$size, robbery=(Public_NUC_Criminal_Offenses_On_campus$Robbery+Public_NUC_Criminal_Offenses_On_campus_Student_Housing_Facilities$Robbery+Public_NUC_Criminal_Offenses_Noncampus$Robbery)/Public_NUC_Arrests$size, aggravated_assault=(Public_NUC_Criminal_Offenses_On_campus$Aggravated.assault+Public_NUC_Criminal_Offenses_On_campus_Student_Housing_Facilities$Aggravated.assault+Public_NUC_Criminal_Offenses_Noncampus$Aggravated.assault)/Public_NUC_Arrests$size, burglary=(Public_NUC_Criminal_Offenses_On_campus$Burglary+Public_NUC_Criminal_Offenses_On_campus_Student_Housing_Facilities$Burglary+Public_NUC_Criminal_Offenses_Noncampus$Burglary)/Public_NUC_Arrests$size, car_theft=(Public_NUC_Criminal_Offenses_On_campus$Motor.vehicle.theft+Public_NUC_Criminal_Offenses_On_campus_Student_Housing_Facilities$Motor.vehicle.theft+Public_NUC_Criminal_Offenses_Noncampus$Motor.vehicle.theft)/Public_NUC_Arrests$size, arson=(Public_NUC_Criminal_Offenses_On_campus$Arson+Public_NUC_Criminal_Offenses_On_campus_Student_Housing_Facilities$Arson+Public_NUC_Criminal_Offenses_Noncampus$Arson)/Public_NUC_Arrests$size)
+
+Public_NUC_Criminal_Offenses
+```
+
+```{r}
+NorCal_NUC_schools = c("California State University-Chico", "California State University-Sacramento", "San Jose State University", "Sonoma State University", "Humboldt State University")
+
+#NorCal CSU datatables
+NorCal_NUC_Arrests <- Public_NUC_Arrests %>%
+  filter(name %in% NorCal_NUC_schools)
+
+NorCal_NUC_Disciplinary_Actions <- Public_NUC_Disciplinary_Actions %>%
+  filter(name %in% NorCal_NUC_schools)
+
+NorCal_NUC_VAWA_Offenses <- Public_NUC_VAWA_Offenses %>%
+  filter(name %in% NorCal_NUC_schools)
+
+NorCal_NUC_Sexual_Crimes <- Public_NUC_Sexual_Crimes %>%
+  filter(name %in% NorCal_NUC_schools)
+  
+NorCal_NUC_Criminal_Offenses <- Public_NUC_Criminal_Offenses %>%
+  filter(name %in% NorCal_NUC_schools)
+
+#SoCal UC datatables
+SoCal_NUC_Arrests <- Public_NUC_Arrests %>%
+  filter(!name %in% NorCal_NUC_schools)
+
+SoCal_NUC_Disciplinary_Actions <- Public_NUC_Disciplinary_Actions %>%
+  filter(!name %in% NorCal_NUC_schools)
+
+SoCal_NUC_VAWA_Offenses <- Public_NUC_VAWA_Offenses %>%
+  filter(!name %in% NorCal_NUC_schools)
+
+SoCal_NUC_Sexual_Crimes <- Public_NUC_Sexual_Crimes %>%
+  filter(!name %in% NorCal_NUC_schools)
+  
+SoCal_NUC_Criminal_Offenses <- Public_NUC_Criminal_Offenses %>%
+  filter(!name %in% NorCal_NUC_schools)
+```
+
+
