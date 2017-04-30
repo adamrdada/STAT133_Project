@@ -1,0 +1,356 @@
+---
+title: "Stat Project"
+author: ""
+date: "Public UC"
+output: 
+  html_document:
+    fig_height: 6
+    fig_width: 10
+---
+<!-- Don't edit in between this line and the one below -->
+```{r include=FALSE}
+# Don't delete this chunk if you are using the DataComputing package
+library(DataComputing)
+library(ggplot2)
+library(dplyr)
+```
+*Source file* 
+```{r, results='asis', echo=FALSE}
+includeSourceDocuments()
+```
+<!-- Don't edit the material above this line -->
+
+```{r}
+UC_arrests_noncampus = read.csv("NorCal SoCal/Public_UC_Arrests_Noncampus.csv")
+UC_arrests_campus = read.csv("NorCal SoCal/Public_UC_Arrests_On_Campus.csv")
+UC_arrests_housing = read.csv("NorCal SoCal/Public_UC_Arrests_On_campus_Student_Housing_Facilities.csv")
+
+UC_criminal_noncampus = read.csv("NorCal SoCal/Public_UC_Criminal_Offenses_Noncampus.csv")
+UC_criminal_campus = read.csv("NorCal SoCal/Public_UC_Criminal_Offenses_On_campus.csv")
+UC_criminal_housing = read.csv("NorCal SoCal/Public_UC_Criminal_Offenses_On_campus_Student_Housing_Facilities.csv")
+
+UC_disciplinary_noncampus = read.csv("NorCal SoCal/Public_UC_Disciplinary_Actions_Noncampus.csv")
+UC_disciplinary_campus = read.csv("NorCal SoCal/Public_UC_Disciplinary_Actions_On_campus.csv")
+UC_disciplinary_housing = read.csv("NorCal SoCal/Public_UC_Disciplinary_Actions_Student_Housing_Facilities.csv")
+
+UC_VAWA_noncampus = read.csv("NorCal SoCal/Public_UC_VAWA_Offenses_Noncampus.csv")
+UC_VAWA_campus = read.csv("NorCal SoCal/Public_UC_VAWA_Offenses_On_campus.csv")
+UC_VAWA_housing = read.csv("NorCal SoCal/Public_UC_VAWA_Offenses_On_campus_Student_Housing_Facilities.csv")
+
+NUC_arrests_noncampus = read.csv("NorCal SoCal/Public_NUC_Arrests_Noncampus.csv")
+NUC_arrests_campus = read.csv("NorCal SoCal/Public_NUC_Arrests_On_campus.csv")
+NUC_arrests_housing = read.csv("NorCal SoCal/Public_NUC_Arrests_On_campus_Student_Housing_Facilities.csv")
+
+NUC_criminal_noncampus = read.csv("NorCal SoCal/Public_NUC_Criminal_Offenses_Noncampus.csv")
+NUC_criminal_campus = read.csv("NorCal SoCal/Public_NUC_Criminal_Offenses_On_campus.csv")
+NUC_criminal_housing = read.csv("NorCal SoCal/Public_NUC_Criminal_Offenses_On_campus_Student_Housing_Facilities.csv")
+
+NUC_disciplinary_noncampus = read.csv("NorCal SoCal/Public_NUC_Disciplinary_Actions_Noncampus.csv")
+NUC_disciplinary_campus = read.csv("NorCal SoCal/Public_NUC_Disciplinary_Actions_On_campus.csv")
+NUC_disciplinary_housing = read.csv("NorCal SoCal/Public_NUC_Disciplinary_Actions_Student_Housing_Facilities.csv")
+
+NUC_VAWA_noncampus = read.csv("NorCal SoCal/Public_NUC_VAWA_Offenses_Noncampus.csv")
+NUC_VAWA_campus = read.csv("NorCal SoCal/Public_NUC_VAWA_Offenses_On_campus.csv")
+NUC_VAWA_housing = read.csv("NorCal SoCal/Public_NUC_VAWA_Offenses_On_campus_Student_Housing_Facilities.csv")
+
+```
+
+```{r}
+for(i in range(3)) {
+  
+}
+UC_criminal <- merge(UC_criminal_noncampus, UC_criminal_campus, by=c("Survey.year", "Institution.name", "Institution.Size")) 
+UC_criminal <- merge(UC_criminal, UC_criminal_housing, by=c("Survey.year", "Institution.name", "Institution.Size"))
+UC_criminal <- UC_criminal %>% select(Survey.year, Institution.name, contains("Weapons"))
+```
+
+
+```{r}
+Arrests <- c("Weapons", "Drugs", "Liquor")
+ArrestsPerStudent <- paste(Arrests, "PerStudent", sep="")
+
+Crimes <- c("ForcibleSexOffenses", "Assault", "Burglary", "CarTheft", "Arson", "Total")
+CrimesPerStudent <- paste(Crimes, "PerStudent", sep="")
+
+VAWA <- c("DomesticViolence", "DatingViolence", "Stalking", "Rape", "Fondling", "StatutoryRape")
+VAWAPerStudent <- paste(VAWA, "PerStudent", sep="")
+
+
+filterArrests <- function(data) {
+  return(data %>% filter(!grepl("Hastings", data$Institution.name)) %>%
+                                          filter(!is.na(Institution.Size)) %>% 
+                                          mutate(Weapons = Illegal.weapons.possession,
+                                                 Drugs = Drug.law.violations,
+                                                 Liquor = Liquor.law.violations) %>%
+                                          mutate(WeaponsPerStudent = Weapons/Institution.Size, 
+                                                 DrugsPerStudent = Drugs/Institution.Size, 
+                                                 LiquorPerStudent = Liquor/Institution.Size) %>%
+                                          mutate(Total = Weapons + Drugs + Liquor, TotalPerStudent = Total/Institution.Size) %>%
+                                          select(Survey.year, Institution.name, one_of(Arrests), one_of(ArrestsPerStudent)))
+}
+
+filterCriminal <- function(data){
+   data %>% filter(!grepl("Hastings", data$Institution.name)) %>%
+                                            filter(!is.na(Institution.Size)) %>% 
+                                            mutate(ForcibleSexOffenses = Sex.offenses...Forcible,
+                                                   Assault = Aggravated.assault,
+                                                   CarTheft = Motor.vehicle.theft) %>%
+                                            mutate(ForcibleSexOffensesPerStudent = ForcibleSexOffenses/Institution.Size,
+                                                   AssaultPerStudent = Assault/Institution.Size,
+                                                   BurglaryPerStudent = Burglary/Institution.Size,
+                                                   CarTheftPerStudent = CarTheft/Institution.Size,
+                                                   ArsonPerStudent = Arson/Institution.Size) %>%
+                                            mutate(Total = ForcibleSexOffenses + Assault + Burglary + CarTheft + Arson,
+                                                   TotalPerStudent = Total/Institution.Size) %>%
+                                            select(Survey.year, Institution.name, one_of(Crimes), one_of(CrimesPerStudent))
+}
+
+filterVAWA <- function(data) {
+  data %>% filter(!grepl("Hastings", data$Institution.name)) %>%
+                                            filter(!is.na(Institution.Size)) %>% 
+                                            mutate(DomesticViolence = Domestic.violence,
+                                                   DatingViolence = Dating.violence,
+                                                   StatutoryRape = Statutory.Rape) %>%
+                                            mutate(DomesticViolencePerStudent = DomesticViolence/Institution.Size,
+                                                   DatingViolencePerStudent = DatingViolence/Institution.Size,
+                                                   StalkingPerStudent = Stalking/Institution.Size,
+                                                   RapePerStudent = Rape/Institution.Size,
+                                                   FondlingPerStudent = Fondling/Institution.Size,
+                                                   StatutoryRapePerStudent = StatutoryRape/Institution.Size) %>%
+                                            mutate(Total = DomesticViolence + DatingViolence + Stalking + Rape + Fondling + StatutoryRape) %>%
+                                            select(Survey.year, Institution.name, one_of(VAWA), one_of(VAWAPerStudent))
+}
+
+sumSexOffenses <- function(data) {
+  return(data %>% mutate(Sex.offenses...Forcible = ifelse(Survey.year > 2013, Rape + Fondling, Sex.offenses...Forcible)) %>%
+          mutate(Sex.offenses...Non.forcible = ifelse(Survey.year > 2013, Incest + Statutory.rape, Sex.offenses...Non.forcible)))
+}
+
+updatedNames <- function(data, UC=TRUE) {
+  if (UC) {
+    return(gsub(".*-", "", data$Institution.name))
+  } else {
+    data$Institution.name <- gsub("California State University", "CSU", data$Institution.name)
+    data$Institution.name <- gsub(".*Polytechnic.*-", "CalPoly-", data$Institution.name)
+    return(data$Institution.name)
+  }
+  
+}
+
+getBerkeley <- function(data) {
+  return(data %>% filter(grepl("Berkeley", data$Institution.name)))
+}
+
+sumNonBerkeley <- function(data, UC=TRUE) {
+  data = data %>% filter(!grepl("Berkeley", data$Institution.name)) %>% 
+                                                group_by(Survey.year) %>% 
+                                                summarise_each(funs(mean))
+  if (UC) {
+     return(data %>% mutate(Institution.name = "Other UCs"))
+  } else {
+    return(data %>% mutate(Institution.name = "Non-UCs"))
+  }
+}
+
+massPlot <- function(data, cols) {
+  for(col in cols) {
+    print(data %>% ggplot(aes(x = Survey.year, col=Institution.name)) + geom_line(aes_string(y=col)))
+  }
+}
+
+```
+
+```{r, warning=FALSE}
+UC_arrests_campus = filterArrests(UC_arrests_campus)
+
+UC_arrests_campus$Institution.name <- updatedNames(UC_arrests_campus)
+
+Berkeley_arrests_campus = getBerkeley(UC_arrests_campus)
+  
+
+Other_UC_arrests_campus = sumNonBerkeley(UC_arrests_campus)
+
+summedUC_arrests = rbind(Berkeley_arrests_campus, Other_UC_arrests_campus)
+
+
+
+massPlot(UC_arrests_campus, Arrests)
+massPlot(UC_arrests_campus, ArrestsPerStudent)
+
+massPlot(summedUC_arrests, Arrests)
+massPlot(summedUC_arrests, ArrestsPerStudent)
+```
+
+
+
+
+```{r, warning=FALSE}
+UC_criminal_campus = sumSexOffenses(UC_criminal_campus)
+
+UC_criminal_campus = filterCriminal(UC_criminal_campus)
+
+UC_criminal_campus$Institution.name = updatedNames(UC_criminal_campus)
+
+Berkeley_criminal_campus = getBerkeley(UC_criminal_campus)
+
+Other_UC_criminal_campus = sumNonBerkeley(UC_criminal_campus)
+
+summedUC_criminal = rbind(Berkeley_criminal_campus, Other_UC_criminal_campus)
+
+massPlot(UC_criminal_campus, Crimes)
+massPlot(UC_criminal_campus, CrimesPerStudent)
+
+massPlot(summedUC_criminal, Crimes)
+massPlot(summedUC_criminal, CrimesPerStudent)
+```
+
+
+
+```{r, warning=FALSE}
+UC_disciplinary_campus = filterArrests(UC_disciplinary_campus)
+
+UC_disciplinary_campus$Institution.name = updatedNames(UC_disciplinary_campus)
+
+Berkeley_disciplinary_campus = getBerkeley(UC_disciplinary_campus)
+
+Other_UC_disciplinary_campus = sumNonBerkeley(UC_disciplinary_campus)
+
+summedUC_disciplinary_campus = rbind(Berkeley_disciplinary_campus, Other_UC_disciplinary_campus)
+
+massPlot(UC_disciplinary_campus, Arrests)
+massPlot(UC_disciplinary_campus, ArrestsPerStudent)
+
+massPlot(summedUC_disciplinary_campus, Arrests)
+massPlot(summedUC_disciplinary_campus, ArrestsPerStudent)
+```
+
+
+
+
+```{r, warning=FALSE}
+UC_VAWA_campus = filterVAWA(UC_VAWA_campus)
+
+UC_VAWA_campus$Institution.name = updatedNames(UC_VAWA_campus)
+
+Berkeley_VAWA_campus = getBerkeley(UC_VAWA_campus)
+
+Other_UC_VAWA_campus = sumNonBerkeley(UC_VAWA_campus)
+
+summedUC_VAWA_campus = rbind(Berkeley_VAWA_campus, Other_UC_VAWA_campus)
+
+massPlot(UC_VAWA_campus, VAWA)
+massPlot(UC_VAWA_campus, VAWAPerStudent)
+
+massPlot(summedUC_VAWA_campus, VAWAPerStudent)
+massPlot(summedUC_VAWA_campus, VAWAPerStudent)
+
+```
+
+
+
+
+
+Disciplinary Actions vs. Arrests (Students vs. Community)
+```{r, warning=FALSE}
+compareDiscplinaryArrests <- function(disciplinary, arrests) {
+  combined <- merge(disciplinary, arrests, by=c("Survey.year", "Institution.name"))
+  UC_criminal_campus$Institution.name = gsub(".*-", "", UC_criminal_campus$Institution.name)
+  names(combined) <- gsub("y$","Arrests", names(combined))
+  names(combined) <- gsub("x$","Disciplinary", names(combined))
+  for(crime in Arrests) {
+    crime_x = paste(crime, "Disciplinary", sep=".")
+    crime_y = paste(crime, "Arrests", sep=".")
+    print(combined %>% ggplot(aes(col=Institution.name)) + geom_point(aes_string(x=crime_x, y=crime_y)))
+  }
+}
+
+compareDiscplinaryArrests(UC_disciplinary_campus, UC_arrests_campus)
+
+```
+
+
+```{r, warning=FALSE}
+
+NUC_arrests_campus = filterArrests(NUC_arrests_campus)
+
+NUC_arrests_campus$Institution.name <- updatedNames(NUC_arrests_campus, FALSE)
+
+Berkeley_NUC_arrests_campus = rbind(Berkeley_arrests_campus, NUC_arrests_campus)
+
+Berkeley_summedNUC_arrests_campus = rbind(Berkeley_arrests_campus, sumNonBerkeley(NUC_arrests_campus, FALSE))
+
+massPlot(NUC_arrests_campus, Arrests)
+massPlot(NUC_arrests_campus, ArrestsPerStudent)
+
+massPlot(Berkeley_NUC_arrests_campus, Arrests)
+massPlot(Berkeley_NUC_arrests_campus, ArrestsPerStudent)
+
+massPlot(Berkeley_summedNUC_arrests_campus, Arrests)
+massPlot(Berkeley_summedNUC_arrests_campus, ArrestsPerStudent)
+
+
+```
+
+
+
+```{r, warning=FALSE}
+NUC_criminal_campus = sumSexOffenses(NUC_criminal_campus)
+
+NUC_criminal_campus = filterCriminal(NUC_criminal_campus)
+
+NUC_criminal_campus$Institution.name = updatedNames(NUC_criminal_campus, FALSE)
+
+Berkeley_NUC_criminal_campus = rbind(Berkeley_criminal_campus, NUC_criminal_campus)
+
+Berkeley_summedNUC_criminal_campus = rbind(Berkeley_criminal_campus, sumNonBerkeley(NUC_criminal_campus, FALSE))
+
+
+massPlot(Berkeley_NUC_criminal_campus, Crimes)
+massPlot(Berkeley_NUC_criminal_campus, CrimesPerStudent)
+
+massPlot(Berkeley_summedNUC_criminal_campus, Crimes)
+massPlot(Berkeley_summedNUC_criminal_campus, CrimesPerStudent)
+
+```
+
+
+```{r, warning=FALSE}
+NUC_disciplinary_campus = filterArrests(NUC_disciplinary_campus)
+
+NUC_disciplinary_campus$Institution.name = updatedNames(NUC_disciplinary_campus, FALSE)
+
+Berkeley_NUC_disciplinary_campus = rbind(Berkeley_disciplinary_campus, NUC_disciplinary_campus)
+
+Berkeley_summedNUC_disciplinary_campus = rbind(Berkeley_disciplinary_campus, sumNonBerkeley(NUC_disciplinary_campus, FALSE))
+
+massPlot(Berkeley_NUC_disciplinary_campus, Arrests)
+massPlot(Berkeley_NUC_disciplinary_campus, ArrestsPerStudent)
+
+massPlot(Berkeley_summedNUC_disciplinary_campus, Arrests)
+massPlot(Berkeley_summedNUC_disciplinary_campus, ArrestsPerStudent)
+```
+
+
+```{r, warning=FALSE}
+NUC_VAWA_campus = filterVAWA(NUC_VAWA_campus)
+
+NUC_VAWA_campus$Institution.name = updatedNames(NUC_VAWA_campus)
+
+Berkeley_NUC_VAWA_campus = rbind(Berkeley_VAWA_campus, NUC_VAWA_campus)
+
+Berkeley_summedNUC_VAWA_campus = rbind(Berkeley_VAWA_campus, sumNonBerkeley(NUC_VAWA_campus))
+
+massPlot(Berkeley_NUC_VAWA_campus, VAWA)
+massPlot(Berkeley_NUC_VAWA_campus, VAWAPerStudent)
+
+massPlot(Berkeley_summedNUC_VAWA_campus, VAWAPerStudent)
+massPlot(Berkeley_summedNUC_VAWA_campus, VAWAPerStudent)
+
+```
+
+
+
+
+
+
+
