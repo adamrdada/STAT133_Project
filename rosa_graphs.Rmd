@@ -33,10 +33,6 @@ UC_disciplinary_noncampus = read.csv("NorCal SoCal/Public_UC_Disciplinary_Action
 UC_disciplinary_campus = read.csv("NorCal SoCal/Public_UC_Disciplinary_Actions_On_campus.csv")
 UC_disciplinary_housing = read.csv("NorCal SoCal/Public_UC_Disciplinary_Actions_Student_Housing_Facilities.csv")
 
-UC_VAWA_noncampus = read.csv("NorCal SoCal/Public_UC_VAWA_Offenses_Noncampus.csv")
-UC_VAWA_campus = read.csv("NorCal SoCal/Public_UC_VAWA_Offenses_On_campus.csv")
-UC_VAWA_housing = read.csv("NorCal SoCal/Public_UC_VAWA_Offenses_On_campus_Student_Housing_Facilities.csv")
-
 NUC_arrests_noncampus = read.csv("NorCal SoCal/Public_NUC_Arrests_Noncampus.csv")
 NUC_arrests_campus = read.csv("NorCal SoCal/Public_NUC_Arrests_On_campus.csv")
 NUC_arrests_housing = read.csv("NorCal SoCal/Public_NUC_Arrests_On_campus_Student_Housing_Facilities.csv")
@@ -49,19 +45,6 @@ NUC_disciplinary_noncampus = read.csv("NorCal SoCal/Public_NUC_Disciplinary_Acti
 NUC_disciplinary_campus = read.csv("NorCal SoCal/Public_NUC_Disciplinary_Actions_On_campus.csv")
 NUC_disciplinary_housing = read.csv("NorCal SoCal/Public_NUC_Disciplinary_Actions_Student_Housing_Facilities.csv")
 
-NUC_VAWA_noncampus = read.csv("NorCal SoCal/Public_NUC_VAWA_Offenses_Noncampus.csv")
-NUC_VAWA_campus = read.csv("NorCal SoCal/Public_NUC_VAWA_Offenses_On_campus.csv")
-NUC_VAWA_housing = read.csv("NorCal SoCal/Public_NUC_VAWA_Offenses_On_campus_Student_Housing_Facilities.csv")
-
-```
-
-```{r}
-for(i in range(3)) {
-  
-}
-UC_criminal <- merge(UC_criminal_noncampus, UC_criminal_campus, by=c("Survey.year", "Institution.name", "Institution.Size")) 
-UC_criminal <- merge(UC_criminal, UC_criminal_housing, by=c("Survey.year", "Institution.name", "Institution.Size"))
-UC_criminal <- UC_criminal %>% select(Survey.year, Institution.name, contains("Weapons"))
 ```
 
 
@@ -75,13 +58,12 @@ CrimesPerStudent <- paste(Crimes, "PerStudent", sep="")
 VAWA <- c("DomesticViolence", "DatingViolence", "Stalking", "Rape", "Fondling", "StatutoryRape")
 VAWAPerStudent <- paste(VAWA, "PerStudent", sep="")
 
-
 filterArrests <- function(data) {
   return(data %>% filter(!grepl("Hastings", data$Institution.name)) %>%
                                           filter(!is.na(Institution.Size)) %>% 
-                                          mutate(Weapons = Illegal.weapons.possession,
-                                                 Drugs = Drug.law.violations,
-                                                 Liquor = Liquor.law.violations) %>%
+                                          mutate(Weapons = as.numeric(Illegal.weapons.possession),
+                                                 Drugs = as.numeric(Drug.law.violations),
+                                                 Liquor = as.numeric(Liquor.law.violations)) %>%
                                           mutate(WeaponsPerStudent = Weapons/Institution.Size, 
                                                  DrugsPerStudent = Drugs/Institution.Size, 
                                                  LiquorPerStudent = Liquor/Institution.Size) %>%
@@ -92,9 +74,9 @@ filterArrests <- function(data) {
 filterCriminal <- function(data){
    data %>% filter(!grepl("Hastings", data$Institution.name)) %>%
                                             filter(!is.na(Institution.Size)) %>% 
-                                            mutate(ForcibleSexOffenses = Sex.offenses...Forcible,
-                                                   Assault = Aggravated.assault,
-                                                   CarTheft = Motor.vehicle.theft) %>%
+                                            mutate(ForcibleSexOffenses = as.numeric(Sex.offenses...Forcible),
+                                                   Assault = as.numeric(Aggravated.assault),
+                                                   CarTheft = as.numeric(Motor.vehicle.theft)) %>%
                                             mutate(ForcibleSexOffensesPerStudent = ForcibleSexOffenses/Institution.Size,
                                                    AssaultPerStudent = Assault/Institution.Size,
                                                    BurglaryPerStudent = Burglary/Institution.Size,
@@ -108,9 +90,9 @@ filterCriminal <- function(data){
 filterVAWA <- function(data) {
   data %>% filter(!grepl("Hastings", data$Institution.name)) %>%
                                             filter(!is.na(Institution.Size)) %>% 
-                                            mutate(DomesticViolence = Domestic.violence,
-                                                   DatingViolence = Dating.violence,
-                                                   StatutoryRape = Statutory.Rape) %>%
+                                            mutate(DomesticViolence = as.numeric(Domestic.violence),
+                                                   DatingViolence = as.numeric(Dating.violence),
+                                                   StatutoryRape = as.numeric(Statutory.Rape)) %>%
                                             mutate(DomesticViolencePerStudent = DomesticViolence/Institution.Size,
                                                    DatingViolencePerStudent = DatingViolence/Institution.Size,
                                                    StalkingPerStudent = Stalking/Institution.Size,
@@ -138,13 +120,14 @@ updatedNames <- function(data, UC=TRUE) {
 }
 
 getBerkeley <- function(data) {
-  return(data %>% filter(grepl("Berkeley", data$Institution.name)))
+  return(data %>% filter(grepl("Berkeley", Institution.name)) %>% ungroup())
 }
 
 sumNonBerkeley <- function(data, UC=TRUE) {
-  data = data %>% filter(!grepl("Berkeley", data$Institution.name)) %>% 
+  data = data %>% filter(!grepl("Berkeley", Institution.name)) %>% 
                                                 group_by(Survey.year) %>% 
                                                 summarise_each(funs(mean))
+
   if (UC) {
      return(data %>% mutate(Institution.name = "Other UCs"))
   } else {
@@ -158,24 +141,51 @@ massPlot <- function(data, cols) {
   }
 }
 
+groupCriminal <- function(data1, data2, data3, UC=TRUE){
+  data <- rbind(data1, data2, data3)
+  data$Institution.name = updatedNames(data, UC)
+  return(data %>% sumSexOffenses() %>%
+                                filterCriminal() %>%
+                                group_by(Survey.year, Institution.name) %>%
+                                summarise_all(.funs=sum) %>%
+                                ungroup(Survey.year, Institution.name))
+}
+
+groupArrests <- function(data1, data2, data3, UC=TRUE){
+  data <- rbind(data1, data2, data3)
+  data$Institution.name = updatedNames(data, UC)
+  return(data %>% filterArrests() %>%
+                                group_by(Survey.year, Institution.name) %>%
+                                summarise_all(.funs=sum) %>%
+                                ungroup(Survey.year, Institution.name))
+}
+
+```
+
+
+```{r, warning=FALSE}
+UC_criminal <- groupCriminal(UC_criminal_campus, UC_criminal_housing, UC_criminal_noncampus, UC=TRUE)
+
+UC_arrests <- groupArrests(UC_arrests_campus, UC_arrests_housing, UC_arrests_noncampus, UC=TRUE)
+
+UC_disciplinary <- groupArrests(UC_disciplinary_campus, UC_disciplinary_housing, UC_disciplinary_noncampus, UC=TRUE)
+
+NUC_criminal <- groupCriminal(NUC_criminal_campus, NUC_criminal_housing, NUC_criminal_noncampus, UC=FALSE)
+
+NUC_arrests <- groupArrests(NUC_arrests_campus, NUC_arrests_housing, NUC_arrests_noncampus, UC=FALSE)
+
+NUC_disciplinary <- groupArrests(NUC_disciplinary_campus, NUC_disciplinary_housing, NUC_disciplinary_noncampus, UC=FALSE)
 ```
 
 ```{r, warning=FALSE}
-UC_arrests_campus = filterArrests(UC_arrests_campus)
+Berkeley_arrests = getBerkeley(UC_arrests)
 
-UC_arrests_campus$Institution.name <- updatedNames(UC_arrests_campus)
+Other_UC_arrests = sumNonBerkeley(UC_arrests)
 
-Berkeley_arrests_campus = getBerkeley(UC_arrests_campus)
-  
+summedUC_arrests = rbind(Berkeley_arrests, Other_UC_arrests)
 
-Other_UC_arrests_campus = sumNonBerkeley(UC_arrests_campus)
-
-summedUC_arrests = rbind(Berkeley_arrests_campus, Other_UC_arrests_campus)
-
-
-
-massPlot(UC_arrests_campus, Arrests)
-massPlot(UC_arrests_campus, ArrestsPerStudent)
+massPlot(UC_arrests, Arrests)
+massPlot(UC_arrests, ArrestsPerStudent)
 
 massPlot(summedUC_arrests, Arrests)
 massPlot(summedUC_arrests, ArrestsPerStudent)
@@ -185,20 +195,14 @@ massPlot(summedUC_arrests, ArrestsPerStudent)
 
 
 ```{r, warning=FALSE}
-UC_criminal_campus = sumSexOffenses(UC_criminal_campus)
+Berkeley_criminal = getBerkeley(UC_criminal)
 
-UC_criminal_campus = filterCriminal(UC_criminal_campus)
+Other_UC_criminal = sumNonBerkeley(UC_criminal)
 
-UC_criminal_campus$Institution.name = updatedNames(UC_criminal_campus)
+summedUC_criminal = rbind(Berkeley_criminal, Other_UC_criminal)
 
-Berkeley_criminal_campus = getBerkeley(UC_criminal_campus)
-
-Other_UC_criminal_campus = sumNonBerkeley(UC_criminal_campus)
-
-summedUC_criminal = rbind(Berkeley_criminal_campus, Other_UC_criminal_campus)
-
-massPlot(UC_criminal_campus, Crimes)
-massPlot(UC_criminal_campus, CrimesPerStudent)
+massPlot(UC_criminal, Crimes)
+massPlot(UC_criminal, CrimesPerStudent)
 
 massPlot(summedUC_criminal, Crimes)
 massPlot(summedUC_criminal, CrimesPerStudent)
@@ -207,54 +211,24 @@ massPlot(summedUC_criminal, CrimesPerStudent)
 
 
 ```{r, warning=FALSE}
-UC_disciplinary_campus = filterArrests(UC_disciplinary_campus)
+Berkeley_disciplinary = getBerkeley(UC_disciplinary)
 
-UC_disciplinary_campus$Institution.name = updatedNames(UC_disciplinary_campus)
+Other_UC_disciplinary = sumNonBerkeley(UC_disciplinary)
 
-Berkeley_disciplinary_campus = getBerkeley(UC_disciplinary_campus)
+summedUC_disciplinary = rbind(Berkeley_disciplinary, Other_UC_disciplinary)
 
-Other_UC_disciplinary_campus = sumNonBerkeley(UC_disciplinary_campus)
+massPlot(UC_disciplinary, Arrests)
+massPlot(UC_disciplinary, ArrestsPerStudent)
 
-summedUC_disciplinary_campus = rbind(Berkeley_disciplinary_campus, Other_UC_disciplinary_campus)
-
-massPlot(UC_disciplinary_campus, Arrests)
-massPlot(UC_disciplinary_campus, ArrestsPerStudent)
-
-massPlot(summedUC_disciplinary_campus, Arrests)
-massPlot(summedUC_disciplinary_campus, ArrestsPerStudent)
+massPlot(summedUC_disciplinary, Arrests)
+massPlot(summedUC_disciplinary, ArrestsPerStudent)
 ```
-
-
-
-
-```{r, warning=FALSE}
-UC_VAWA_campus = filterVAWA(UC_VAWA_campus)
-
-UC_VAWA_campus$Institution.name = updatedNames(UC_VAWA_campus)
-
-Berkeley_VAWA_campus = getBerkeley(UC_VAWA_campus)
-
-Other_UC_VAWA_campus = sumNonBerkeley(UC_VAWA_campus)
-
-summedUC_VAWA_campus = rbind(Berkeley_VAWA_campus, Other_UC_VAWA_campus)
-
-massPlot(UC_VAWA_campus, VAWA)
-massPlot(UC_VAWA_campus, VAWAPerStudent)
-
-massPlot(summedUC_VAWA_campus, VAWAPerStudent)
-massPlot(summedUC_VAWA_campus, VAWAPerStudent)
-
-```
-
-
-
-
 
 Disciplinary Actions vs. Arrests (Students vs. Community)
 ```{r, warning=FALSE}
 compareDiscplinaryArrests <- function(disciplinary, arrests) {
   combined <- merge(disciplinary, arrests, by=c("Survey.year", "Institution.name"))
-  UC_criminal_campus$Institution.name = gsub(".*-", "", UC_criminal_campus$Institution.name)
+  UC_criminal$Institution.name = gsub(".*-", "", UC_criminal$Institution.name)
   names(combined) <- gsub("y$","Arrests", names(combined))
   names(combined) <- gsub("x$","Disciplinary", names(combined))
   for(crime in Arrests) {
@@ -264,29 +238,27 @@ compareDiscplinaryArrests <- function(disciplinary, arrests) {
   }
 }
 
-compareDiscplinaryArrests(UC_disciplinary_campus, UC_arrests_campus)
+compareDiscplinaryArrests(UC_disciplinary, UC_arrests)
 
 ```
 
 
 ```{r, warning=FALSE}
+Berkeley_NUC_arrests = rbind(Berkeley_arrests, NUC_arrests)
 
-NUC_arrests_campus = filterArrests(NUC_arrests_campus)
+class(Berkeley_arrests)
+class(NUC_arrests)
 
-NUC_arrests_campus$Institution.name <- updatedNames(NUC_arrests_campus, FALSE)
+Berkeley_summedNUC_arrests = rbind(Berkeley_arrests, sumNonBerkeley(NUC_arrests, FALSE))
 
-Berkeley_NUC_arrests_campus = rbind(Berkeley_arrests_campus, NUC_arrests_campus)
+massPlot(NUC_arrests, Arrests)
+massPlot(NUC_arrests, ArrestsPerStudent)
 
-Berkeley_summedNUC_arrests_campus = rbind(Berkeley_arrests_campus, sumNonBerkeley(NUC_arrests_campus, FALSE))
+massPlot(Berkeley_NUC_arrests, Arrests)
+massPlot(Berkeley_NUC_arrests, ArrestsPerStudent)
 
-massPlot(NUC_arrests_campus, Arrests)
-massPlot(NUC_arrests_campus, ArrestsPerStudent)
-
-massPlot(Berkeley_NUC_arrests_campus, Arrests)
-massPlot(Berkeley_NUC_arrests_campus, ArrestsPerStudent)
-
-massPlot(Berkeley_summedNUC_arrests_campus, Arrests)
-massPlot(Berkeley_summedNUC_arrests_campus, ArrestsPerStudent)
+massPlot(Berkeley_summedNUC_arrests, Arrests)
+massPlot(Berkeley_summedNUC_arrests, ArrestsPerStudent)
 
 
 ```
@@ -294,61 +266,38 @@ massPlot(Berkeley_summedNUC_arrests_campus, ArrestsPerStudent)
 
 
 ```{r, warning=FALSE}
-NUC_criminal_campus = sumSexOffenses(NUC_criminal_campus)
+Berkeley_NUC_criminal = rbind(Berkeley_criminal, NUC_criminal)
 
-NUC_criminal_campus = filterCriminal(NUC_criminal_campus)
-
-NUC_criminal_campus$Institution.name = updatedNames(NUC_criminal_campus, FALSE)
-
-Berkeley_NUC_criminal_campus = rbind(Berkeley_criminal_campus, NUC_criminal_campus)
-
-Berkeley_summedNUC_criminal_campus = rbind(Berkeley_criminal_campus, sumNonBerkeley(NUC_criminal_campus, FALSE))
+Berkeley_summedNUC_criminal = rbind(Berkeley_criminal, sumNonBerkeley(NUC_criminal, FALSE))
 
 
-massPlot(Berkeley_NUC_criminal_campus, Crimes)
-massPlot(Berkeley_NUC_criminal_campus, CrimesPerStudent)
+massPlot(Berkeley_NUC_criminal, Crimes)
+massPlot(Berkeley_NUC_criminal, CrimesPerStudent)
 
-massPlot(Berkeley_summedNUC_criminal_campus, Crimes)
-massPlot(Berkeley_summedNUC_criminal_campus, CrimesPerStudent)
+massPlot(Berkeley_summedNUC_criminal, Crimes)
+massPlot(Berkeley_summedNUC_criminal, CrimesPerStudent)
 
 ```
 
 
 ```{r, warning=FALSE}
-NUC_disciplinary_campus = filterArrests(NUC_disciplinary_campus)
+Berkeley_NUC_disciplinary = rbind(Berkeley_disciplinary, NUC_disciplinary)
 
-NUC_disciplinary_campus$Institution.name = updatedNames(NUC_disciplinary_campus, FALSE)
+Berkeley_summedNUC_disciplinary = rbind(Berkeley_disciplinary, sumNonBerkeley(NUC_disciplinary, FALSE))
 
-Berkeley_NUC_disciplinary_campus = rbind(Berkeley_disciplinary_campus, NUC_disciplinary_campus)
+massPlot(Berkeley_NUC_disciplinary, Arrests)
+massPlot(Berkeley_NUC_disciplinary, ArrestsPerStudent)
 
-Berkeley_summedNUC_disciplinary_campus = rbind(Berkeley_disciplinary_campus, sumNonBerkeley(NUC_disciplinary_campus, FALSE))
-
-massPlot(Berkeley_NUC_disciplinary_campus, Arrests)
-massPlot(Berkeley_NUC_disciplinary_campus, ArrestsPerStudent)
-
-massPlot(Berkeley_summedNUC_disciplinary_campus, Arrests)
-massPlot(Berkeley_summedNUC_disciplinary_campus, ArrestsPerStudent)
+massPlot(Berkeley_summedNUC_disciplinary, Arrests)
+massPlot(Berkeley_summedNUC_disciplinary, ArrestsPerStudent)
 ```
-
 
 ```{r, warning=FALSE}
-NUC_VAWA_campus = filterVAWA(NUC_VAWA_campus)
 
-NUC_VAWA_campus$Institution.name = updatedNames(NUC_VAWA_campus)
 
-Berkeley_NUC_VAWA_campus = rbind(Berkeley_VAWA_campus, NUC_VAWA_campus)
 
-Berkeley_summedNUC_VAWA_campus = rbind(Berkeley_VAWA_campus, sumNonBerkeley(NUC_VAWA_campus))
-
-massPlot(Berkeley_NUC_VAWA_campus, VAWA)
-massPlot(Berkeley_NUC_VAWA_campus, VAWAPerStudent)
-
-massPlot(Berkeley_summedNUC_VAWA_campus, VAWAPerStudent)
-massPlot(Berkeley_summedNUC_VAWA_campus, VAWAPerStudent)
 
 ```
-
-
 
 
 
