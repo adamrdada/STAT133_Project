@@ -261,7 +261,7 @@ Public_NUC_Criminal_Offenses
 ```
 
 ```{r}
-NorCal_NUC_schools = c("California State University-Chico", "California State University-Sacramento", "San Jose State University", "Sonoma State University", "Humboldt State University")
+NorCal_NUC_schools = c("CSU-Chico", "CSU-Sacramento", "San Jose State University", "Sonoma State University", "Humboldt State University")
 
 #NorCal CSU datatables
 NorCal_NUC_Arrests <- Public_NUC_Arrests %>%

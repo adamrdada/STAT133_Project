@@ -110,12 +110,23 @@ sumSexOffenses <- function(data) {
 
 updatedNames <- function(data, UC=TRUE) {
   if (UC) {
-    return(gsub(".*-", "", data$Institution.name))
+    return(gsub(".*-", "UC ", data$Institution.name))
   } else {
     data$Institution.name <- gsub("California State University", "CSU", data$Institution.name)
     data$Institution.name <- gsub(".*Polytechnic.*-", "CalPoly-", data$Institution.name)
     return(data$Institution.name)
   }
+  
+}
+
+updateNames <- function(data, UC=TRUE) {
+  if (UC) {
+    data$name = gsub(".*-", "", data$name)
+  } else {
+    data$name <- gsub("California State University", "CSU", data$name)
+    data$name <- gsub(".*Polytechnic.*-", "CalPoly-", data$name)
+  }
+  return(data)
   
 }
 
@@ -135,9 +146,29 @@ sumNonBerkeley <- function(data, UC=TRUE) {
   }
 }
 
+socalNorcal <- function(data1, data2, group1, group2) {
+  data1 = data1 %>% na.omit() %>%
+                  group_by(Survey.year) %>% 
+                  summarise_each(funs(mean)) %>%
+                  mutate(Institution.name = group1)
+  
+  data2 = data2 %>% group_by(Survey.year) %>% 
+                  na.omit() %>%
+                  summarise_each(funs(mean)) %>%
+                  mutate(Institution.name = group2)
+
+  return(rbind(data1, data2))
+}
+
 massPlot <- function(data, cols) {
   for(col in cols) {
     print(data %>% ggplot(aes(x = Survey.year, col=Institution.name)) + geom_line(aes_string(y=col)))
+  }
+}
+
+massPlot2 <- function(data, cols) {
+  for(col in cols) {
+    print(data %>% ggplot(aes(x = year, col=name)) + geom_line(aes_string(y=col)))
   }
 }
 
@@ -246,8 +277,6 @@ compareDiscplinaryArrests(UC_disciplinary, UC_arrests)
 ```{r, warning=FALSE}
 Berkeley_NUC_arrests = rbind(Berkeley_arrests, NUC_arrests)
 
-class(Berkeley_arrests)
-class(NUC_arrests)
 
 Berkeley_summedNUC_arrests = rbind(Berkeley_arrests, sumNonBerkeley(NUC_arrests, FALSE))
 
@@ -292,8 +321,28 @@ massPlot(Berkeley_summedNUC_disciplinary, Arrests)
 massPlot(Berkeley_summedNUC_disciplinary, ArrestsPerStudent)
 ```
 
-```{r, warning=FALSE}
+```{r, warning=FALSE} 
+NorCal_UC = c("UC Berkeley", "UC Davis", "UC San Francisco", "UC Santa Cruz", "UC Merced")
 
+#NorCal UC datatables
+NorCal_UC_arrests <- UC_arrests %>%
+  filter(Institution.name %in% NorCal_UC)
+
+NorCal_UC_disciplinary <- UC_disciplinary %>%
+  filter(Institution.name %in% NorCal_UC)
+
+NorCal_UC_criminal <- UC_criminal %>%
+  filter(Institution.name %in% NorCal_UC)
+
+#SoCal UC datatables
+SoCal_UC_arrests <- UC_arrests %>%
+  filter(!Institution.name %in% NorCal_UC)
+
+SoCal_UC_disciplinary <- UC_disciplinary %>%
+  filter(!Institution.name %in% NorCal_UC)
+
+SoCal_UC_criminal <- UC_criminal %>%
+  filter(!Institution.name %in% NorCal_UC)
 
 
 
@@ -301,5 +350,49 @@ massPlot(Berkeley_summedNUC_disciplinary, ArrestsPerStudent)
 
 
 
+```{r, warning=FALSE}
+NorCal_NUC = c("CSU-Chico", "CSU-Sacramento", "San Jose State University", "Sonoma State University", "Humboldt State University")
+
+#NorCal CSU datatables
+NorCal_NUC_arrests <- NUC_arrests %>%
+        filter(Institution.name %in% NorCal_NUC)
+
+NorCal_NUC_disciplinary <- NUC_disciplinary %>%
+        filter(Institution.name %in% NorCal_NUC)
+  
+NorCal_NUC_criminal <- NUC_criminal %>%
+        filter(Institution.name %in% NorCal_NUC)
+
+#SoCal UC datatables
+SoCal_NUC_arrests <- NUC_arrests %>%
+        filter(!Institution.name %in% NorCal_NUC)
+
+SoCal_NUC_disciplinary <- NUC_disciplinary %>%
+        filter(!Institution.name %in% NorCal_NUC)
+
+SoCal_NUC_criminal <- NUC_criminal %>%
+        filter(!Institution.name %in% NorCal_NUC)
+
+
+
+```
+
+
+```{r, warning=FALSE}
+NorcalSocal_UC_criminal = socalNorcal(NorCal_UC_criminal, SoCal_UC_criminal, "Norcal", "Socal")
+
+massPlot(NorcalSocal_UC_criminal, Crimes)
+```
+```{r, warning=FALSE}
+NorcalSocal_UC_arrests = socalNorcal(NorCal_UC_arrests, SoCal_UC_arrests, "Norcal", "Socal")
+
+massPlot(NorcalSocal_UC_arrests, Arrests)
+```
+
+```{r, warning=FALSE}
+NorcalSocal_UC_disciplinary = socalNorcal(NorCal_UC_disciplinary, SoCal_UC_disciplinary, "Norcal", "Socal")
+
+massPlot(NorcalSocal_UC_disciplinary, Arrests)
+```
 
 
