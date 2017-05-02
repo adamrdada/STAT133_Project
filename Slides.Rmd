@@ -10,6 +10,7 @@ knitr::opts_chunk$set(echo = FALSE)
 library(png)
 library(dplyr)
 library(ggplot2)
+library(plotrix)
 ```
 ## Research Topic
 
@@ -258,43 +259,29 @@ compareDiscplinaryArrests <- function(disciplinary, arrests) {
 compareDiscplinaryArrests(UC_disciplinary, UC_arrests)
 ```
 
-## NorCal vs. SoCal
-
+##Distribution of Types of Crimes Committed
 ```{r, warning=FALSE}
-NorCal_UC = c("UC Berkeley", "UC Davis", "UC San Francisco", "UC Santa Cruz", "UC Merced")
+slices1<- c(sum(UC_arrests_noncampus$Illegal.weapons.possession), sum(UC_arrests_noncampus$Drug.law.violations), sum(UC_arrests_noncampus$Liquor.law.violations))
+lbls <- c("Illegal Weapons", "Drug Violations", "Liquor law")
+pie3D(slices1, labels = lbls, explode = 0.2, main= "Pie Chart of arrests [UC noncampus grounds]")
 
-#NorCal UC datatables
-NorCal_UC_arrests <- UC_arrests %>%
-  filter(Institution.name %in% NorCal_UC)
+slices2<- c(sum(UC_arrests_campus$Illegal.weapons.possession), sum(UC_arrests_campus$Drug.law.violations), sum(UC_arrests_campus$Liquor.law.violations))
+sum<-sum(slices2)
+percentage<-round(100*slices2/sum,2)
+pielabels<- paste(percentage, "%", sep="")
+lbls <- c("Illegal Weapons", "Drug Violations", "Liquor law")
+pie(slices2, labels = pielabels, main= "Pie Chart of arrests [UC Campus]", col=rainbow(length(slices2)))
+legend("topright", lbls, cex=0.8, fill=rainbow(length(slices2)))
 
-NorCal_UC_disciplinary <- UC_disciplinary %>%
-  filter(Institution.name %in% NorCal_UC)
+UCB_on_campus<-filter(UC_arrests_campus, Unitid==110635)
+slices3<- c(sum(UCB_on_campus$Illegal.weapons.possession), sum(UCB_on_campus$Drug.law.violations), sum(UCB_on_campus$Liquor.law.violations))
+sum<-sum(slices3)
+percentage<-round(100*slices3/sum,2)
+pielabels<- paste(percentage, "%", sep="")
+lbls <- c("Illegal Weapons", "Drug Violations", "Liquor law")
+pie(slices3, labels = pielabels, main= "Pie Chart of arrests [UC Berkeley onCampus]", col=rainbow(length(slices3)))
+legend("topright", lbls, cex=0.8, fill=rainbow(length(slices3)))
 
-NorCal_UC_criminal <- UC_criminal %>%
-  filter(Institution.name %in% NorCal_UC)
 
-#SoCal UC datatables
-SoCal_UC_arrests <- UC_arrests %>%
-  filter(!Institution.name %in% NorCal_UC)
-
-SoCal_UC_disciplinary <- UC_disciplinary %>%
-  filter(!Institution.name %in% NorCal_UC)
-
-SoCal_UC_criminal <- UC_criminal %>%
-  filter(!Institution.name %in% NorCal_UC)
-NorcalSocal_UC_criminal = socalNorcal(NorCal_UC_criminal, SoCal_UC_criminal, "Norcal", "Socal")
-
-massPlot(NorcalSocal_UC_criminal, Crimes, "Norcal vs. Socal UC Criminal Offenses")
-massPlot(NorcalSocal_UC_criminal, CrimesPerStudent, "Norcal vs. Socal UC Criminal Offenses", TRUE)
-
-NorcalSocal_UC_arrests = socalNorcal(NorCal_UC_arrests, SoCal_UC_arrests, "Norcal", "Socal")
-
-massPlot(NorcalSocal_UC_arrests, Arrests, "Norcal vs. Socal UC Arrests")
-massPlot(NorcalSocal_UC_arrests, ArrestsPerStudent, "Norcal vs. Socal UC Arrests", TRUE)
-
-NorcalSocal_UC_disciplinary = socalNorcal(NorCal_UC_disciplinary, SoCal_UC_disciplinary, "Norcal", "Socal")
-
-massPlot(NorcalSocal_UC_disciplinary, Arrests, "Norcal vs. Socal UC Disciplinary Actions")
-massPlot(NorcalSocal_UC_disciplinary, ArrestsPerStudent, "Norcal vs. Socal UC Disciplinary Actions", TRUE)
 ```
 
