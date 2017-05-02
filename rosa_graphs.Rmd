@@ -160,14 +160,9 @@ socalNorcal <- function(data1, data2, group1, group2) {
   return(rbind(data1, data2))
 }
 
-massPlot <- function(data, cols, title = "", perStudent = FALSE) {
+massPlot <- function(data, cols) {
   for(col in cols) {
-    if (perStudent) {
-      print(data %>% ggplot(aes(x = Survey.year, col=Institution.name)) + geom_line(aes_string(y=col)) + labs(title=paste(title, col, sep=" - "), x = "Year", y = "Number of Incidents Per Student"))
-    } else {
-      print(data %>% ggplot(aes(x = Survey.year, col=Institution.name)) + geom_line(aes_string(y=col)) + labs(title=paste(title, col, sep=" - "), x = "Year", y = "Number of Incidents"))
-    }
-    
+    print(data %>% ggplot(aes(x = Survey.year, col=Institution.name)) + geom_line(aes_string(y=col)))
   }
 }
 
@@ -211,12 +206,19 @@ NUC_criminal <- groupCriminal(NUC_criminal_campus, NUC_criminal_housing, NUC_cri
 NUC_arrests <- groupArrests(NUC_arrests_campus, NUC_arrests_housing, NUC_arrests_noncampus, UC=FALSE)
 
 NUC_disciplinary <- groupArrests(NUC_disciplinary_campus, NUC_disciplinary_housing, NUC_disciplinary_noncampus, UC=FALSE)
+```
 
-saveRDS(UC_criminal, "UC_criminal.Rds")
-saveRDS(UC_arrests, "UC_arrests.Rds")
-saveRDS(UC_disciplinary, "UC_disciplinary.Rds")
+
+
+```{r}
+UC_arrests <- readRDS("UC_arrests.Rds")
+UC_criminal <- readRDS("UC_criminal.Rds")
+UC_disciplinary <- readRDS("UC_disciplinary.Rds")
 
 ```
+
+
+
 
 ```{r, warning=FALSE}
 Berkeley_arrests = getBerkeley(UC_arrests)
@@ -225,11 +227,11 @@ Other_UC_arrests = sumNonBerkeley(UC_arrests)
 
 summedUC_arrests = rbind(Berkeley_arrests, Other_UC_arrests)
 
-massPlot(UC_arrests, Arrests, "UC Arrests")
-massPlot(UC_arrests, ArrestsPerStudent, "UC Arrests", TRUE)
+massPlot(UC_arrests, Arrests)
+massPlot(UC_arrests, ArrestsPerStudent)
 
-massPlot(summedUC_arrests, Arrests, "Berkeley vs. Other UCs: Arrests")
-massPlot(summedUC_arrests, ArrestsPerStudent, "Berkeley vs. Other UCs: Arrests", TRUE)
+massPlot(summedUC_arrests, Arrests)
+massPlot(summedUC_arrests, ArrestsPerStudent)
 ```
 
 
@@ -242,11 +244,11 @@ Other_UC_criminal = sumNonBerkeley(UC_criminal)
 
 summedUC_criminal = rbind(Berkeley_criminal, Other_UC_criminal)
 
-massPlot(UC_criminal, Crimes,"UC Criminal Offenses")
-massPlot(UC_criminal, CrimesPerStudent, "UC Criminal Offenses", TRUE)
+massPlot(UC_criminal, Crimes)
+massPlot(UC_criminal, CrimesPerStudent)
 
-massPlot(summedUC_criminal, Crimes, "Berkeley vs. Other UCs: Criminal Offenses")
-massPlot(summedUC_criminal, CrimesPerStudent,"Berkeley vs. Other UCs: Criminal Offenses", TRUE)
+massPlot(summedUC_criminal, Crimes)
+massPlot(summedUC_criminal, CrimesPerStudent)
 ```
 
 
@@ -258,11 +260,11 @@ Other_UC_disciplinary = sumNonBerkeley(UC_disciplinary)
 
 summedUC_disciplinary = rbind(Berkeley_disciplinary, Other_UC_disciplinary)
 
-massPlot(UC_disciplinary, Arrests, "UC Disciplinary Actions")
-massPlot(UC_disciplinary, ArrestsPerStudent, "UC Disciplinary Actions", TRUE)
+massPlot(UC_disciplinary, Arrests)
+massPlot(UC_disciplinary, ArrestsPerStudent)
 
-massPlot(summedUC_disciplinary, Arrests, "Berkeley vs. Other UCs: Disciplinary Actions")
-massPlot(summedUC_disciplinary, ArrestsPerStudent, "Berkeley vs. Other UCs: Disciplinary Actions", TRUE)
+massPlot(summedUC_disciplinary, Arrests)
+massPlot(summedUC_disciplinary, ArrestsPerStudent)
 ```
 
 Disciplinary Actions vs. Arrests (Students vs. Community)
@@ -290,14 +292,14 @@ Berkeley_NUC_arrests = rbind(Berkeley_arrests, NUC_arrests)
 
 Berkeley_summedNUC_arrests = rbind(Berkeley_arrests, sumNonBerkeley(NUC_arrests, FALSE))
 
-massPlot(NUC_arrests, Arrests, "Non-UC Arrests")
-massPlot(NUC_arrests, ArrestsPerStudent, "Non-UC Arrests", TRUE)
+massPlot(NUC_arrests, Arrests)
+massPlot(NUC_arrests, ArrestsPerStudent)
 
-massPlot(Berkeley_NUC_arrests, Arrests, "Berkeley vs. Non-UCs: Arrests")
-massPlot(Berkeley_NUC_arrests, ArrestsPerStudent, "Berkeley vs. Non-UCs: Arrests", TRUE)
+massPlot(Berkeley_NUC_arrests, Arrests)
+massPlot(Berkeley_NUC_arrests, ArrestsPerStudent)
 
-massPlot(Berkeley_summedNUC_arrests, Arrests, "Berkeley vs. Average Non-UC: Arrests")
-massPlot(Berkeley_summedNUC_arrests, ArrestsPerStudent, "Berkeley vs. Average Non-UC: Arrests", TRUE)
+massPlot(Berkeley_summedNUC_arrests, Arrests)
+massPlot(Berkeley_summedNUC_arrests, ArrestsPerStudent)
 
 
 ```
@@ -310,11 +312,11 @@ Berkeley_NUC_criminal = rbind(Berkeley_criminal, NUC_criminal)
 Berkeley_summedNUC_criminal = rbind(Berkeley_criminal, sumNonBerkeley(NUC_criminal, FALSE))
 
 
-massPlot(Berkeley_NUC_criminal, Crimes, "Berkeley vs. Non-UCs: Criminal Offenses")
-massPlot(Berkeley_NUC_criminal, CrimesPerStudent, "Berkeley vs. Non-UCs: Criminal Offenses", TRUE)
+massPlot(Berkeley_NUC_criminal, Crimes)
+massPlot(Berkeley_NUC_criminal, CrimesPerStudent)
 
-massPlot(Berkeley_summedNUC_criminal, Crimes, "Berkeley vs. Average Non-UC: Criminal Offenses")
-massPlot(Berkeley_summedNUC_criminal, CrimesPerStudent, "Berkeley vs. Average Non-UC: Criminal Offenses", TRUE)
+massPlot(Berkeley_summedNUC_criminal, Crimes)
+massPlot(Berkeley_summedNUC_criminal, CrimesPerStudent)
 
 ```
 
@@ -324,11 +326,11 @@ Berkeley_NUC_disciplinary = rbind(Berkeley_disciplinary, NUC_disciplinary)
 
 Berkeley_summedNUC_disciplinary = rbind(Berkeley_disciplinary, sumNonBerkeley(NUC_disciplinary, FALSE))
 
-massPlot(Berkeley_NUC_disciplinary, Arrests, "Berkeley vs. Non-UCs: Disciplinary Actions")
-massPlot(Berkeley_NUC_disciplinary, ArrestsPerStudent, "Berkeley vs. Non-UCs: Disciplinary Actions", TRUE)
+massPlot(Berkeley_NUC_disciplinary, Arrests)
+massPlot(Berkeley_NUC_disciplinary, ArrestsPerStudent)
 
-massPlot(Berkeley_summedNUC_disciplinary, Arrests, "Berkeley vs. Average Non-UC: Disciplinary Actions")
-massPlot(Berkeley_summedNUC_disciplinary, ArrestsPerStudent, "Berkeley vs. Average Non-UC: Disciplinary Actions", TRUE)
+massPlot(Berkeley_summedNUC_disciplinary, Arrests)
+massPlot(Berkeley_summedNUC_disciplinary, ArrestsPerStudent)
 ```
 
 ```{r, warning=FALSE} 
@@ -353,6 +355,9 @@ SoCal_UC_disciplinary <- UC_disciplinary %>%
 
 SoCal_UC_criminal <- UC_criminal %>%
   filter(!Institution.name %in% NorCal_UC)
+
+
+
 ```
 
 
@@ -388,22 +393,69 @@ SoCal_NUC_criminal <- NUC_criminal %>%
 ```{r, warning=FALSE}
 NorcalSocal_UC_criminal = socalNorcal(NorCal_UC_criminal, SoCal_UC_criminal, "Norcal", "Socal")
 
-massPlot(NorcalSocal_UC_criminal, Crimes, "Norcal vs. Socal UC Criminal Offenses")
-massPlot(NorcalSocal_UC_criminal, CrimesPerStudent, "Norcal vs. Socal UC Criminal Offenses", TRUE)
+massPlot(NorcalSocal_UC_criminal, Crimes)
 ```
 ```{r, warning=FALSE}
 NorcalSocal_UC_arrests = socalNorcal(NorCal_UC_arrests, SoCal_UC_arrests, "Norcal", "Socal")
 
-massPlot(NorcalSocal_UC_arrests, Arrests, "Norcal vs. Socal UC Arrests")
-massPlot(NorcalSocal_UC_arrests, ArrestsPerStudent, "Norcal vs. Socal UC Arrests", TRUE)
-
+massPlot(NorcalSocal_UC_arrests, Arrests)
 ```
 
 ```{r, warning=FALSE}
 NorcalSocal_UC_disciplinary = socalNorcal(NorCal_UC_disciplinary, SoCal_UC_disciplinary, "Norcal", "Socal")
 
-massPlot(NorcalSocal_UC_disciplinary, Arrests, "Norcal vs. Socal UC Disciplinary Actions")
-massPlot(NorcalSocal_UC_disciplinary, ArrestsPerStudent, "Norcal vs. Socal UC Disciplinary Actions", TRUE)
+massPlot(NorcalSocal_UC_disciplinary, Arrests)
 ```
 
 
+
+
+
+```{r}
+slices1<- c(sum(UC_arrests_noncampus$Illegal.weapons.possession), sum(UC_arrests_noncampus$Drug.law.violations), sum(UC_arrests_noncampus$Liquor.law.violations))
+lbls <- c("Illegal Weapons", "Drug Violations", "Liquor law")
+pie3D(slices, labels = lbls, explode = 0.2, main= "Pie Chart of arrests [UC noncampus grounds]")
+```
+
+```{r}
+slices2<- c(sum(UC_arrests_campus$Illegal.weapons.possession), sum(UC_arrests_campus$Drug.law.violations), sum(UC_arrests_campus$Liquor.law.violations))
+sum<-sum(slices2)
+percentage<-round(100*slices2/sum,2)
+pielabels<- paste(percentage, "%", sep="")
+lbls <- c("Illegal Weapons", "Drug Violations", "Liquor law")
+pie(slices, labels = pielabels, main= "Pie Chart of arrests [UC Campus]", col=rainbow(length(slices2)))
+legend("topright", lbls, cex=0.8, fill=rainbow(length(slices)))
+```
+
+```{r}
+UCB_on_campus<-filter(UC_arrests_campus, Unitid==110635)
+slices3<- c(sum(UCB_on_campus$Illegal.weapons.possession), sum(UCB_on_campus$Drug.law.violations), sum(UCB_on_campus$Liquor.law.violations))
+sum<-sum(slices3)
+percentage<-round(100*slices3/sum,2)
+pielabels<- paste(percentage, "%", sep="")
+lbls <- c("Illegal Weapons", "Drug Violations", "Liquor law")
+pie(slices, labels = pielabels, main= "Pie Chart of arrests [UC Berkeley onCampus]", col=rainbow(length(slices3)))
+legend("topright", lbls, cex=0.8, fill=rainbow(length(slices)))
+```
+
+```{r}
+library(choroplethr)
+library(tidyr)
+install.packages("plotrix")
+install.packages("choroplethr")
+install.packages("choroplethrMaps")
+library(choroplethrMaps)
+library(choroplethr)
+library(plotrix)
+
+grouped1 = UC_arrests %>% mutate(total_crime = as.numeric(Weapons + Drugs + Liquor))
+UC_2015<-read.csv("Choropleth.csv")
+data.frame(UC_2015)
+county_choropleth(UC_2015,
+    title      = "Crime across the UCs",
+    legend     = "Crime",
+    state_zoom = "california")
+read.file("https://www.census.gov/geo/maps-data/data/tiger-cart-boundary.html")
+data(county.map)
+
+```
