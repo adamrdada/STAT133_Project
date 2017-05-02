@@ -211,6 +211,11 @@ NUC_criminal <- groupCriminal(NUC_criminal_campus, NUC_criminal_housing, NUC_cri
 NUC_arrests <- groupArrests(NUC_arrests_campus, NUC_arrests_housing, NUC_arrests_noncampus, UC=FALSE)
 
 NUC_disciplinary <- groupArrests(NUC_disciplinary_campus, NUC_disciplinary_housing, NUC_disciplinary_noncampus, UC=FALSE)
+
+saveRDS(UC_criminal, "UC_criminal.Rds")
+saveRDS(UC_arrests, "UC_arrests.Rds")
+saveRDS(UC_disciplinary, "UC_disciplinary.Rds")
+
 ```
 
 ```{r, warning=FALSE}

@@ -20,7 +20,7 @@ library(ggplot2)
 
 ## Berkeley vs. UCs
 
-```{r}
+```{r, warning=FALSE}
 UC_arrests_noncampus = read.csv("NorCal SoCal/Public_UC_Arrests_Noncampus.csv")
 UC_arrests_campus = read.csv("NorCal SoCal/Public_UC_Arrests_On_Campus.csv")
 UC_arrests_housing = read.csv("NorCal SoCal/Public_UC_Arrests_On_campus_Student_Housing_Facilities.csv")
@@ -44,6 +44,8 @@ NUC_criminal_housing = read.csv("NorCal SoCal/Public_NUC_Criminal_Offenses_On_ca
 NUC_disciplinary_noncampus = read.csv("NorCal SoCal/Public_NUC_Disciplinary_Actions_Noncampus.csv")
 NUC_disciplinary_campus = read.csv("NorCal SoCal/Public_NUC_Disciplinary_Actions_On_campus.csv")
 NUC_disciplinary_housing = read.csv("NorCal SoCal/Public_NUC_Disciplinary_Actions_Student_Housing_Facilities.csv")
+
+
 Arrests <- c("Weapons", "Drugs", "Liquor")
 ArrestsPerStudent <- paste(Arrests, "PerStudent", sep="")
 
@@ -155,9 +157,14 @@ socalNorcal <- function(data1, data2, group1, group2) {
   return(rbind(data1, data2))
 }
 
-massPlot <- function(data, cols) {
+massPlot <- function(data, cols, title = "", perStudent = FALSE) {
   for(col in cols) {
-    print(data %>% ggplot(aes(x = Survey.year, col=Institution.name)) + geom_line(aes_string(y=col)))
+    if (perStudent) {
+      print(data %>% ggplot(aes(x = Survey.year, col=Institution.name)) + geom_line(aes_string(y=col)) + labs(title=paste(title, col, sep=" - "), x = "Year", y = "Number of Incidents Per Student"))
+    } else {
+      print(data %>% ggplot(aes(x = Survey.year, col=Institution.name)) + geom_line(aes_string(y=col)) + labs(title=paste(title, col, sep=" - "), x = "Year", y = "Number of Incidents"))
+    }
+    
   }
 }
 
@@ -185,6 +192,7 @@ groupArrests <- function(data1, data2, data3, UC=TRUE){
                                 summarise_all(.funs=sum) %>%
                                 ungroup(Survey.year, Institution.name))
 }
+
 UC_criminal <- groupCriminal(UC_criminal_campus, UC_criminal_housing, UC_criminal_noncampus, UC=TRUE)
 
 UC_arrests <- groupArrests(UC_arrests_campus, UC_arrests_housing, UC_arrests_noncampus, UC=TRUE)
@@ -196,39 +204,45 @@ NUC_criminal <- groupCriminal(NUC_criminal_campus, NUC_criminal_housing, NUC_cri
 NUC_arrests <- groupArrests(NUC_arrests_campus, NUC_arrests_housing, NUC_arrests_noncampus, UC=FALSE)
 
 NUC_disciplinary <- groupArrests(NUC_disciplinary_campus, NUC_disciplinary_housing, NUC_disciplinary_noncampus, UC=FALSE)
+
+
+
+
 Berkeley_arrests = getBerkeley(UC_arrests)
 
 Other_UC_arrests = sumNonBerkeley(UC_arrests)
 
 summedUC_arrests = rbind(Berkeley_arrests, Other_UC_arrests)
 
-massPlot(UC_arrests, Arrests)
-massPlot(UC_arrests, ArrestsPerStudent)
+massPlot(UC_arrests, Arrests, "UC Arrests")
+massPlot(UC_arrests, ArrestsPerStudent, "UC Arrests", TRUE)
 
-massPlot(summedUC_arrests, Arrests)
-massPlot(summedUC_arrests, ArrestsPerStudent)
+massPlot(summedUC_arrests, Arrests, "Berkeley vs. Other UCs: Arrests")
+massPlot(summedUC_arrests, ArrestsPerStudent, "Berkeley vs. Other UCs: Arrests", TRUE)
+
 Berkeley_criminal = getBerkeley(UC_criminal)
 
 Other_UC_criminal = sumNonBerkeley(UC_criminal)
 
 summedUC_criminal = rbind(Berkeley_criminal, Other_UC_criminal)
 
-massPlot(UC_criminal, Crimes)
-massPlot(UC_criminal, CrimesPerStudent)
+massPlot(UC_criminal, Crimes,"UC Criminal Offenses")
+massPlot(UC_criminal, CrimesPerStudent, "UC Criminal Offenses", TRUE)
 
-massPlot(summedUC_criminal, Crimes)
-massPlot(summedUC_criminal, CrimesPerStudent)
+massPlot(summedUC_criminal, Crimes, "Berkeley vs. Other UCs: Criminal Offenses")
+massPlot(summedUC_criminal, CrimesPerStudent,"Berkeley vs. Other UCs: Criminal Offenses", TRUE)
 Berkeley_disciplinary = getBerkeley(UC_disciplinary)
 
 Other_UC_disciplinary = sumNonBerkeley(UC_disciplinary)
 
 summedUC_disciplinary = rbind(Berkeley_disciplinary, Other_UC_disciplinary)
 
-massPlot(UC_disciplinary, Arrests)
-massPlot(UC_disciplinary, ArrestsPerStudent)
+massPlot(UC_disciplinary, Arrests, "UC Disciplinary Actions")
+massPlot(UC_disciplinary, ArrestsPerStudent, "UC Disciplinary Actions", TRUE)
 
-massPlot(summedUC_disciplinary, Arrests)
-massPlot(summedUC_disciplinary, ArrestsPerStudent)
+massPlot(summedUC_disciplinary, Arrests, "Berkeley vs. Other UCs: Disciplinary Actions")
+massPlot(summedUC_disciplinary, ArrestsPerStudent, "Berkeley vs. Other UCs: Disciplinary Actions", TRUE)
+
 compareDiscplinaryArrests <- function(disciplinary, arrests) {
   combined <- merge(disciplinary, arrests, by=c("Survey.year", "Institution.name"))
   UC_criminal$Institution.name = gsub(".*-", "", UC_criminal$Institution.name)
@@ -246,39 +260,7 @@ compareDiscplinaryArrests(UC_disciplinary, UC_arrests)
 
 ## NorCal vs. SoCal
 
-```{r}
-Berkeley_NUC_arrests = rbind(Berkeley_arrests, NUC_arrests)
-
-
-Berkeley_summedNUC_arrests = rbind(Berkeley_arrests, sumNonBerkeley(NUC_arrests, FALSE))
-
-massPlot(NUC_arrests, Arrests)
-massPlot(NUC_arrests, ArrestsPerStudent)
-
-massPlot(Berkeley_NUC_arrests, Arrests)
-massPlot(Berkeley_NUC_arrests, ArrestsPerStudent)
-
-massPlot(Berkeley_summedNUC_arrests, Arrests)
-massPlot(Berkeley_summedNUC_arrests, ArrestsPerStudent)
-Berkeley_NUC_criminal = rbind(Berkeley_criminal, NUC_criminal)
-
-Berkeley_summedNUC_criminal = rbind(Berkeley_criminal, sumNonBerkeley(NUC_criminal, FALSE))
-
-
-massPlot(Berkeley_NUC_criminal, Crimes)
-massPlot(Berkeley_NUC_criminal, CrimesPerStudent)
-
-massPlot(Berkeley_summedNUC_criminal, Crimes)
-massPlot(Berkeley_summedNUC_criminal, CrimesPerStudent)
-Berkeley_NUC_disciplinary = rbind(Berkeley_disciplinary, NUC_disciplinary)
-
-Berkeley_summedNUC_disciplinary = rbind(Berkeley_disciplinary, sumNonBerkeley(NUC_disciplinary, FALSE))
-
-massPlot(Berkeley_NUC_disciplinary, Arrests)
-massPlot(Berkeley_NUC_disciplinary, ArrestsPerStudent)
-
-massPlot(Berkeley_summedNUC_disciplinary, Arrests)
-massPlot(Berkeley_summedNUC_disciplinary, ArrestsPerStudent)
+```{r, warning=FALSE}
 NorCal_UC = c("UC Berkeley", "UC Davis", "UC San Francisco", "UC Santa Cruz", "UC Merced")
 
 #NorCal UC datatables
@@ -300,35 +282,19 @@ SoCal_UC_disciplinary <- UC_disciplinary %>%
 
 SoCal_UC_criminal <- UC_criminal %>%
   filter(!Institution.name %in% NorCal_UC)
-NorCal_NUC = c("CSU-Chico", "CSU-Sacramento", "San Jose State University", "Sonoma State University", "Humboldt State University")
-
-#NorCal CSU datatables
-NorCal_NUC_arrests <- NUC_arrests %>%
-        filter(Institution.name %in% NorCal_NUC)
-
-NorCal_NUC_disciplinary <- NUC_disciplinary %>%
-        filter(Institution.name %in% NorCal_NUC)
-  
-NorCal_NUC_criminal <- NUC_criminal %>%
-        filter(Institution.name %in% NorCal_NUC)
-
-#SoCal UC datatables
-SoCal_NUC_arrests <- NUC_arrests %>%
-        filter(!Institution.name %in% NorCal_NUC)
-
-SoCal_NUC_disciplinary <- NUC_disciplinary %>%
-        filter(!Institution.name %in% NorCal_NUC)
-
-SoCal_NUC_criminal <- NUC_criminal %>%
-        filter(!Institution.name %in% NorCal_NUC)
 NorcalSocal_UC_criminal = socalNorcal(NorCal_UC_criminal, SoCal_UC_criminal, "Norcal", "Socal")
 
-massPlot(NorcalSocal_UC_criminal, Crimes)
+massPlot(NorcalSocal_UC_criminal, Crimes, "Norcal vs. Socal UC Criminal Offenses")
+massPlot(NorcalSocal_UC_criminal, CrimesPerStudent, "Norcal vs. Socal UC Criminal Offenses", TRUE)
+
 NorcalSocal_UC_arrests = socalNorcal(NorCal_UC_arrests, SoCal_UC_arrests, "Norcal", "Socal")
 
-massPlot(NorcalSocal_UC_arrests, Arrests)
+massPlot(NorcalSocal_UC_arrests, Arrests, "Norcal vs. Socal UC Arrests")
+massPlot(NorcalSocal_UC_arrests, ArrestsPerStudent, "Norcal vs. Socal UC Arrests", TRUE)
+
 NorcalSocal_UC_disciplinary = socalNorcal(NorCal_UC_disciplinary, SoCal_UC_disciplinary, "Norcal", "Socal")
 
-massPlot(NorcalSocal_UC_disciplinary, Arrests)
+massPlot(NorcalSocal_UC_disciplinary, Arrests, "Norcal vs. Socal UC Disciplinary Actions")
+massPlot(NorcalSocal_UC_disciplinary, ArrestsPerStudent, "Norcal vs. Socal UC Disciplinary Actions", TRUE)
 ```
 
